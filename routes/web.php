@@ -29,4 +29,7 @@ Route::get('/beranda_penjual', function () {
 Route::get('/footer', function () {
     return view('footer');
 });
-    
+
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
+});
