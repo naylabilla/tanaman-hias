@@ -21,3 +21,7 @@ Route::get('/pesanan_penjual', function () {
 Route::get('/produk', function () {
     return view('produk');
 });
+
+Route::get('/beranda_penjual', function () {
+    return view('beranda_penjual');
+});
