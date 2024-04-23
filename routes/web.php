@@ -33,3 +33,7 @@ Route::get('/footer', function () {
 Route::get('/pembayaran', function () {
     return view('pembayaran');
 });
+
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
