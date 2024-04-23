@@ -13,3 +13,7 @@ Route::get('/login', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+
+Route::get('/pesanan_penjual', function () {
+    return view('pesanan_penjual');
+});
