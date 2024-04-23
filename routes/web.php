@@ -17,3 +17,7 @@ Route::get('/kontak', function () {
 Route::get('/pesanan_penjual', function () {
     return view('pesanan_penjual');
 });
+
+Route::get('/produk', function () {
+    return view('produk');
+});
