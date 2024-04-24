@@ -50,3 +50,9 @@ Route::get('/cetak_resi_penjual', function () {
 Route::get('/cetak_resi', function () {
     return view('cetak_resi');
 });
+Route::get('/riwayat_pesanan', function () {
+    return view('riwayat_pesanan');
+});
+Route::get('/bukti_pembayaran', function () {
+    return view('bukti_pembayaran');
+});
