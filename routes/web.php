@@ -37,3 +37,7 @@ Route::get('/pembayaran', function () {
 Route::get('/transaksi', function () {
     return view('transaksi');
 });
+
+Route::get('/rincian_pesanan', function () {
+    return view('rincian_pesanan');
+});
