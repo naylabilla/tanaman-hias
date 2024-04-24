@@ -18,8 +18,8 @@ Route::get('/pesanan_penjual', function () {
     return view('pesanan_penjual');
 });
 
-Route::get('/produk', function () {
-    return view('produk');
+Route::get('/detail_produk', function () {
+    return view('detail_produk');
 });
 
 Route::get('/beranda_penjual', function () {
@@ -57,6 +57,6 @@ Route::get('/daftar_akun', function () {
     return view('daftar_akun');
 });
 
-Route::get('/tambah_produk', function () {
-    return view('tambah_produk');
+Route::get('/produk', function () {
+    return view('produk');
 });
