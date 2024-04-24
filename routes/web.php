@@ -47,3 +47,6 @@ Route::get('/rincian_pesanan', function () {
 Route::get('/cetak_resi_penjual', function () {
     return view('cetak_resi_penjual');
 });
+Route::get('/cetak_resi', function () {
+    return view('cetak_resi');
+});
