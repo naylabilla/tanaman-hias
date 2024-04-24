@@ -56,3 +56,11 @@ Route::get('/riwayat_pesanan', function () {
 Route::get('/bukti_pembayaran', function () {
     return view('bukti_pembayaran');
 });
+
+Route::get('/daftarakun', function () {
+    return view('daftar_akun');
+});
+
+Route::get('/tambahproduk', function () {
+    return view('tambah_produk');
+});
