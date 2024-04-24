@@ -17,11 +17,11 @@
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/produk.png" alt="" class="w-10">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-10">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
             <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/pesanan.png" alt="" class="w-10">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-10">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">

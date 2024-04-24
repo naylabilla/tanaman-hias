@@ -21,3 +21,19 @@ Route::get('/pesanan_penjual', function () {
 Route::get('/produk', function () {
     return view('produk');
 });
+
+Route::get('/beranda_penjual', function () {
+    return view('beranda_penjual');
+});
+
+Route::get('/footer', function () {
+    return view('footer');
+});
+
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
+});
+
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
