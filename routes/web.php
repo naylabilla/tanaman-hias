@@ -37,3 +37,7 @@ Route::get('/pembayaran', function () {
 Route::get('/transaksi', function () {
     return view('transaksi');
 });
+
+Route::get('/alamat', function () {
+    return view('alamat_pengiriman');
+});
