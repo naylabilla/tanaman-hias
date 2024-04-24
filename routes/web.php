@@ -44,3 +44,6 @@ Route::get('/alamat', function () {
 Route::get('/rincian_pesanan', function () {
     return view('rincian_pesanan');
 });
+Route::get('/cetak_resi_penjual', function () {
+    return view('cetak_resi_penjual');
+});
