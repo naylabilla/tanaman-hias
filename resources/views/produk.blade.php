@@ -4,61 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Produk</title>
+    <title>Beranda Penjual</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#78A07C] h-screen place-content-end">
-    <div class="navbar bg-white fixed top-0 grid grid-cols-2 text-black text-3xl font-bold">
-        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-10">
-            <img src="./assets/images/tamu/logo.png" alt="" class="size-16">
-            <p class="text-2xl text-[#78A07C]">Lustilvy</p>
+<body class="bg-[#618264] h-screen ">
+    <div class="navbar bg-[#B0D9B1] fixed top-0 rounded-b-3xl grid grid-cols-3 text-black text-3xl font-bold">
+        <a href="" class="btn btn-ghost text-xl me-auto">
+            <img src="./assets/icons/user.png" alt="" class="w-10">
+            <p>Admin</p>
         </a>
-        <div class="ms-auto">
-            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-10">
-                <p class="text-2xl text-[#78A07C]">Keranjang</p>
+        <h1 class="mx-auto">Produk</h1>
+        <a href="" class="btn btn-ghost ms-auto">
+            <img src="./assets/icons/logout.png" alt="" class="w-10">
+        </a>
+    </div>
+    <div class="fixed left-0 top-[5.5rem] h-screen bg-[#B0D9B1] w-[23%]">
+        <div class="bg-transparent w-48 min-h-48 rounded-lg flex mx-auto my-5">
+            <img src="./assets/images/tamu/logo.png" alt="" class="resize pl-1">
+        </div>
+        <div class="flex justify-center grid grid-rows-3 gap-5">
+            <a href="/beranda_penjual" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <img src="./assets/icons/beranda.png" alt="" class="w-9 h-9 mr-4">
+                <span>Beranda</span>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-10">
-                <p class="text-2xl text-[#78A07C]">Pesanan</p>
+            <a href="/produk_penjual" class="btn bg-[#327C54] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <img src="./assets/icons/produk.png" alt="" class="w-9 h-9 mr-4">
+                <span class="self-center col-span-2 mr-3">Produk</span>
             </a>
-            <div class="border-l-4 border-black">
-                <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icons/logout.png" alt="" class="w-10">
-                </a>
+            <a href="/pesanan_penjual" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <img src="./assets/icons/rekapan.png" alt="" class="w-9 h-9 mr-4">
+                <span class="self-center col-span-2">Rekapan</span>
+            </a>
+        </div>
+    </div>
+
+    {{-- PRODUK --}}
+    <div class="rounded-lg absolute top-[9rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73%] h-[75%]">
+
+        <form class="rounded-box pl-8 pt-6" action="#" method="#" enctype="#">
+            <div class="grid grid-cols-2 gap-4">
+
+
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Nama
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[95%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" name="nama" required>
+                </div>
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Stok
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[30%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="number" placeholder="" name="nama" required>
+                </div>
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Tinggi
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[30%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" name="nama" required>
+                </div>
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Kategori
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[40%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" name="nama" required>
+                </div>
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Harga
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[50%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" name="nama" required>
+                </div>
+                <div class="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Deskripsi
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[95%] h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" name="nama" required>
+                </div>
+                <div class="col-span-2">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">
+                        Gambar Produk
+                    </label>
+                    <input class="shadow appearance-none border rounded w-[35%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="file" placeholder="" name="nama" required>
+                </div>
+                <div class="flex justify-center items-center ">
+
+                    <input type="submit" value="Simpan" class="btn text-white font-bold w-44 text-lg  " style="background-color: #618264 ">
+
+
+                </div>
+                <div class="flex justify-center items-center ">
+                    <input type="submit" value="Kembali" class="btn text-white font-bold w-44 text-lg  " style="background-color: #0077B6">
+
+                </div>
+
+
             </div>
-        </div>
+
+        </form>
+
     </div>
-    <a href="" class="absolute top-20 left-5">
-        <img src="./assets/icons/kembali.png" alt="">
-    </a>
-    <img src="./assets/images/outdoor/gambar 4 monstera.png" alt="" class="absolute left-20 top-20 size-72">
-    <div class="bg-white w-full h-3/6 size-40 mb-full min-h-80 rounded-t-2xl p-4">
-        <h1 class="mr-10 mt-5 pl-6 text-black font-semibold text-4xl">Monstera Deliciosa</h1>
-        <h2 class="mr-10 mt-5 pl-6 text-black font-semibold text-3xl">165 K</h2>
-        <h3 class="mr-10 mt-5 pl-6 text-justify font-sans text-xl text-black">Tanaman Monstera berasal dari daerah
-            tropis dan subtropis di seluruh dunia, terutama di Asia, Afrika, dan Amerika Selatan.
-            Monstera biasanya tumbuh sebagai pepohonan kecil dan memiliki daun yang besar dan berbulu yang memberikan
-            tampilan unik dan menarik.
-            Tanaman Monstera sering ditanam sebagai tanaman hias di rumah atau di taman, dan juga dapat tumbuh dengan
-            baik di dalam pot atau wadah.</h3>
-        <div class="grid grid-cols-3 place-items-center text-black mt-5">
-            <h1 class="text-3xl block">Stok</h1>
-            <h1 class="text-3xl block">Kategori</h1>
-            <h1 class="text-3xl block">Tinggi</h1>
-        </div>
-        <div class="grid grid-cols-3 place-items-center text-black">
-            <h1 class="text-3xl block">10</h1>
-            <h1 class="text-3xl block">Indoor</h1>
-            <h1 class="text-3xl block">8,5"</h1>
-        </div>
-        <div class="flex justify-center">
-            <button type="submit" class="btn bg-green-700 w-64 mt-3 text-black text-xl rounded-full">Tambah ke
-                keranjang</button>
-        </div>
-    </div>
+
 </body>
 
 </html>
