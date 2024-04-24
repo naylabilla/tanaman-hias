@@ -57,10 +57,10 @@ Route::get('/bukti_pembayaran', function () {
     return view('bukti_pembayaran');
 });
 
-Route::get('/daftarakun', function () {
+Route::get('/daftar_akun', function () {
     return view('daftar_akun');
 });
 
-Route::get('/tambahproduk', function () {
+Route::get('/tambah_produk', function () {
     return view('tambah_produk');
 });
