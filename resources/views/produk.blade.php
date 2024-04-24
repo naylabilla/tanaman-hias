@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[#78A07C] h-screen place-content-end">
-    <div class="navbar bg-white fixed top-0 grid grid-cols-2 text-black text-3xl font-bold">
+    <div class="navbar bg-white fixed top-0 grid grid-cols-2 text-black text-3xl font-bold z-50">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-10">
             <img src="./assets/images/tamu/logo.png" alt="" class="size-16">
             <p class="text-2xl text-[#78A07C]">Lustilvy</p>
