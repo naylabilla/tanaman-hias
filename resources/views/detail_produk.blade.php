@@ -32,7 +32,7 @@
         </div>
     </div>
     <a href="" class="absolute top-20 left-5">
-        <img src="./assets/icons/kembali.png" alt="">
+        <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-10">
     </a>
     <img src="./assets/images/outdoor/gambar 4 monstera.png" alt="" class="absolute left-20 top-20 size-72">
     <div class="bg-white w-full h-3/6 size-40 mb-full min-h-80 rounded-t-2xl p-4">
