@@ -10,18 +10,18 @@
 </head>
 
 <body class="bg-[#78A07C] h-screen place-content-end">
-    <div class="navbar bg-white fixed top-0 grid grid-cols-2 text-black text-3xl font-bold">
-        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-10">
-            <img src="./assets/images/tamu/logo.png" alt="" class="size-16">
-            <p class="text-2xl text-[#78A07C]">Lustilvy</p>
+    <div class="navbar bg-white sticky-top top-0 grid grid-cols-2 text-black text-3xl font-bold">
+        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5">
+            <p class="text-2xl text-[#78A07C] mb-6">Lustilvy</p>
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/produk.png" alt="" class="w-10">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
             <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/pesanan.png" alt="" class="w-10">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">

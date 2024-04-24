@@ -19,7 +19,7 @@
                 <img src="./assets/icons/user.png" alt="" class="w-10">
                 <p>Admin</p>
             </a>
-            <h1 class="mx-auto">Beranda</h1>
+            <h1 class="mx-auto">Rekapan</h1>
             <a href="" class="btn btn-ghost ms-auto">
                 <img src="./assets/icons/logout.png" alt="" class="w-10">
             </a>
