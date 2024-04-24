@@ -53,10 +53,6 @@ Route::get('/cetak_resi', function () {
 Route::get('/riwayat_pesanan', function () {
     return view('riwayat_pesanan');
 });
-Route::get('/bukti_pembayaran', function () {
-    return view('bukti_pembayaran');
-});
-
 Route::get('/daftar_akun', function () {
     return view('daftar_akun');
 });
