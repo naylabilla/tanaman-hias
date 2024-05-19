@@ -41,22 +41,31 @@ Route::get('/transaksi', function () {
 Route::get('/alamat', function () {
     return view('alamat_pengiriman');
 });
+
 Route::get('/rincian_pesanan', function () {
     return view('rincian_pesanan');
 });
+
 Route::get('/cetak_resi_penjual', function () {
     return view('cetak_resi_penjual');
 });
+
 Route::get('/cetak_resi', function () {
     return view('cetak_resi');
 });
+
 Route::get('/riwayat_pesanan', function () {
     return view('riwayat_pesanan');
 });
+
 Route::get('/daftar_akun', function () {
     return view('daftar_akun');
 });
 
 Route::get('/produk', function () {
     return view('produk');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
