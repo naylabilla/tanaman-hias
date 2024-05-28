@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#6D896B] h-full pb-10">
+<body class="bg-[#6D896B] h-full pb-4">
     <div class="navbar bg-white sticky-top top-0 grid grid-cols-2 text-black text-3xl font-bold">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
             <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5">
@@ -17,31 +17,30 @@
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <img src="./assets/icon/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
             <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+                <img src="./assets/icon/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">
                 <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icons/logout.png" alt="" class="w-10">
+                    <img src="./assets/icon/logout.png" alt="" class="w-10">
                 </a>
             </div>
         </div>
     </div>
     <div class="container mx-10">
-        <hr>
         <div class="grid grid-cols-2">
             <div class="flex items-center">
-                <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-10">
-                <p class="text-3xl text-white font-bold mt-9 ml-[75%] text-center flex-1">PEMBAYARAN</p>
+                <img src="./assets/icon/panah kiri.png" alt="" class="w-10 h-10 mt-5">
+                <p class="text-3xl text-white font-bold mt-6 ml-[76%] text-center flex-1">PEMBAYARAN</p>
             </div>
         </div>
         <div class="grid grid-cols-2">
             <div class="flex items-center">
-                <img src="./assets/icons/user.png" alt="" class="w-8 h-8 mt-8 ml-4">
+                <img src="./assets/icon/user.png" alt="" class="w-8 h-8 mt-8 ml-4">
                 <p class="text-2xs font-bold text-white mt-8 mr-[82%] text-center flex-1">hryyyh</p>
             </div>
         </div>
@@ -67,7 +66,7 @@
             <input type="file" id="tes" class="text-black font-bold rounded input input-bordered input-success w-[57%] h-18 border-green-300" />
         </div>
 
-        <div class="mt-12 flex justify-center">
+        <div class="mt-8 flex justify-center">
             <button class="btn bg-[#00A651] text-xl rounded text-white border-none w-[14%] h-[10%] mx-auto">OK</button>
         </div>
     </div>
