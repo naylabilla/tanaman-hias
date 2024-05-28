@@ -17,16 +17,16 @@
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icon/navbar keranjang.png" alt="" class="w-12">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
             <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icon/navbar pesanan.png" alt="" class="w-12">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">
                 <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icon/logout.png" alt="" class="w-10">
+                    <img src="./assets/icons/logout.png" alt="" class="w-10">
                 </a>
             </div>
         </div>
@@ -34,13 +34,13 @@
     <div class="container mx-10">
         <div class="grid grid-cols-2">
             <div class="flex items-center">
-                <img src="./assets/icon/panah kiri.png" alt="" class="w-10 h-10 mt-5">
+                <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-5">
                 <p class="text-3xl text-white font-bold mt-6 ml-[76%] text-center flex-1">PEMBAYARAN</p>
             </div>
         </div>
         <div class="grid grid-cols-2">
             <div class="flex items-center">
-                <img src="./assets/icon/user.png" alt="" class="w-8 h-8 mt-8 ml-4">
+                <img src="./assets/icons/user.png" alt="" class="w-8 h-8 mt-8 ml-4">
                 <p class="text-2xs font-bold text-white mt-8 mr-[82%] text-center flex-1">hryyyh</p>
             </div>
         </div>
