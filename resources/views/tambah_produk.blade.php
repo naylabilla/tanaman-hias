@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#618264] h-screen ">
+<body class="bg-[#618264] h-screen">
     <div class="navbar bg-[#B0D9B1] fixed top-0 rounded-b-3xl grid grid-cols-3 text-black text-3xl font-bold">
         <a href="" class="btn btn-ghost text-xl me-auto">
             <img src="./assets/icons/user.png" alt="" class="w-10">
@@ -41,7 +41,7 @@
     </div>
 
     {{-- PRODUK --}}
-    <div class="rounded-lg absolute top-[9rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73%] h-[75%]">
+    <div class="rounded-lg absolute top-[5.5rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73.5%] h-[82%]">
 
         <form class="rounded-box pl-8 pt-6" action="#" method="#" enctype="#">
             <div class="grid grid-cols-2 gap-4">
@@ -91,12 +91,12 @@
                 </div>
                 <div class="flex justify-center items-center ">
 
-                    <input type="submit" value="Simpan" class="btn text-white font-bold w-44 text-lg  " style="background-color: #618264 ">
+                    <input type="submit" value="Simpan" class="btn text-white font-bold w-44 text-lg  " style="background-color: #327C54 ">
 
 
                 </div>
                 <div class="flex justify-center items-center ">
-                    <input type="submit" value="Kembali" class="btn text-white font-bold w-44 text-lg  " style="background-color: #0077B6">
+                    <input type="submit" value="Kembali" class="btn text-white font-bold w-44 text-lg  " style="background-color: grey">
 
                 </div>
 

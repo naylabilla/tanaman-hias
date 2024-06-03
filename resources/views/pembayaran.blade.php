@@ -10,10 +10,11 @@
 </head>
 
 <body class="bg-[#618264] h-full">
-    <div class="navbar bg-white sticky-top top-0 grid grid-cols-2 text-black text-3xl font-bold">
+    <!-- Navbar -->
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000;">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
-            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5">
-            <p class="text-2xl text-[#78A07C] mb-6">Lustilvy</p>
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
+            <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
@@ -26,11 +27,12 @@
             </a>
             <div class="border-l-4 border-black">
                 <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icons/logout.png" alt="" class="w-10">
+                    <img src="./assets/icons/user1.png" alt="" class="w-10">
                 </a>
             </div>
         </div>
     </div>
+    <br>
     <div class="container mx-8">
         <p class="text-2xl text-black font-bold mb-4">Alamat Pengiriman</p>
         <button class="btn bg-[#00A651] border-none mt-3 w-44 text-xl text-white mb-5">Tambah Alamat</button>
