@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            /* background-image: url('assxets/images/tamu/background3.png'); */
+            background-image: url('assets/images/tamu/background4.png');
             background-size: contain;
             background-position: center;
             background-attachment: scroll;

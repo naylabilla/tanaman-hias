@@ -47,8 +47,9 @@
     <hr style="border-color: white; margin-top: 5px; margin-left: 80px; margin-right: 50px;">
 
 
-    <div class="container">
-        <div class="text-left text-white mr-12 ml-24 mt-3">Nomor Pesanan : 24032GGVM1HUD</div>
+    <div class="container2">
+        <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Pesanan</div>
+        <div class="text-left text-white mt-2" style="margin-left: -330px;">: 24032GGVM1HUD</div>
         <div class="text-right text-white mr-16 mt-3">Status Pesanan : Sedang Dikirim</div>
     </div>
 
@@ -91,7 +92,7 @@
 
     <div class="container2">
         <div class="text-left text-white ml-20 mt-2" style="margin-left: 96px;">
-            <img src="./assets/images/outdoor/gambar 4 monstera.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
+            <img src="./assets/images/outdoor/gambar 5 monstera.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
         </div>
         <div class="text-left text-white mr-16 mt-2" style="margin-left: -35px;">Monstera Deliciosa</div>
         <div class="text-left text-white mr-16 mt-2" style="margin-left: 44px;">1</div>
@@ -103,7 +104,7 @@
 
     <div class="container2">
         <div class="text-left text-white ml-20 mt-2" style="margin-left: 96px;">
-            <img src="./assets/images/indoor/gambar 9 calla lily.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
+            <img src="./assets/images/indoor/gambar 4 calla.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
         </div>
         <div class="text-left text-white mr-16 mt-2" style="margin-left: -35px;">Calla Lily</div>
         <div class="text-left text-white mr-16 mt-2" style="margin-left: 44px;">1</div>
