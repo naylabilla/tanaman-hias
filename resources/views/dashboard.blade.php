@@ -10,6 +10,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+
+<style>
+    .custom-card-size {
+        padding: 3rem; /* Ubah padding sesuai kebutuhan Anda */
+        width: 200px;
+        height: 200px;
+    }
+
+</style>
+
 <body class="p-2">
     <div class="max-w-5xl mx-auto relative" x-data="{
         activeSlide: 1,
@@ -56,6 +66,228 @@
     </div>
 
     <br><br><br>
+    <!-- Kategori -->
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center">
+        <div class="flex items-center justify-center">
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="px-4 text-green-300">KATEGORI</div>
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+        </div>
+        <div class="px-4 mt-4">RANGKAIAN UNTUK EVENT SPESIAL</div>
+        <br>
+        <div class="flex justif y-center mt-4">
+            <div class="ml-0 mr-auto text-center"> <!-- Untuk gambar 1 -->
+            <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
+                <img src="assets/images/outdoor/gambar 7 goeppertia.png" alt="Gambar 1" class="w-32 h-32 object-cover">
+        </div>
+            <div class="mt-3">Outdoor</div>
+        </div>
+        <div class="mx-4 text-center"> <!-- Untuk gambar 2 -->
+            <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
+                <img src="assets/images/populer/gambar 5 calathea.png" alt="Gambar 2" class="w-32 h-32 object-cover">
+        </div>
+            <div class="mt-3">Populer</div>
+             </div>
+        <div class="ml-auto mr-0 text-center"><!-- Untuk gambar 3 -->
+            <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
+                <img src="assets/images/indoor/gambar 3 anthurium.png" alt="Gambar 3" class="w-32 h-32 object-cover">
+        </div>
+            <div class="mt-3">Indoor</div>
+    </div>
+
+        </div>
+        <br>
+
+        <br><br><br>
+
+    <!-- Populer -->
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center">
+        <div class="flex items-center justify-center">
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="px-4 text-green-300">POPULER</div>
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+        </div>
+        <div class="px-2 mt-1">Saat ini kamu tertarik untuk menambah koleksi tanaman hias daun di
+        <div class="px-2 mt-1">rumah agar terlihat lebih asri,berikut 6 rekomendasi tanaman hias 
+        <div class="px-2 mt-1">populer saat ini</div>
+        <br>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="text-center"> <!-- Untuk gambar 1 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 7 goeppertia.png" alt="Gambar 1" class="w-32 h-32 object-cover">
+            <div class="mt-3">Monstera Deliciosa</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 2 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5 calathea.png" alt="Gambar 2" class="w-32 h-32 object-cover">
+            <div class="mt-3">Watermelon Peperomia</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 3 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 3 anthurium.png" alt="Gambar 3" class="w-32 h-32 object-cover">
+            <div class="mt-3">Sansevieria Trifasciata</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 4 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 4.png" alt="Gambar 4" class="w-32 h-32 object-cover">
+            <div class="mt-3">Cloropythum Comosum</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 5 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5.png" alt="Gambar 5" class="w-32 h-32 object-cover">
+            <div class="mt-3">Spathipyllum Kochii</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 6 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 6.png" alt="Gambar 6" class="w-32 h-32 object-cover">
+            <div class="mt-3">Alocasia Amazonica</div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <br>
+
+        <br><br><br>
+
+          <!-- Outdoor -->
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center">
+        <div class="flex items-center justify-center">
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="px-4 text-green-300">OUTDOOR</div>
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+        </div>
+        <div class="px-2 mt-1"> Tanaman Hias outdoor merupakan pilihan tepat untuk mempercantik
+        <div class="px-2 mt-1">halaman. Warna hijau dan wanginya bunga dapat memberi kesegaran
+        <div class="px-2 mt-1">tersendiri di ruang terbuka</div>
+        <br>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="text-center"> <!-- Untuk gambar 1 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 7 goeppertia.png" alt="Gambar 1" class="w-32 h-32 object-cover">
+            <div class="mt-3">Monstera Deliciosa</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 2 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5 calathea.png" alt="Gambar 2" class="w-32 h-32 object-cover">
+            <div class="mt-3">Sansevieria Trifasciata</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 3 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 3 anthurium.png" alt="Gambar 3" class="w-32 h-32 object-cover">
+            <div class="mt-3">Cloropythum Comosum</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 4 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 4.png" alt="Gambar 4" class="w-32 h-32 object-cover">
+            <div class="mt-3">Calathea Orbifolia</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 5 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5.png" alt="Gambar 5" class="w-32 h-32 object-cover">
+            <div class="mt-3">Croton Petra</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 6 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 6.png" alt="Gambar 6" class="w-32 h-32 object-cover">
+            <div class="mt-3">English Lavender</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 7 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 4.png" alt="Gambar 4" class="w-32 h-32 object-cover">
+            <div class="mt-3">Bromelia Guzmania</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 8 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5.png" alt="Gambar 5" class="w-32 h-32 object-cover">
+            <div class="mt-3">Caladium Spring Fling</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 9 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 6.png" alt="Gambar 6" class="w-32 h-32 object-cover">
+            <div class="mt-3">Geoepertia Loulsae</div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <br>
+
+    <br><br><br>
+
+    <!-- Indoor -->
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center">
+        <div class="flex items-center justify-center">
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="px-4 text-green-300">INDOOR</div>
+            <div class="flex-1 h-0.5 bg-green-200"></div>
+        </div>
+        <div class="px-2 mt-1"> Tanaman Hias outdoor merupakan pilihan tepat untuk mempercantik
+        <div class="px-2 mt-1">halaman. Warna hijau dan wanginya bunga dapat memberi kesegaran
+        <div class="px-2 mt-1">tersendiri di ruang terbuka</div>
+        <br>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="text-center"> <!-- Untuk gambar 1 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 7 goeppertia.png" alt="Gambar 1" class="w-32 h-32 object-cover">
+            <div class="mt-3">Watermelon Peperomia</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 2 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5 calathea.png" alt="Gambar 2" class="w-32 h-32 object-cover">
+            <div class="mt-3">Spathipyllum kochii</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 3 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 3 anthurium.png" alt="Gambar 3" class="w-32 h-32 object-cover">
+            <div class="mt-3">Alocasia Amazonica</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 4 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 4.png" alt="Gambar 4" class="w-32 h-32 object-cover">
+            <div class="mt-3">Anthurium Andraenum</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 5 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/populer/gambar 5.png" alt="Gambar 5" class="w-32 h-32 object-cover">
+            <div class="mt-3">Dieffenbachia Seguine</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 6 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/indoor/gambar 6.png" alt="Gambar 6" class="w-32 h-32 object-cover">
+            <div class="mt-3">Maranta Fascinator</div>
+        </div>
+    </div>
+    <div class="text-center"> <!-- Untuk gambar 7 -->
+        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
+            <img src="assets/images/outdoor/gambar 4.png" alt="Gambar 4" class="w-32 h-32 object-cover">
+            <div class="mt-3">Calla Lily</div>
+        </div>
+    </div>
+
+        </div>
+        <br>
+
+    <br><br><br>
+
     <!-- Service -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center">
         <div class="flex items-center justify-center">

@@ -69,3 +69,15 @@ Route::get('/produk', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/ubahpw', function () {
+    return view('ubahpw');
+});
+
+Route::get('/lupapw', function () {
+    return view('lupapw');
+});
+
+Route::get('/keranjang', function () {
+    return view('keranjang');
+});
