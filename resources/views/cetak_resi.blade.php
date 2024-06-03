@@ -43,11 +43,11 @@
     color: black; /* Warna teks dalam kotak */
     font-size: 25px; /* Ukuran teks dalam kotak */
     margin-top: -253px; /* Jarak antara label dan kotak */
-    margin-left: -662px; /* Membuat kotak berada di tengah secara horizontal */
+    margin-left: -560px; /* Membuat kotak berada di tengah secara horizontal */
 }
 
 .new-text {
-    margin-left: -886px; /* Atur jarak kiri teks penerima */
+    margin-left: -850px; /* Atur jarak kiri teks penerima */
     font-size: 20px;
     margin-top: 0px; /* Mengatur jarak atas teks penerima */   
 }
@@ -90,7 +90,7 @@
         <div class="h-80 flex border relative">
             <!-- Kotak tengah baru -->
             <div class="box1">
-                <div class="box rounded-lg">
+                <div class="">
                     No.Pesanan 240320GGVM1HUD
                 </div>
             </div>
