@@ -97,3 +97,14 @@ Route::get('/header_penjual', function () {
 Route::get('/sidebar_penjual', function () {
     return view('components/sidebar_penjual');
 });
+Route::get('/ubahpw', function () {
+    return view('ubahpw');
+});
+
+Route::get('/lupapw', function () {
+    return view('lupapw');
+});
+
+Route::get('/keranjang', function () {
+    return view('keranjang');
+});

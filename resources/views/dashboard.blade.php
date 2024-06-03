@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            /* background-image: url('assets/images/tamu/background3.png'); */
+            /* background-image: url('assxets/images/tamu/background3.png'); */
             background-size: contain;
             background-position: center;
             background-attachment: scroll;
@@ -30,7 +30,7 @@
                 <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+            <a href="/riwayat_pesanan" class="btn btn-ghost hover:bg-white">
                 <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
@@ -92,8 +92,9 @@
 
         <br><br><br>
 
+
         <!-- Service -->
-        <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+        <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
             <div class="flex items-center justify-center">
                 <div class="flex-1 h-0.5 bg-green-200"></div>
                 <div class="px-4 text-green-300 text-2xl">S E R V I C E</div>
@@ -129,7 +130,7 @@
                 <div class="flex justif y-center mt-2">
                     <div class="ml-20 mr-auto text-center"> <!-- Untuk gambar 1 -->
                         <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
-                            <img src="assets/images/outdoor/gambar 8 goeppertia.png" alt="Gambar 1" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
+                            <img src="assets/images/outdoor/gambar 9 goeppertia.png" alt="Gambar 1" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                         </div>
                         <div class="mt-3">Outdoor</div>
                     </div>
@@ -189,7 +190,7 @@
                                 </div>
                                 <div class="text-center"> <!-- Untuk gambar 5 -->
                                     <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                                        <img src="assets/images/populer/gambar 5 spathypillum.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                        <img src="assets/images/populer/gambar 5 spathyphillum.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                         <div class="mt-3">Spathipyllum Kochii</div>
                                     </div>
                                 </div>
@@ -221,7 +222,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 1 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 1 bromeliad.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 1 bromelia.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -243,7 +244,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 3 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 3 sansevieria.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 3 lavender.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -254,7 +255,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 4 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 4 monstera.png" alt="Gambar 4" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 4 sansevieria.png" alt="Gambar 4" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -265,7 +266,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 5 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 5 calathea.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 5 monstera.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -276,7 +277,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 6 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 6 lavender.png" alt="Gambar 6" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 6 calathea.png" alt="Gambar 6" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -298,7 +299,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 8 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 8 goeppertia.png" alt="Gambar 8" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 8 diefenbacia.png" alt="Gambar 8" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -309,7 +310,7 @@
                                         <div class="text-center"> <!-- Untuk gambar 9 -->
                                             <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                 <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                <img src="assets/images/outdoor/gambar 9 croton.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                <img src="assets/images/outdoor/gambar 9 goeppertia.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                 <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                 <div class="mt-1">Rp. 230k</div>
                                                 <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -339,7 +340,7 @@
                                                 <div class="text-center"> <!-- Untuk gambar 1 -->
                                                     <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                         <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                        <img src="assets/images/outdoor/gambar 1 bromeliad.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                        <img src="assets/images/indoor/gambar 1 alocasia.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                         <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                         <div class="mt-1">Rp. 230k</div>
                                                         <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -350,7 +351,7 @@
                                                 <div class="text-center"> <!-- Untuk gambar 2 -->
                                                     <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                         <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                        <img src="assets/images/indoor/gambar 2 spathypillum.png" alt="Gambar 2" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                        <img src="assets/images/indoor/gambar 2 spathyphillum.png" alt="Gambar 2" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                         <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                         <div class="mt-1">Rp. 230k</div>
                                                         <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -427,7 +428,7 @@
                                                 <div class="text-center"> <!-- Untuk gambar 9 -->
                                                     <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                                                         <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                                                        <img src="assets/images/indoor/gambar 9 calla lily.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                                                        <img src="assets/images/indoor/gambar 9 croton.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                                                         <div class="mt-3 text-bold">Monstera Deliciosa</div>
                                                         <div class="mt-1">Rp. 230k</div>
                                                         <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
@@ -663,7 +664,7 @@
 
                                                 <!-- Footer -->
                                                 <footer class="footer p-10 bg-[#7AA97B] text-neutral-content w-full">
-                                                    <nav style="max-w-7xl auto">
+                                                    <nav class="max-w-7xl auto">
                                                         <h6 class=" footer-title text-black">Tautan Langsung</h6>
                                                         <a class="link link-hover text-black">Beranda</a>
                                                         <a class="link link-hover text-black">Produk</a>

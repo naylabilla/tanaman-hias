@@ -17,7 +17,7 @@
 </head>
 
 <body class="h-screen flex items-center justify-center bg-black">
-    <div class="max-w-md w-full p-7 bg-opacity-75 rounded-xl text-black">
+    <div class="max-w-md w-full p-7 bg-opacity-75 rounded-xl text-black -ml-64 -mt-10">
         <h1 class="text-center font-bold text-4xl font-mono pt-2">DAFTAR AKUN</h1>
         <form action="" class="form-control">
             <label for="nama_pengguna" class="text-2xl">Nama Pengguna</label>
