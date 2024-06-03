@@ -30,7 +30,7 @@
                 <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+            <a href="/riwayat_pesanan" class="btn btn-ghost hover:bg-white">
                 <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
