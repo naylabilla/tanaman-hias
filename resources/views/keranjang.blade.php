@@ -29,6 +29,9 @@
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 230.000 </p>
+            <button class="text-white">
+                <i class="fa-solid fa-trash ml-10"></i>
+            </button>
         </div>
         
         <br>
@@ -46,6 +49,9 @@
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 200.000</p>
+            <button class="text-white">
+                <i class="fa-solid fa-trash ml-10"></i>
+            </button>
         </div>
         
         <br>
@@ -63,9 +69,22 @@
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 300.000</p>
+            <button class="text-white">
+                <i class="fa-solid fa-trash ml-10"></i>
+            </button>
         </div>
         
         <br>
+    </div>
+
+    
+    <div class="mt-4 flex items-center justify-end">
+    <p class="text-gray-300 text-2xl mr-32">Total Pembayaran</p>
+    <p class="text-white text-2xl mr-40">Rp. 730.000</p>
+</div>
+
+<div class="flex items-center justify-end mt-2 mr-40">
+        <button class="bg-green-600 text-white font-bold py-2 px-4 rounded text-xl">Lanjutkan Pesanan</button>
     </div>
 
     <div class="ml-20 mt-4">
