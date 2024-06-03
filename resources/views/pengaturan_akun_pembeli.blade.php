@@ -24,14 +24,14 @@
     <div class="container p-0 mt-4 mb-8">
         <div class="grid grid-rows-3 grid-flow-col gap-4">
             <div class="row-span-3 ">
-                <img src="../assets/icons/foto_awal.jpg" alt="Foto Profil" class="w-72 rounded-lg mt-5 ml-28">
+                <img src="../assets/icons/foto_awal.jpg" alt="Foto Profil" class="w-60 rounded-lg mt-5 ml-28">
 
                 <!-- <img src='../assets/foto_profil/' alt='Foto Profil' class='w-100 rounded-3'> -->
 
 
             </div>
             <div class="row-span-3 col-span-2">
-                <div class="grid grid-cols-2 gap-4 -ml-72 mt-5">
+                <div class="grid grid-cols-2 gap-4 -ml-48 mt-4">
 
 
                     <div class="col-span-1">

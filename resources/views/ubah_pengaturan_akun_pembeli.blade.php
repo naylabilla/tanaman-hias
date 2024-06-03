@@ -24,14 +24,14 @@
     <div class="container mt-4 ">
         <div class="grid grid-rows-3 grid-flow-col gap-4">
             <div class="row-span-3 ">
-                <img src="../assets/icons/foto_awal.jpg" alt="Foto Profil" class="w-72 rounded-lg mt-5 ml-28">
+                <img src="../assets/icons/foto_awal.jpg" alt="Foto Profil" class="w-60 rounded-lg mt-5 ml-28">
 
                 <!-- <img src='../assets/foto_profil/' alt='Foto Profil' class='w-100 rounded-3'> -->
 
 
             </div>
             <div class="row-span-3 col-span-2">
-                <div class="grid grid-cols-2 gap-4 -ml-16 mt-5">
+                <div class="grid grid-cols-2 gap-4 ml-5 mt-4">
 
 
                     <div class="col-span-1">
@@ -80,7 +80,7 @@
                 </a>
             </div>
             <div class="">
-                <a class="btn font-bold w-10/12 -ml-12 h-16 text-2xl" style="border: 3px solid #0077B6; color: #0077B6" href="pengaturan_akun_pembeli" role="button"><i class="fa-solid fa-circle-xmark"></i>Batal
+                <a class="btn font-bold w-10/12 -ml-6 h-16 text-2xl" style="border: 3px solid #0077B6; color: #0077B6" href="pengaturan_akun_pembeli" role="button"><i class="fa-solid fa-circle-xmark"></i>Batal
                 </a>
             </div>
             <div class="">

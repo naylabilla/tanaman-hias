@@ -33,7 +33,7 @@
 
         <div class="h-80 flex items-center justify-center border relative">
             <div class="text-white text-lg absolute top-3 left-10 text-left flex items-center">
-                <img src="./assets/images/outdoor/gambar 4 monstera.png" class="w-32 h-32 mr-5 pl-2">
+                <img src="assets/images/outdoor/gambar 5 monstera.png" class="w-32 h-32 mr-5 pl-2">
                 <div>
                     <p>Monstera Deliciosa</p>
                     <p>Outdoor</p>
@@ -45,7 +45,7 @@
             </div>
             <hr class="w-11/12 border-t border-gray-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div class="text-white text-lg absolute bottom-5 left-10 text-left flex items-center">
-                <img src="./assets/images/indoor/gambar 9 calla lily.png" class="w-32 h-32 mr-5 pl-2">
+                <img src="assets/images/indoor/gambar 4 calla.png" class="w-32 h-32 mr-5 pl-2">
                 <div>
                     <p>Calla Lily</p>
                     <p>Indoor</p>
