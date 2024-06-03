@@ -26,7 +26,7 @@
                 <i class="fas fa-minus-circle"></i>
             </button>
             <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
-            <button class="bg-green-500 text-white px-2 py-1 rounded">
+            <button class="text-white px-2 py-1 rounded">
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 230.000 </p>
@@ -46,7 +46,7 @@
                 <i class="fas fa-minus-circle"></i>
             </button>
             <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
-            <button class="bg-green-500 text-white px-2 py-1 rounded">
+            <button class="text-white px-2 py-1 rounded">
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 200.000</p>
@@ -66,7 +66,7 @@
                 <i class="fas fa-minus-circle"></i>
             </button>
             <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
-            <button class="bg-green-500 text-white px-2 py-1 rounded">
+            <button class="text-white px-2 py-1 rounded">
                 <i class="fas fa-plus-circle"></i>
             </button>
             <p class="text-white text-xl ml-52">Rp. 300.000</p>

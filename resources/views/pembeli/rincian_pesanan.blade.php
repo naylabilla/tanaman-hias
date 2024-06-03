@@ -37,12 +37,33 @@
     </style>
 </head>
 
-<body class="bg-[#618264] h-full">
-
+<body class="bg-[#618264] h-full pb-5">
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000;">
+        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
+            <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
+        </a>
+        <div class="ms-auto">
+            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Keranjang</p>
+            </a>
+            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Pesanan</p>
+            </a>
+            <div class="border-l-4 border-black">
+                <a href="/logout" class="btn btn-ghost hover:bg-white">
+                    <img src="./assets/icons/user1.png" alt="" class="w-10">
+                </a>
+            </div>
+        </div>
+    </div>
     <h1 class="text-center text-white text-3xl font-bold mt-15">Rincian Pesanan</h1>
-    <div class="flex items-center mt-8">
-        <i class="fas fa-arrow-left ml-14"></i>
-        <div class="text-left text-[#B0D9B1] text-2xl ml-5">Kembali | Rincian Pesanan</div>
+    <div class="flex items-center">
+        <img src="./assets/icons/panah kiri.png" alt="" class="w-8 h-8 mt-8 ml-10">
+        <p class="text-2xl text-[#B0D9B1] font-bold mt-7 mr-[72%] ml-3">Rincian</p>
+    </div>
     </div>
     <hr style="border-color: white; margin-top: 5px; margin-left: 80px; margin-right: 50px;">
 
@@ -51,7 +72,8 @@
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Pesanan</div>
         <div class="text-left text-white mt-2" style="margin-left: -330px;">: 24032GGVM1HUD</div>
         <div class="text-right text-white mr-16 mt-3">Status Pesanan : Sedang Dikirim</div>
-    </div>
+    </div> 
+
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Nama</div>

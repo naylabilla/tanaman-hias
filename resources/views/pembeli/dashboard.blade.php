@@ -30,7 +30,7 @@
                 <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+            <a href="/riwayat_pesanan" class="btn btn-ghost hover:bg-white">
                 <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
@@ -664,7 +664,7 @@
 
                                                 <!-- Footer -->
                                                 <footer class="footer p-10 bg-[#7AA97B] text-neutral-content w-full">
-                                                    <nav style="max-w-7xl auto">
+                                                    <nav class="max-w-7xl auto">
                                                         <h6 class=" footer-title text-black">Tautan Langsung</h6>
                                                         <a class="link link-hover text-black">Beranda</a>
                                                         <a class="link link-hover text-black">Produk</a>
