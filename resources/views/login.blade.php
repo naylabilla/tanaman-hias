@@ -18,7 +18,7 @@
 
 <body class="h-screen flex items-center justify-center bg-black">
     <div class="max-w-md w-full p-7 bg-opacity-75 rounded-xl text-black">
-        <h1 class="text-center font-bold text-5xl">LOGIN</h1>
+        <h1 class="text-center font-bold mt-6 text-5xl">LOGIN</h1>
         <form action="" class="form-control">
             <label for="pengguna" class="text-2xl">Pilih Jenis Pengguna</label>
             <label class="flex items-center gap-2 border border-2 border-gray-400 bg-red-700">

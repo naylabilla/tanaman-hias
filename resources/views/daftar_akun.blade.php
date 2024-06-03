@@ -49,7 +49,7 @@
                 <button type="submit" class="btn bg-red-700 w-1/2 mt-5 text-white text-xl">Daftar</button>
             </div>
             <div class="flex justify-center">
-                <small class="text-xl">Sudah punya akun? <a href="index.php" class="text-blue-500">Masuk</a></small>
+                <small class="text-xl">Sudah punya akun? <a href="/login" class="text-blue-500">Masuk</a></small>
             </div>
         </form>
     </div>
