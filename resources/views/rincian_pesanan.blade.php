@@ -37,7 +37,7 @@
     </style>
 </head>
 
-<body class="bg-[#618264] h-screen">
+<body class="bg-[#618264] h-full">
 
     <h1 class="text-center text-white text-3xl font-bold mt-15">Rincian Pesanan</h1>
     <div class="flex items-center mt-8">
@@ -54,27 +54,27 @@
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Nama</div>
-        <div class="text-left text-white mt-2" style="margin-left: -1100px;">: Marsya Huriyah</div>
+        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Marsya Huriyah</div>
     </div>
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Hp</div>
-        <div class="text-left text-white mt-2" style="margin-left: -1100px;">: 08341428919</div>
+        <div class="text-left text-white mt-2" style="margin-left: -900px;">: 08341428919</div>
     </div>
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Alamat</div>
-        <div class="text-left text-white mt-2" style="margin-left: -1100px;">: Orchard Park blok X no 505, Batam Centre, 29431</div>
+        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Orchard Park blok X no 505, Batam Centre, 29431</div>
     </div>
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Tanggal Pesan</div>
-        <div class="text-left text-white mt-2" style="margin-left: -1100px;">: 27/03/2024</div>
+        <div class="text-left text-white mt-2" style="margin-left: -900px;">: 27/03/2024</div>
     </div>
 
     <div class="container2">
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Metode Pembayaran</div>
-        <div class="text-left text-white mt-2" style="margin-left: -1100px;">: Transfer Bank</div>
+        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Transfer Bank</div>
     </div>
 
     <hr style="border-color: white; margin-top: 25px; margin-right: 50px; margin-left: 84px;">
@@ -114,8 +114,8 @@
     <hr style="border-color: white; margin-top: 12px; margin-right: 50px; margin-left: 84px;">
 
     <div class="container2">
-        <div class="text-left text-white font-bold ml-20 mt-2" style="margin-left: 905px;">Total</div>
-        <div class="text-left text-white font-bold mr-16 mt-2" style="margin-left: 158px;">365.000</div>
+        <div class="text-left text-white font-bold ml-20 mt-4 " style="margin-left: 795px;">Total</div>
+        <div class="text-left text-white font-bold mr-16 mt-4" style="margin-left: 160px;">365.000</div>
     </div>
 
 </body>
