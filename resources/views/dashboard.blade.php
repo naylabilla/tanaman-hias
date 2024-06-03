@@ -10,23 +10,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-image: url('assets/images/tamu/background3.png');
+            /* background-image: url('assets/images/tamu/background3.png'); */
             background-size: contain;
             background-position: center;
             background-attachment: scroll;
-        }
-
-        .navbar {
-            position: sticky;
-            z-index: 1000;
-            border-radius: 10px;
         }
     </style>
 </head>
 
 <body class="bg-[#6D896B] h-full pb-4">
     <!-- Navbar -->
-    <div class="navbar bg-white sticky-top top-0 grid grid-cols-2 text-black text-3xl font-bold">
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
             <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
@@ -99,7 +93,7 @@
         <br><br><br>
 
         <!-- Service -->
-        <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
+        <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
             <div class="flex items-center justify-center">
                 <div class="flex-1 h-0.5 bg-green-200"></div>
                 <div class="px-4 text-green-300 text-2xl">S E R V I C E</div>
@@ -108,7 +102,7 @@
             <div class="px-4 mt-2">JAMINAN KAMI PADA ANDA</div>
             <br>
             <div class="flex justify-center mt-1 px-2">
-                <div class="ml-0 mr-auto text-center"> <!-- Untuk gambar 1 -->
+                <div class="ml-40 mr-auto text-center"> <!-- Untuk gambar 1 -->
                     <img src="assets/images/tamu/service1.png" alt="Gambar 1" class="w-32 h-32 object-cover">
                     <div class="mt-3">Kirim di Hari yang Sama</div>
                 </div>
@@ -116,7 +110,7 @@
                     <img src="assets/images/tamu/service2.png" alt="Gambar 2" class="w-32 h-32 object-cover">
                     <div class="mt-3">Pembayaran Aman</div>
                 </div>
-                <div class="ml-auto mr-0 text-center"> <!-- Untuk gambar 3 -->
+                <div class="ml-auto mr-40 text-center"> <!-- Untuk gambar 3 -->
                     <img src="assets/images/tamu/service3.png" alt="Gambar 3" class="w-32 h-32 object-cover">
                     <div class="mt-3">Pilihan Bunga Variatif</div>
                 </div>
@@ -133,7 +127,7 @@
                 <div class="px-4 mt-4">RANGKAIAN UNTUK EVENT SPESIAL</div>
                 <br>
                 <div class="flex justif y-center mt-2">
-                    <div class="ml-0 mr-auto text-center"> <!-- Untuk gambar 1 -->
+                    <div class="ml-20 mr-auto text-center"> <!-- Untuk gambar 1 -->
                         <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                             <img src="assets/images/outdoor/gambar 8 goeppertia.png" alt="Gambar 1" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                         </div>
@@ -145,7 +139,7 @@
                         </div>
                         <div class="mt-3">Populer</div>
                     </div>
-                    <div class="ml-auto mr-0 text-center"><!-- Untuk gambar 3 -->
+                    <div class="ml-auto mr-20 text-center"><!-- Untuk gambar 3 -->
                         <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                             <img src="assets/images/indoor/gambar 4 calla.png" alt="Gambar 3" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                         </div>
