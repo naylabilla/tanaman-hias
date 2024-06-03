@@ -45,7 +45,7 @@
         </div>
         <main class="absolute top-[5.5rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73.5%] h-[82%] rounded-lg">
             <div class="relative overflow-x-auto m-6">
-                <button class="btn btn-active btn-ghost mt-4 font-bold">Tambah Produk</button>
+                <a href="tambah_produk"><button class="btn btn-active btn-ghost mt-4 font-bold">Tambah Produk</button></a>
                 <table class="mt-6 w-full text-sm text-left rtl:text-right mx-auto bg-green-700 text-white rounded-xl text-center  ">
                     <thead class="text-xs uppercase border-b border-black">                        
                         <tr>

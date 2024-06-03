@@ -14,8 +14,31 @@
 
 
 <body class="bg-[#618264] h-screen">
-    <div class="ms-3 flex items-center pt-10 ">
-        <a class="font-semibold text-2xl text-white flex items-center ml-3 " href="#"><i class="fa-solid fa-arrow-left mr-3"></i>Kembali</a>
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
+        style="position: sticky; z-index: 1000;">
+        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
+            <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
+        </a>
+        <div class="ms-auto">
+            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Keranjang</p>
+            </a>
+            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Pesanan</p>
+            </a>
+            <div class="border-l-4 border-black">
+                <a href="/logout" class="btn btn-ghost hover:bg-white">
+                    <img src="./assets/icons/user1.png" alt="" class="w-10">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ms-3 flex items-center pt-3 ">
+        <a class="font-semibold text-2xl text-white flex items-center ml-3 " href="#"><i
+                class="fa-solid fa-arrow-left mr-3"></i>Kembali</a>
         <div class="flex items-center mx-3">
             <div class=" bg-[#e2e8f0] h-8 w-[3px] opacity-100"></div>
         </div>
@@ -31,25 +54,29 @@
 
             </div>
             <div class="row-span-3 col-span-2">
-                <div class="grid grid-cols-2 gap-4 -ml-48 mt-4">
+                <div class="grid grid-cols-2 gap-4 -ml-44 mt-4">
 
 
                     <div class="col-span-1">
                         <label class="form-label text-lg font-semibold" style="color: #03045E">Nama Pengguna</label>
-                        <input type="text" class="form-control w-11/12 rounded-lg border-slate-950 mt-1" name="nama_pengguna" readonly value="Vanziix">
+                        <input type="text" class="form-control w-11/12 rounded-lg border-slate-950 mt-1"
+                            name="nama_pengguna" readonly value="Vanziix">
                     </div>
                     <div class="col-span-1 -ml-3">
                         <label class="form-label text-lg font-semibold " style="color: #03045E">Nomor HP</label>
-                        <input type="number" class="form-control w-8/12 rounded-lg border-slate-950 mt-1 " name="nomor_hp" readonly value="089450219878">
+                        <input type="number" class="form-control w-8/12 rounded-lg border-slate-950 mt-1 "
+                            name="nomor_hp" readonly value="089450219878">
                     </div>
 
                     <div class="col-span-2">
                         <label class="form-label text-lg font-semibold " style="color: #03045E">Alamat</label>
-                        <textarea class="form-control w-10/12 rounded-lg border-slate-950 mt-1" rows="3" name="alamat" readonly>Bulaksumur, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</textarea>
+                        <textarea class="form-control w-10/12 rounded-lg border-slate-950 mt-1" rows="3" name="alamat"
+                            readonly>Bulaksumur, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</textarea>
                     </div>
                     <div class="col-span-2">
                         <label class="form-label text-lg font-semibold " style="color: #03045E">Nama Lengkap</label>
-                        <input type="text" class="form-control w-10/12 rounded-lg border-slate-950 mt-1" name="nama_lengkap" readonly value="Rahya Sartakhya Sanjaya">
+                        <input type="text" class="form-control w-10/12 rounded-lg border-slate-950 mt-1"
+                            name="nama_lengkap" readonly value="Rahya Sartakhya Sanjaya">
                     </div>
 
 
@@ -61,11 +88,15 @@
         </div>
         <div class="grid grid-cols-4 gap-4 mt-32">
             <div class="">
-                <a class="btn fs-4 font-bold w-4/5 ml-28 h-16 text-2xl" style="border: 3px solid #0077B6; color: #0077B6" href="#" role="button"><i class="fa-solid fa-arrow-up-from-bracket" style="rotate: -90deg"></i>Keluar
+                <a class="btn fs-4 font-bold w-4/5 ml-28 h-16 text-2xl"
+                    style="border: 3px solid #0077B6; color: #0077B6" href="#" role="button"><i
+                        class="fa-solid fa-arrow-up-from-bracket" style="rotate: -90deg"></i>Keluar
                 </a>
             </div>
             <div class="">
-                <a class="btn fs-4 font-bold w-full ml-16 h-16 text-2xl" style="border: 3px solid #0077B6; color: #0077B6" href="ubah_pengaturan_akun_pembeli" role="button"><i class="fa-solid fa-pen  "></i>Ubah
+                <a class="btn fs-4 font-bold w-full ml-20 h-16 text-2xl"
+                    style="border: 3px solid #0077B6; color: #0077B6" href="ubah_pengaturan_akun_pembeli"
+                    role="button"><i class="fa-solid fa-pen  "></i>Ubah
                 </a>
             </div>
         </div>
