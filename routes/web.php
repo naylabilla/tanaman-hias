@@ -69,3 +69,31 @@ Route::get('/produk', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/tambah_produk', function () {
+    return view('tambah_produk');
+});
+
+Route::get('/pengaturan_akun_pembeli', function () {
+    return view('pengaturan_akun_pembeli');
+});
+
+Route::get('/ubah_pengaturan_akun_pembeli', function () {
+    return view('ubah_pengaturan_akun_pembeli');
+});
+
+Route::get('/footer_pembeli', function () {
+    return view('components/footer_pembeli');
+});
+
+Route::get('/header_pembeli', function () {
+    return view('components/header_pembeli');
+});
+
+Route::get('/header_penjual', function () {
+    return view('components/header_penjual');
+});
+
+Route::get('/sidebar_penjual', function () {
+    return view('components/sidebar_penjual');
+});
