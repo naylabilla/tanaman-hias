@@ -40,7 +40,7 @@
 
         <div class="grid grid-cols-5 my-5">
             <div class="w-48 rounded-xl ml-10">
-                <img src="./assets/images/outdoor/gambar 4 monstera.png" alt="">
+                <img src="./assets/images/outdoor/gambar 5 monstera.png" alt="">
             </div>
             <div class="col-span-4">
                 <h1 class="text-2xl text-[#C1D1C0]">Monstera Deliciosa</h1>
@@ -52,7 +52,7 @@
 
         <div class="grid grid-cols-5 my-5">
             <div class="w-48 rounded-xl ml-10">
-                <img src="./assets/images/indoor/gambar 9 calla lily.png" alt="">
+                <img src="./assets/images/indoor/gambar 4 calla.png" alt="">
             </div>
             <div class="col-span-4">
                 <h1 class="text-2xl text-[#C1D1C0]">Calla Lily</h1>

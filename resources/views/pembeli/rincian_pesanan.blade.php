@@ -72,7 +72,7 @@
         <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Pesanan</div>
         <div class="text-left text-white mt-2" style="margin-left: -330px;">: 24032GGVM1HUD</div>
         <div class="text-right text-white mr-16 mt-3">Status Pesanan : Sedang Dikirim</div>
-    </div> 
+    </div>
 
 
     <div class="container2">
