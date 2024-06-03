@@ -663,7 +663,7 @@
 
                                                 <!-- Footer -->
                                                 <footer class="footer p-10 bg-[#7AA97B] text-neutral-content w-full">
-                                                    <nav style="max-w-7xl auto;">
+                                                    <nav style="max-w-7xl auto">
                                                         <h6 class=" footer-title text-black">Tautan Langsung</h6>
                                                         <a class="link link-hover text-black">Beranda</a>
                                                         <a class="link link-hover text-black">Produk</a>
