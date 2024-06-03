@@ -10,18 +10,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#618264] h-screen">
+<body class="bg-[#618264] h-full pb-5   ">
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000;">
+        <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
+            <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
+        </a>
+        <div class="ms-auto">
+            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Keranjang</p>
+            </a>
+            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+                <p class="text-2xl text-[#78A07C]">Pesanan</p>
+            </a>
+            <div class="border-l-4 border-black">
+                <a href="/logout" class="btn btn-ghost hover:bg-white">
+                    <img src="./assets/icons/user1.png" alt="" class="w-10">
+                </a>
+            </div>
+        </div>
+    </div>
     <h1 class="text-center text-white text-3xl font-bold">Riwayat Pesanan</h1>
-    <div class="flex items-center text-[#B0D9B1] text-2xl mt-8">
-        <i class="fas fa-arrow-left ml-12"></i>
-        <div class="text-left font-semibold pb-2 border-b-2 border-white w-5/6 mx-auto ml-11">
-            Kembali | Pesanan
+    <div class="flex items-center text-[#B0D9B1] text-2xl">
+        <img src="./assets/icons/panah kiri.png" alt="" class="w-8 h-8 mt-8 ml-16 ">
+        <div class="text-2xl font-bold pb-2 border-b-2 border-white w-5/6 mx-auto ml-4 mt-10">
+            Pesanan
         </div>
     </div>
 
     <br>
 
-    <div class="grid grid-cols-1 grid-flow-row gap-0 border border-white w-5/6 mx-auto">
+    <div class="grid grid-cols-1 grid-flow-row gap-0 border border-white w-5/6 mx-auto mb-10">
         <div class="h-20 flex justify-center border text-left text-white pl-2 flex-col relative">
             <div class="text-left pl-2">
                 <p>No. Pesanan: 240320GGVM1HUD</p>
