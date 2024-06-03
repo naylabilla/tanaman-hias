@@ -46,7 +46,7 @@
                 <button type="submit" class="btn bg-red-700 w-1/2 mt-5 text-white text-xl">Masuk</button>
             </div>
             <div class="flex justify-center">
-                <small class="text-xl">Belum punya akun ? <a href="/registrasi" class="text-blue-500">Daftar</a></small>
+                <small class="text-xl">Belum punya akun ? <a href="/daftar_akun" class="text-blue-500">Daftar</a></small>
             </div>
         </form>
     </div>
