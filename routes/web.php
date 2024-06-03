@@ -7,79 +7,71 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/kontak', function () {
-    return view('kontak');
+    return view('pembeli.login');
 });
 
 Route::get('/pesanan_penjual', function () {
-    return view('pesanan_penjual');
+    return view('admin.pesanan_penjual');
 });
 
 Route::get('/detail_produk', function () {
-    return view('detail_produk');
+    return view('pembeli.detail_produk');
 });
 
 Route::get('/beranda_penjual', function () {
-    return view('beranda_penjual');
-});
-
-Route::get('/footer', function () {
-    return view('footer');
+    return view('admin.beranda_penjual');
 });
 
 Route::get('/pembayaran', function () {
-    return view('pembayaran');
+    return view('pembeli.pembayaran');
 });
 
 Route::get('/transaksi', function () {
-    return view('transaksi');
+    return view('pembeli.transaksi');
 });
 
 Route::get('/alamat', function () {
-    return view('alamat_pengiriman');
+    return view('pembeli.alamat_pengiriman');
 });
 
 Route::get('/rincian_pesanan', function () {
-    return view('rincian_pesanan');
+    return view('pembeli.rincian_pesanan');
 });
 
 Route::get('/cetak_resi_penjual', function () {
-    return view('cetak_resi_penjual');
+    return view('admin.cetak_resi_penjual');
 });
 
 Route::get('/cetak_resi', function () {
-    return view('cetak_resi');
+    return view('pembeli.cetak_resi');
 });
 
 Route::get('/riwayat_pesanan', function () {
-    return view('riwayat_pesanan');
+    return view('pembeli.riwayat_pesanan');
 });
 
 Route::get('/daftar_akun', function () {
-    return view('daftar_akun');
+    return view('pembeli.daftar_akun');
 });
 
 Route::get('/produk', function () {
-    return view('produk');
+    return view('pembeli.produk');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('pembeli.dashboard');
 });
 
 Route::get('/tambah_produk', function () {
-    return view('tambah_produk');
+    return view('admin.tambah_produk');
 });
 
 Route::get('/pengaturan_akun_pembeli', function () {
-    return view('pengaturan_akun_pembeli');
+    return view('pembeli.pengaturan_akun_pembeli');
 });
 
 Route::get('/ubah_pengaturan_akun_pembeli', function () {
-    return view('ubah_pengaturan_akun_pembeli');
+    return view('pembeli.ubah_pengaturan_akun_pembeli');
 });
 
 Route::get('/footer_pembeli', function () {
@@ -91,20 +83,20 @@ Route::get('/header_pembeli', function () {
 });
 
 Route::get('/header_penjual', function () {
-    return view('components/header_penjual');
+    return view('components/admin.header_penjual');
 });
 
 Route::get('/sidebar_penjual', function () {
-    return view('components/sidebar_penjual');
+    return view('components/admin.sidebar_penjual');
 });
-Route::get('/ubahpw', function () {
-    return view('ubahpw');
+Route::get('/ubah_password', function () {
+    return view('pembeli.ubah_password');
 });
 
-Route::get('/lupapw', function () {
-    return view('lupapw');
+Route::get('/lupa_password', function () {
+    return view('pembeli.lupa_password');
 });
 
 Route::get('/keranjang', function () {
-    return view('keranjang');
+    return view('pembeli.keranjang');
 });
