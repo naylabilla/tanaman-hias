@@ -33,9 +33,11 @@
     </div>
     <div class="container mx-10">
         <div class="grid grid-cols-2">
+            <a href="" class="absolute top-20 left-5">
+                <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-4 ml-4">
+            </a>
             <div class="flex items-center">
-                <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-5">
-                <p class="text-3xl text-white font-bold mt-6 ml-[76%] text-center flex-1">PEMBAYARAN</p>
+                <p class="text-3xl text-white font-bold mt-6 ml-[84%] text-center flex-1">PEMBAYARAN</p>
             </div>
         </div>
         <div class="grid grid-cols-2">
