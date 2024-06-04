@@ -84,12 +84,14 @@
         <p class="text-white text-2xl mr-40">Rp. 730.000</p>
     </div>
 
-    <div class="flex items-center justify-end mt-2 mr-40">
+    <div class="flex items-center justify-end mt-6 mr-40">
         <button class="bg-green-600 text-white font-bold py-2 px-4 rounded text-xl">Lanjutkan Pesanan</button>
     </div>
 
-    <div class="ml-20 mt-4">
-        <button class="text-white font-bold py-2 px-4 rounded text-2xl"> <- Kembali </button>
+    <div class="grid grid-cols-2 items-center ml-8 mb-">
+        <a href="" class="text-2xl text-black font-bold">
+            <i class="fa-solid fa-chevron-left w-6 mr-2"></i>Kembali
+        </a>
     </div>
 </body>
 
