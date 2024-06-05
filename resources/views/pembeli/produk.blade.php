@@ -47,12 +47,12 @@
             <div class="relative overflow-x-auto m-6">
                 <a href="tambah_produk"><button class="btn btn-active btn-ghost mt-4 font-bold">Tambah Produk</button></a>
                 <table class="mt-6 w-full text-sm text-left rtl:text-right mx-auto bg-green-700 text-white rounded-xl text-center  ">
-                    <thead class="text-xs uppercase border-b border-black">                        
+                    <thead class="text-xs uppercase border-b border-black">
                         <tr>
                             <th scope="col" class="px-2 py-3">No</th>
                             <th scope="col" class="px-4 py-3">Gambar</th>
                             <th scope="col" class="px-4 py-3">Nama Produk</th>
-                            <th scope="col" class="px-4 py-3">Harga</th>                            
+                            <th scope="col" class="px-4 py-3">Harga</th>
                             <th scope="col" class="px-4 py-3">Kategori</th>
                             <th scope="col" class="px-4 py-3">Stok</th>
                             <th scope="col" class="px-4 py-3">Aksi</th>
@@ -66,9 +66,9 @@
                                     <img src=".\assets\images\indoor\gambar 1 alocasia.png" alt="" class="size-14">
                                 </a>
                             </td>
-                            <td>Edelweis Edelweisyt</td>                            
+                            <td>Edelweis Edelweisyt</td>
                             <td>Rp900.000</td>
-                            <td>Indoor</td>                         
+                            <td>Indoor</td>
                             <td>4</td>
                             <td>
                                 <a href="#detail" class="inline-block">
@@ -84,16 +84,16 @@
                         </tr>
                     </tbody>
                     <tbody>
-                    <tr>
+                        <tr>
                             <td>1</td>
                             <td>
                                 <a href="#gambar" class="inline-block">
                                     <img src=".\assets\images\indoor\gambar 1 alocasia.png" alt="" class="size-14">
                                 </a>
                             </td>
-                            <td>Edelweis Edelweisyt gswgsgs  gsgsgsgs fhqifhwqf  fiahfqfawfhjoq fjaof</td>                            
+                            <td>Edelweis flora</td>
                             <td>Rp900.000</td>
-                            <td>Indoor</td>                         
+                            <td>Indoor</td>
                             <td>4</td>
                             <td>
                                 <a href="#detail" class="inline-block">
@@ -113,6 +113,6 @@
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-</body>
+    </body>
 
 </html>
