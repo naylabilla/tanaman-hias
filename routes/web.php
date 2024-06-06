@@ -1,12 +1,25 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__ . '/auth.php';
+
+Route::get('/loginlama', function () {
     return view('pembeli.login');
 });
 
@@ -58,7 +71,7 @@ Route::get('/produk', function () {
     return view('pembeli.produk');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/dashboardlama', function () {
     return view('pembeli.dashboard');
 });
 

@@ -89,7 +89,7 @@
     </div>
 
     <div class="grid grid-cols-2 items-center ml-8 mb-">
-        <a href="" class="text-2xl text-black font-bold">
+        <a href="/dashboard" class="text-2xl text-black font-bold">
             <i class="fa-solid fa-chevron-left w-6 mr-2"></i>Kembali
         </a>
     </div>
