@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-image: url('assets/images/tamu/background4.png');
+            background-image: url('assets/images/tamu/background2.png');
             background-size: contain;
             background-position: center;
             background-attachment: scroll;
@@ -57,7 +57,7 @@
             { id: 4, image: '{{ asset('assets/images/tamu/carousel4.jpg') }}' }
         ],
         loop(){
-            setInterval(() => { this.activeSlide = this.activeSlide === 4 ? 1 : this.activeSlide + 1 }, 2000);
+            setInterval(() => { this.activeSlide = this.activeSlide === 4 ? 1 : this.activeSlide + 1 }, 5000);
         }
     }" x-init="loop">
         <!-- Data Loop -->
@@ -96,10 +96,10 @@
 
 
     <!-- Service -->
-    <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">S E R V I C E</div>
+            <div class="px-4 text-green-400 text-2xl">S E R V I C E</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
         <div class="px-4 mt-2">JAMINAN KAMI PADA ANDA</div>
@@ -122,44 +122,45 @@
     <br><br><br>
 
     <!-- Kategori -->
-    <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">K A T E G O R I</div>
+            <div class="px-4 text-green-400 text-2xl">K A T E G O R I</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
         <div class="px-4 mt-4">RANGKAIAN UNTUK EVENT SPESIAL</div>
         <br>
-        <div class="flex justif y-center mt-2">
-            <div class="ml-20 mr-auto text-center"> <!-- Untuk gambar 1 -->
+        <div class="flex justify-center mt-2">
+            <a href="#outdoor" class="ml-20 mr-auto text-center"> <!-- Untuk gambar 1 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/outdoor/gambar 9 goeppertia.png" alt="Gambar 1" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
                 <div class="mt-3">Outdoor</div>
-            </div>
-            <div class="mx-4 text-center"> <!-- Untuk gambar 2 -->
+            </a>
+            <a href="#populer" class="mx-4 text-center"> <!-- Untuk gambar 2 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/populer/gambar 1 monstera.png" alt="Gambar 2" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
                 <div class="mt-3">Populer</div>
-            </div>
-            <div class="ml-auto mr-20 text-center"><!-- Untuk gambar 3 -->
+            </a>
+            <a href="#indoor" class="ml-auto mr-20 text-center"><!-- Untuk gambar 3 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/indoor/gambar 4 calla.png" alt="Gambar 3" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
                 <div class="mt-3">Indoor</div>
-            </div>
+            </a>
         </div>
     </div>
+
 
     <br><br><br>
 
 
     <!-- Populer -->
-    <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3" id="populer">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">P O P U L E R</div>
+            <div class="px-4 text-green-400 text-2xl">P O P U L E R</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
         <div class="px-2 mt-1">Saat ini kamu tertarik untuk menambah koleksi tanaman hias daun di
@@ -212,10 +213,10 @@
 
 
     <!-- Outdoor -->
-    <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3" id="outdoor">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">O U T D O O R</div>
+            <div class="px-4 text-green-400 text-2xl">O U T D O O R</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
         <div class="px-2 mt-1"> Tanaman Hias Outdoor merupakan pilihan tepat untuk mempercantik
@@ -331,10 +332,10 @@
 
 
     <!-- Indoor -->
-    <div class="font-semibold pb-2 w-7/8 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3" id="indoor">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">I N D O O R</div>
+            <div class="px-4 text-green-400 text-2xl">I N D O O R</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
         <div class="px-2 mt-1"> Tambahkan beberapa tanaman hias dalam ruangan untuk sudut rumah
@@ -450,10 +451,10 @@
 
 
     <!-- Review/Ulasan -->
-    <div class="font-semibold w-7/8 mx-auto text-center">
+    <div class="font-semibold w-5/6 mx-auto text-center">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">U L A S A N</div>
+            <div class="px-4 text-green-400 text-2xl">U L A S A N</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
 
@@ -584,10 +585,10 @@
     </div>
 
     <!-- Hubungi Kami -->
-    <div class="font-semibold pb-2 w-9/10 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-8/9 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-300 text-2xl">HUBUNGI KAMI</div>
+            <div class="px-4 text-green-400 text-2xl">HUBUNGI KAMI</div>
             <div class="flex-1 h-0.5 bg-green-200"></div>
         </div>
 
