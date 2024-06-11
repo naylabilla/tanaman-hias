@@ -16,9 +16,13 @@
             <p>Admin</p>
         </a>
         <h1 class="mx-auto">Beranda</h1>
-        <a href="" class="btn btn-ghost ms-auto">
-            <img src="./assets/icons/logout.png" alt="" class="w-10">
-        </a>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <button type="submit" class="btn btn-ghost ms-auto">
+                <img src="./assets/icons/logout.png" alt="" class="w-10">
+            </button>
+        </form>
     </div>
     <div class="fixed left-0 top-[5.5rem] h-screen bg-[#B0D9B1] w-[23%]">
         <div class="bg-transparent w-48 min-h-48 rounded-lg flex mx-auto my-5">

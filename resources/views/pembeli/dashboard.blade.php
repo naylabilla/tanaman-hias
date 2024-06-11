@@ -34,9 +34,13 @@
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">
-                <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icons/user1.png" alt="" class="w-10">
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <button type="submit" class="btn btn-ghost">
+                        <img src="./assets/icons/user1.png" alt="" class="w-10">
+                    </button>
+                </form>
             </div>
         </div>
     </div>

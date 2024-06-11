@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        return view('pembeli.daftar_akun');
     }
 
     /**
@@ -30,21 +30,25 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'nama_pengguna' => ['required', 'string', 'max:255'],
+            'nomor_hp' => ['required', 'numeric', 'digits_between:12,15'],
+            'alamat' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
+        User::create([
+            'name' => $request->nama_pengguna,
             'email' => $request->email,
+            'nomor_hp' => $request->nomor_hp,
+            'alamat' => $request->alamat,
             'password' => Hash::make($request->password),
         ]);
 
-        event(new Registered($user));
+        return redirect(route('login'));
 
-        Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
+        // event(new Registered($user));
+        // Auth::login($user);
+        // return redirect(route('dashboard', absolute: false));
     }
 }
