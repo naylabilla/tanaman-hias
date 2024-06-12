@@ -10,10 +10,16 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
+
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__ . '/auth.php';
@@ -79,11 +85,11 @@ Route::get('/tambah_produk', function () {
 });
 
 Route::get('/pengaturan_akun_pembeli', function () {
-    return view('pembeli.pengaturan_akun_pembeli');
+    return view('pembeli.profile.index');
 });
 
 Route::get('/ubah_pengaturan_akun_pembeli', function () {
-    return view('pembeli.ubah_pengaturan_akun_pembeli');
+    return view('pembeli.profile.edit');
 });
 
 Route::get('/footer_pembeli', function () {
