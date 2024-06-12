@@ -75,7 +75,16 @@
                 <h1 class="text-gray-300 text-xl mb-1">METODE PEMBAYARAN</h1>
                 <select name="" id="" class="w-4/6 h-10 text-2xl bg-white text-black border border-4 border-green-400">
                     <option selected disabled hidden></option>
-                    <option value="">Transfer Bank</option>
+                    <option value="" </div>
+
+                        <div class="grid grid-cols-2 items-center">
+                            <a href="" class="text-2xl text-black font-bold">
+                                <img src="./assets/icons/kembali.png" alt="" class="inline size-5">Kembali
+                            </a>
+                            <button class="btn bg-green-600 text-xl my-3 text-white border-none w-2/5 ms-auto">BAYAR SEKARANG</button>
+                        </div>
+                        >Transfer Bank
+                    </option>
                     <option value="">Bayar di Tempat</option>
                 </select>
             </div>
@@ -84,15 +93,6 @@
                 <textarea class="w-full bg-white text-black resize-none border border-4 border-green-400" name="" id="" rows="3"></textarea>
             </div>
         </div>
-
-        <div class="grid grid-cols-2 items-center">
-            <a href="" class="text-2xl text-black font-bold">
-                <img src="./assets/icons/kembali.png" alt="" class="inline size-5">Kembali
-            </a>
-            <button class="btn bg-green-600 text-xl my-3 text-white border-none w-2/5 ms-auto">BAYAR SEKARANG</button>
-        </div>
-
-    </div>
 </body>
 
 </html>
