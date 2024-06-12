@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-image: url('assets/images/tamu/background2.png');
+            background-image: url('assets/images/tamu/background2.jpg');
             background-size: contain;
             background-position: center;
             background-attachment: scroll;
@@ -102,24 +102,24 @@
     <!-- Service -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">S E R V I C E</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">S E R V I C E</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
-        <div class="px-4 mt-2">JAMINAN KAMI PADA ANDA</div>
+        <div class="px-4 mt-2 text-[#423F45]">JAMINAN KAMI PADA ANDA</div>
         <br>
         <div class="flex justify-center mt-1 px-2">
             <div class="ml-40 mr-auto text-center"> <!-- Untuk gambar 1 -->
                 <img src="assets/images/tamu/service1.png" alt="Gambar 1" class="w-32 h-32 object-cover">
-                <div class="mt-3">Kirim di Hari yang Sama</div>
+                <div class="mt-3 -ml-5 text-[#423F45]">Kirim di Hari yang Sama</div>
             </div>
             <div class="mx-4 text-center"> <!-- Untuk gambar 2 -->
                 <img src="assets/images/tamu/service2.png" alt="Gambar 2" class="w-32 h-32 object-cover">
-                <div class="mt-3">Pembayaran Aman</div>
+                <div class="mt-3 text-[#423F45]">Pembayaran Aman</div>
             </div>
             <div class="ml-auto mr-40 text-center"> <!-- Untuk gambar 3 -->
                 <img src="assets/images/tamu/service3.png" alt="Gambar 3" class="w-32 h-32 object-cover">
-                <div class="mt-3">Pilihan Bunga Variatif</div>
+                <div class="mt-3 -ml-3 text-[#423F45]">Pilihan Bunga Variatif</div>
             </div>
         </div>
     </div>
@@ -128,30 +128,30 @@
     <!-- Kategori -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">K A T E G O R I</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">K A T E G O R I</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
-        <div class="px-4 mt-4">RANGKAIAN UNTUK EVENT SPESIAL</div>
+        <div class="px-4 mt-4 text-[#423F45]">RANGKAIAN UNTUK EVENT SPESIAL</div>
         <br>
         <div class="flex justify-center mt-2">
             <a href="#outdoor" class="ml-20 mr-auto text-center"> <!-- Untuk gambar 1 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/outdoor/gambar 9 goeppertia.png" alt="Gambar 1" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
-                <div class="mt-3">Outdoor</div>
+                <div class="mt-3 text-[#423F45]">Outdoor</div>
             </a>
             <a href="#populer" class="mx-4 text-center"> <!-- Untuk gambar 2 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/populer/gambar 1 monstera.png" alt="Gambar 2" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
-                <div class="mt-3">Populer</div>
+                <div class="mt-3 text-center text-[#423F45]">Populer</div>
             </a>
             <a href="#indoor" class="ml-auto mr-20 text-center"><!-- Untuk gambar 3 -->
                 <div class="bg-gray-100 shadow-lg rounded-lg custom-card-size">
                     <img src="assets/images/indoor/gambar 4 calla.png" alt="Gambar 3" class="w-64 h-64 mx-auto -mt-1 object-scale-down">
                 </div>
-                <div class="mt-3">Indoor</div>
+                <div class="mt-3 text-[#423F45]">Indoor</div>
             </a>
         </div>
     </div>
@@ -163,13 +163,13 @@
     <!-- Populer -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl" id="populer">P O P U L E R</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">P O P U L E R</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
-        <div class="px-2 mt-1">Saat ini kamu tertarik untuk menambah koleksi tanaman hias daun di
-            <div class="px-2 mt-1">rumah agar terlihat lebih asri, berikut 6 rekomendasi tanaman hias
-                <div class="px-2 mt-1">populer saat ini.</div>
+        <div class="px-2 mt-1 text-[#423F45]">Saat ini kamu tertarik untuk menambah koleksi tanaman hias daun di
+            <div class="px-2 mt-1 text-[#423F45]">rumah agar terlihat lebih asri, berikut 6 rekomendasi tanaman hias
+                <div class="px-2 mt-1 text-[#423F45]">populer saat ini.</div>
                 <br>
                 <div class="grid grid-cols-3 gap-4 mt-4">
                     <div class="text-center"> <!-- Untuk gambar 1 -->
@@ -219,13 +219,13 @@
     <!-- Outdoor -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3" id="outdoor">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">O U T D O O R</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">O U T D O O R</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
-        <div class="px-2 mt-1"> Tanaman Hias Outdoor merupakan pilihan tepat untuk mempercantik
-            <div class="px-2 mt-1">halaman. Warna hijau dan wanginya bunga dapat memberi kesegaran
-                <div class="px-2 mt-1">tersendiri di ruang terbuka.</div>
+        <div class="px-2 mt-1 text-[#423F45]"> Tanaman Hias Outdoor merupakan pilihan tepat untuk mempercantik
+            <div class="px-2 mt-1 text-[#423F45]">halaman. Warna hijau dan wanginya bunga dapat memberi kesegaran
+                <div class="px-2 mt-1 text-[#423F45]">tersendiri di ruang terbuka.</div>
                 <br>
                 <div class="grid grid-cols-3 gap-4 mt-4">
                     <div class="text-center"> <!-- Untuk gambar 1 -->
@@ -338,13 +338,13 @@
     <!-- Indoor -->
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3" id="indoor">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">I N D O O R</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">I N D O O R</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
-        <div class="px-2 mt-1"> Tambahkan beberapa tanaman hias dalam ruangan untuk sudut rumah
-            <div class="px-2 mt-1">jadi lebih asri. Selain memberikan kesan segar dan tidak monoton pada
-                <div class="px-2 mt-1">ruangan, serta memberikan dampak positif bagi kesehatan.</div>
+        <div class="px-2 mt-1 text-[#423F45]"> Tambahkan beberapa tanaman hias dalam ruangan untuk sudut rumah
+            <div class="px-2 mt-1 text-[#423F45]">jadi lebih asri. Selain memberikan kesan segar dan tidak monoton pada
+                <div class="px-2 mt-1 text-[#423F45]">ruangan, serta memberikan dampak positif bagi kesehatan.</div>
                 <br>
                 <div class="grid grid-cols-3 gap-4 mt-4">
                     <div class="text-center"> <!-- Untuk gambar 1 -->
@@ -457,9 +457,9 @@
     <!-- Review/Ulasan -->
     <div class="font-semibold w-5/6 mx-auto text-center">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">U L A S A N</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">U L A S A N</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
 
         <div class="mx-auto max-w-[1340px] px-4 sm:px-6 lg:me-0 p-10 lg:pe-0 lg:ps-8">
@@ -589,11 +589,11 @@
     </div>
 
     <!-- Hubungi Kami -->
-    <div class="font-semibold pb-2 w-8/9 mx-auto text-center -mt-3">
+    <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
-            <div class="flex-1 h-0.5 bg-green-200"></div>
-            <div class="px-4 text-green-400 text-2xl">HUBUNGI KAMI</div>
-            <div class="flex-1 h-0.5 bg-green-200"></div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
+            <div class="px-4 text-[#78A07C] text-2xl">HUBUNGI KAMI</div>
+            <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
 
         <h1 class="text-center font-semibold text-4xl mb-6 pt-5 text-slate-50"></h1>
@@ -606,7 +606,7 @@
                 <p class="text-left text-white font-serifbold text-xl mt-1">Sabtu : 15.00 s/d 21.00</p>
                 <p class="text-left text-white font-serifbold text-xl mt-1 mb-20">Minggu : Tutup</p>
                 <div class="flex my-3">
-                    <div class="bg-green-300 p-2 rounded-full">
+                    <div class="bg-[#78A07C] p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
                         </svg>
@@ -614,7 +614,7 @@
                     <h1 class="text-xl text-white mx-3 mt-2">Batam Centre, Batam, Indonesia</h1>
                 </div>
                 <div class="flex my-3">
-                    <div class="bg-green-300 p-2 rounded-full">
+                    <div class="bg-[#78A07C] p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white">
                             <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
                         </svg>
@@ -622,7 +622,7 @@
                     <h1 class="text-xl text-white mx-3 mt-2">Phone : +628 663 4988</h1>
                 </div>
                 <div class="flex my-3">
-                    <div class="bg-green-300 p-2 rounded-full">
+                    <div class="bg-[#78A07C] p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                             <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />

@@ -8,6 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('assets/images/tamu/bg.png');
+            background-size: contain;
+            background-position: center;
+        }
+    </style>
 </head>
 
 <body class="bg-[#618264] h-full pb-5   ">

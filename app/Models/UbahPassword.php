@@ -1,83 +1,34 @@
 <?php
-class UbahPassword
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
+class PasswordModel extends Model
 {
-    private $username;
-    private $oldPassword;
-    private $newPassword;
-    private $errors = [];
+    use HasFactory;
 
-
-    public function setUsername($username)
+    /**
+     * @param string $currentPassword
+     * @param string $newPassword
+     * @return bool
+     */
+    public function updatePassword(string $currentPassword, string $newPassword): bool
     {
-        $this->username = $username;
-    }
+        $user = Auth::user();
 
-    public function setOldPassword($oldPassword)
-    {
-        $this->oldPassword = $oldPassword;
-    }
-
-    public function setNewPassword($newPassword)
-    {
-        $this->newPassword = $newPassword;
-    }
-
-    public function getErrors()
-    {
-        return $this->errors;
-    }
-
-    public function changePassword()
-    {
-        if ($this->validate()) {
-            $hashedPassword = password_hash($this->newPassword, PASSWORD_BCRYPT);
-            $query = "UPDATE users SET password = :newPassword WHERE username = :username";
-            $stmt->bindParam(':newPassword', $hashedPassword);
-            $stmt->bindParam(':username', $this->username);
-
-            if ($stmt->execute()) {
-                return true;
-            } else {
-                $this->errors[] = "Gagal untuk mengubah password.";
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    private function validate()
-    {
-        if (empty($this->oldPassword) || empty($this->newPassword)) {
-            $this->errors[] = "Anda harus mengisi seluruh kolom yang dibutuhkan.";
+        // Check if current password is correct
+        if (!Hash::check($currentPassword, $user->password)) {
             return false;
         }
 
-        if (!$this->checkOldPassword()) {
-            $this->errors[] = "Password lama salah.";
-            return false;
-        }
-
-        if (strlen($this->newPassword) < 6) {
-            $this->errors[] = "Kata sandi harus terdiri dari minimal 6 karakter.";
-            return false;
-        }
+        // Update password
+        $user->password = Hash::make($newPassword);
+        $user->save();
 
         return true;
-    }
-
-    private function checkOldPassword()
-    {
-        $query = "SELECT password FROM users WHERE username = :username";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':username', $this->username);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($result && password_verify($this->oldPassword, $result['password'])) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
