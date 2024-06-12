@@ -35,13 +35,13 @@
     <br>
 
     <a href="" class="absolute top-20 left-5">
-        <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-10">
+        <img src="./assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-1">
     </a>
     <img src="./assets/images/outdoor/gambar 5 monstera.png" alt="" class="absolute left-20 top-20 size-72">
     <div class="bg-white w-full h-3/6 size-40 mb-full min-h-80 rounded-t-2xl p-4">
         <h1 class="mr-10 mt-2 pl-6 text-black font-semibold text-4xl">Monstera Deliciosa</h1>
         <h2 class="mr-10 pl-6 text-green-600 font-semibold text-3xl">165 K</h2>
-        <h3 class="mr-10 mt-2 pl-6 text-justify font-sans text-xl text-black">Tanaman Monstera berasal dari daerah
+        <h3 class=" mt-2 pl-6 text-justify font-sans text-xl text-black">Tanaman Monstera berasal dari daerah
             tropis dan subtropis di seluruh dunia, terutama di Asia, Afrika, dan Amerika Selatan.
             Monstera biasanya tumbuh sebagai pepohonan kecil dan memiliki daun yang besar dan berbulu yang memberikan
             tampilan unik dan menarik.
@@ -55,11 +55,11 @@
         <div class="grid grid-cols-3 place-items-center text-black">
             <h1 class="text-xl block">10</h1>
             <h1 class="text-xl block">Indoor</h1>
-            <h1 class="text-xl block">8,5"</h1>
+            <h1 class="text-xl block">8,5 M</h1>
         </div>
         <div class="flex justify-center">
             <button type="submit" class="btn bg-green-600 w-64 mt-3 text-white text-xl rounded-full">Tambah ke
-                keranjang</button>
+                Keranjang</button>
         </div>
     </div>
 </body>
