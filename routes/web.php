@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -72,9 +73,9 @@ Route::get('/daftar_akun', function () {
     return view('pembeli.daftar_akun');
 });
 
-Route::get('/produk', function () {
-    return view('pembeli.produk');
-});
+// Route::get('/produk', function () {
+//     return view('pembeli.produk');
+// });
 
 Route::get('/dashboardlama', function () {
     return view('pembeli.dashboard');
@@ -118,3 +119,5 @@ Route::get('/lupa_password', function () {
 Route::get('/keranjang', function () {
     return view('pembeli.keranjang');
 });
+
+Route::resource('produk', ProdukController::class);
