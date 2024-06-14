@@ -80,164 +80,188 @@
         <div class="container mt-4">
             <div class="grid grid-rows-3 grid-flow-col gap-4">
                 <div class="row-span-3">
-                    @if($user->foto != null)
                     <img
-                        src="{{ asset('/storage/assets/images/profile/' . $user->foto) }}"
                         alt="Foto Profil"
-                        class="w-60 rounded-lg mt-5 ml-28"
+                        class="w-60 rounded-lg mt-7 ml-28"
+                        id="imagePreview"
+                        src="{{
+                            $foto
+                                ? '/storage/assets/images/profile/'.$foto
+                                : '/assets/icons/foto_awal.jpg'
+                        }}"
                     />
-                    @else
-                    <img
-                        src="/assets/icons/foto_awal.jpg"
-                        alt="Foto Profil"
-                        class="w-60 rounded-lg mt-5 ml-28"
-                    />
-                    @endif
                 </div>
-                <div class="row-span-3 col-span-2">
-                    <div class="grid grid-cols-2 gap-4 ml-5 mt-4">
-                        <div class="col-span-1">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Nama Pengguna</label
-                            >
-                            <input
-                                type="text"
-                                class="form-control w-11/12 rounded-lg border-slate-95 mt-2"
-                                name="nama_pengguna"
-                                value="{{ $user->nama }}"
-                            />
-                        </div>
-                        <div class="col-span-1">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Nomor HP</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control w-8/12 rounded-lg border-slate-950 mt-2"
-                                name="nomor_hp"
-                                value="{{ $user->nomor_hp }}"
-                                required
-                            />
-                        </div>
+                <div class="row-span-3 col-span-4">
+                    <form
+                        method="post"
+                        action="{{ route('profile.update') }}"
+                        enctype="multipart/form-data"
+                    >
+                        @csrf @method('patch')
+                        <div class="grid gap-4">
+                            <div class="col-span-1">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Nama Pengguna</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control w-11/12 rounded-lg border-slate-95 mt-2"
+                                    name="nama_pengguna"
+                                    value="{{ $user->nama }}"
+                                />
+                            </div>
+                            <div class="col-span-1">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Nomor HP</label
+                                >
+                                <input
+                                    type="number"
+                                    class="form-control w-8/12 rounded-lg border-slate-950 mt-2"
+                                    name="nomor_hp"
+                                    value="{{ $user->nomor_hp }}"
+                                    required
+                                />
+                            </div>
 
-                        <div class="col-span-2">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Alamat</label
-                            >
-                            <textarea
-                                class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
-                                rows="3"
-                                name="alamat"
-                                required
-                                >{{ $user->alamat }}</textarea
-                            >
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Alamat</label
+                                >
+                                <textarea
+                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
+                                    rows="3"
+                                    name="alamat"
+                                    required
+                                >
+ {{ $user->alamat }}</textarea
+                                >
+                            </div>
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Email</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
+                                    name="email"
+                                    value="{{ $user->email }}"
+                                />
+                            </div>
+
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Foto Profil</label
+                                >
+                                <input
+                                    type="file"
+                                    class="form-control w-10/12 rounded-lg mt-2"
+                                    id="fileInput"
+                                    name="foto"
+                                />
+                                <input
+                                    type="text"
+                                    class="w-full h-14 p-4 border border-admin-900 rounded-l-lg focus:outline-none"
+                                    placeholder="No file chosen"
+                                    id="fileText"
+                                    readonly
+                                    hidden
+                                />
+                            </div>
                         </div>
-                        <div class="col-span-2">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Email</label
-                            >
-                            <input
-                                type="email"
-                                class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
-                                name="email"
-                                value="{{ $user->email }}"
-                            />
+                        <button
+                            class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6] ms-96"
+                            style="border: 3px solid #cbd5e1; color: #cbd5e1"
+                            type="submit"
+                        >
+                            <i class="fa-solid fa-circle-check"></i>Simpan
+                        </button>
+                    </form>
+
+                    <form
+                        method="post"
+                        action="{{ route('password.update') }}"
+                        class="mb-4"
+                    >
+                        @csrf @method('put')
+                        <div class="grid gap-4">
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Kata Sandi Sekarang</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control w-10/12 rounded-lg border-slate-950"
+                                    name="current_password"
+                                />
+                            </div>
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Kata Sandi Baru</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
+                                    name="password"
+                                />
+                            </div>
+                            <div class="col-span-2">
+                                <label
+                                    class="form-label text-lg font-semibold"
+                                    style="color: #03045e"
+                                    >Konfirmasi Kata Sandi Baru</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
+                                    name="password_confirmation"
+                                />
+                            </div>
                         </div>
-                        <div class="col-span-2">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Kata Sandi Sekarang</label
-                            >
-                            <input
-                                type="text"
-                                class="form-control w-10/12 rounded-lg border-slate-950"
-                                name="kata_sandi_sekarang"
-                            />
-                        </div>
-                        <div class="col-span-2">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Kata Sandi Baru</label
-                            >
-                            <input
-                                type="text"
-                                class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
-                                name="kata_sandi_baru"
-                            />
-                        </div>
-                        <div class="col-span-2">
-                            <label
-                                class="form-label text-lg font-semibold"
-                                style="color: #03045e"
-                                >Foto Profil</label
-                            >
-                            <input
-                                type="file"
-                                class="form-control w-10/12 rounded-lg mt-2"
-                                name="foto_profil"
-                            />
-                        </div>
-                        <div class="col-span-2">
-                            <p class="font-normal italic mb-0">
-                                *Username tidak dapat diubah.
-                            </p>
-                            <p class="font-normal italic mb-0">
-                                *Jika tidak ingin mengubah password maka tidak
-                                usah di otak-atik pada bagian password sekarang
-                                dan password baru.
-                            </p>
-                            <p class="font-normal italic">
-                                *Jika ingin mengubah foto profil maka pilih file
-                                baru.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-3 gap-4 mt-20 pb-10">
-                <div class="">
-                    <a
-                        class="btn font-bold w-3/5 ml-28 h-16 text-2xl"
-                        style="border: 3px solid #0077b6; color: #0077b6"
-                        href="#"
-                        role="button"
-                        ><i
-                            class="fa-solid fa-arrow-up-from-bracket"
-                            style="rotate: -90deg"
-                        ></i
-                        >Keluar
-                    </a>
-                </div>
-                <div class="">
-                    <a
-                        class="btn font-bold w-10/12 -ml-6 h-16 text-2xl"
-                        style="border: 3px solid #0077b6; color: #0077b6"
-                        href="pengaturan_akun_pembeli"
-                        role="button"
-                        ><i class="fa-solid fa-circle-xmark"></i>Batal
-                    </a>
-                </div>
-                <div class="">
-                    <a
-                        class="btn font-bold w-10/12 -ml-24 h-16 text-2xl bg-[#0077B6]"
-                        style="border: 3px solid #cbd5e1; color: #cbd5e1"
-                        type="submit"
-                        ><i class="fa-solid fa-circle-check"></i>Simpan
-                    </a>
+                        <button
+                            class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6] ms-96 mt-2"
+                            style="border: 3px solid #cbd5e1; color: #cbd5e1"
+                            type="submit"
+                        >
+                            <i class="fa-solid fa-circle-check"></i>Simpan
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script>
+            document
+                .getElementById("fileInput")
+                .addEventListener("change", function () {
+                    var fileInput = this;
+                    var fileName = fileInput.files[0].name;
+                    var fileText = document.getElementById("fileText");
+                    var imagePreview = document.getElementById("imagePreview");
+
+                    fileText.value = fileName;
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        imagePreview.src = e.target.result;
+                        imagePreview.classList.remove("hidden");
+                    };
+                    reader.readAsDataURL(fileInput.files[0]);
+                });
+        </script>
     </body>
 </html>
