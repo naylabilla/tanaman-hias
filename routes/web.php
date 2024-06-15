@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BerandaController;
 use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
@@ -121,3 +122,10 @@ Route::get('/keranjang', function () {
 });
 
 Route::resource('produk', ProdukController::class);
+
+Route::get('/beranda_penjual', [BerandaController::class, 'index']);
+
+
+
+Route::get('/detail_produk/{id}', [DashboardController::class, 'detail'])->name('detail_produk');
+

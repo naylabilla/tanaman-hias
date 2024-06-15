@@ -196,36 +196,7 @@
                             <div class="mt-3">Monstera Deliciosa</div>
                         </div>
                     </div>
-                    <div class="text-center"> <!-- Untuk gambar 2 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                            <img src="assets/images/populer/gambar 2 caladium.png" alt="Gambar 2" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3">Caladium Spring Fling</div>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 3 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                            <img src="assets/images/populer/gambar 3 maranta.png" alt="Gambar 3" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3">Maranta Fascinator</div>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 4 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                            <img src="assets/images/populer/gambar 4 lavender.png" alt="Gambar 4" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3">English Lavender</div>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 5 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                            <img src="assets/images/populer/gambar 5 spathyphillum.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3">Spathipyllum Kochii</div>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 6 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4">
-                            <img src="assets/images/populer/gambar 6 watermelon.png" alt="Gambar 6" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3">Watermelon Peperomia</div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -247,105 +218,25 @@
                 <div class="px-2 mt-1 text-[#423F45]">tersendiri di ruang terbuka.</div>
                 <br>
                 <div class="grid grid-cols-3 gap-4 mt-4">
+                    @foreach ($produkOutdoor as $produkout)
                     <div class="text-center"> <!-- Untuk gambar 1 -->
                         <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                             <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 1 bromelia.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Bromelia Guzmania</div>
-                            <div class="mt-1">Rp. 350k</div>
+                            <img src="/assets/images/tambahproduk/{{ $produkout->gambar }}" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                            <div class="mt-3 text-bold">{{ $produkout->nama }}</div>
+                            <button class="absolute bottom-3 left-3 bg-green-400 bg-hover hover:bg-gray-300">
+                                <a href="{{ route('detail_produk', $produkout->kode) }}">
+                                <img src="assets/icons/detail.png" alt="Icon" class="px-1 w-9 h-9 object-scale-down">
+                                </a>
+                            </button>
+                            <div class="mt-1">Rp{{ $produkout->harga }}</div>
                             <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
                                 <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
                             </button>
                         </div>
                     </div>
-                    <div class="text-center"> <!-- Untuk gambar 2 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 2 caladium.png" alt="Gambar 2" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Caladium Spring Fling</div>
-                            <div class="mt-1">Rp. 150k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 3 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 3 lavender.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">English Lavender</div>
-                            <div class="mt-1">Rp. 100k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 4 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 4 sansevieria.png" alt="Gambar 4" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Sansevieria Trifasciata</div>
-                            <div class="mt-1">Rp. 115k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 5 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 5 monstera.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Monstera Deliciosa</div>
-                            <div class="mt-1">Rp. 230k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 6 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 6 calathea.png" alt="Gambar 6" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Calathea Orbifolia</div>
-                            <div class="mt-1">Rp. 180k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 7 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 7 cloropythum.png" alt="Gambar 7" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Cloropythum Comosum</div>
-                            <div class="mt-1">Rp. 170k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 8 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 8 diefenbacia.png" alt="Gambar 8" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Dieffenbachia Seguine</div>
-                            <div class="mt-1">Rp. 70k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 9 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/outdoor/gambar 9 goeppertia.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Geoepertia Louisae</div>
-                            <div class="mt-1">Rp. 275k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>
@@ -366,105 +257,24 @@
                 <div class="px-2 mt-1 text-[#423F45]">ruangan, serta memberikan dampak positif bagi kesehatan.</div>
                 <br>
                 <div class="grid grid-cols-3 gap-4 mt-4">
+                    @foreach ($produkIndoor as $produkin)
                     <div class="text-center"> <!-- Untuk gambar 1 -->
                         <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                             <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 1 alocasia.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Monstera Deliciosa</div>
-                            <div class="mt-1">Rp. 230k</div>
+                            <img src="/assets/images/tambahproduk/{{ $produkin->gambar }}" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
+                            <div class="mt-3 text-bold">{{ $produkin->nama}}</div>
+                            <button class="absolute bottom-3 left-3 bg-green-400 bg-hover hover:bg-gray-300">
+                                <a href="{{ route('detail_produk', $produkin->kode) }}">
+                                <img src="assets/icons/detail.png" alt="Icon" class="px-1 w-9 h-9 object-scale-down">
+                                </a>                               
+                            </button>
+                            <div class="mt-1">Rp{{ $produkin->harga}}</div>
                             <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
                                 <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
                             </button>
                         </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 2 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 2 spathyphillum.png" alt="Gambar 2" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Alocasia Amazonica</div>
-                            <div class="mt-1">Rp. 165k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 3 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 3 anthurium.png" alt="Gambar 3" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Anthurium Andraeanum</div>
-                            <div class="mt-1">Rp. 300k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 4 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 4 calla.png" alt="Gambar 4" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Calla Lily</div>
-                            <div class="mt-1">Rp. 300k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 5 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 5 maranta.png" alt="Gambar 5" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Maranta Fascinator</div>
-                            <div class="mt-1">Rp. 190k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 6 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 6 diefenbacia.png" alt="Gambar 6" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Dieffenbachia Seguine</div>
-                            <div class="mt-1">Rp. 70k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 7 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 7 goeppertia.png" alt="Gambar 7" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Geoepertia Louisae</div>
-                            <div class="mt-1">Rp. 275k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 8 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 8 watermelon.png" alt="Gambar 8" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Watermelon Peperomia</div>
-                            <div class="mt-1">Rp. 75k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-center"> <!-- Untuk gambar 9 -->
-                        <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
-                            <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
-                            <img src="assets/images/indoor/gambar 9 croton.png" alt="Gambar 9" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
-                            <div class="mt-3 text-bold">Croton Petra</div>
-                            <div class="mt-1">Rp. 120k</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
-                        </div>
-                    </div>
+                    </div>                    
+                    @endforeach                    
                 </div>
             </div>
         </div>
