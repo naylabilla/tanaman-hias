@@ -98,6 +98,7 @@
                         enctype="multipart/form-data"
                     >
                         @csrf @method('patch')
+
                         <div class="grid gap-4">
                             <div class="col-span-1">
                                 <label
@@ -134,12 +135,11 @@
                                     >Alamat</label
                                 >
                                 <textarea
-                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
+                                    class="form-control w-10/12 rounded-lg border-slate-950 mt-2 pl-2"
                                     rows="3"
                                     name="alamat"
                                     required
-                                >
- {{ $user->alamat }}</textarea
+                                    >{{ $user->alamat }}</textarea
                                 >
                             </div>
                             <div class="col-span-2">
@@ -162,29 +162,40 @@
                                     style="color: #03045e"
                                     >Foto Profil</label
                                 >
-                                <input
-                                    type="file"
-                                    class="form-control w-10/12 rounded-lg mt-2"
-                                    id="fileInput"
-                                    name="foto"
-                                />
-                                <input
-                                    type="text"
-                                    class="w-full h-14 p-4 border border-admin-900 rounded-l-lg focus:outline-none"
-                                    placeholder="No file chosen"
-                                    id="fileText"
-                                    readonly
-                                    hidden
-                                />
+                                <div class="relative flex items-center">
+                                    <button
+                                        class="h-12 w-40 bg-blue-900 text-white rounded-l-lg mt-2"
+                                    >
+                                        Pilih File
+                                    </button>
+                                    <input
+                                        type="file"
+                                        class="absolute inset-0 w-10/12 h-full opacity-0 cursor-pointer"
+                                        id="fileInput"
+                                        name="foto"
+                                    />
+                                    <input
+                                        type="text"
+                                        class="form-control w-8/12 rounded-r-lg mt-2"
+                                        placeholder="Tidak ada file terpilih"
+                                        id="fileText"
+                                        readonly
+                                    />
+                                </div>
                             </div>
                         </div>
-                        <button
-                            class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6] ms-96"
-                            style="border: 3px solid #cbd5e1; color: #cbd5e1"
-                            type="submit"
-                        >
-                            <i class="fa-solid fa-circle-check"></i>Simpan
-                        </button>
+                        <div class="grid justify-items-end mr-44 mt-3">
+                            <button
+                                class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6]"
+                                style="
+                                    border: 3px solid #cbd5e1;
+                                    color: #cbd5e1;
+                                "
+                                type="submit"
+                            >
+                                <i class="fa-solid fa-circle-check"></i>Simpan
+                            </button>
+                        </div>
                     </form>
 
                     <form
@@ -204,6 +215,7 @@
                                     type="password"
                                     class="form-control w-10/12 rounded-lg border-slate-950"
                                     name="current_password"
+                                    placeholder="********"
                                 />
                             </div>
                             <div class="col-span-2">
@@ -216,6 +228,7 @@
                                     type="password"
                                     class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
                                     name="password"
+                                    placeholder="********"
                                 />
                             </div>
                             <div class="col-span-2">
@@ -228,16 +241,22 @@
                                     type="password"
                                     class="form-control w-10/12 rounded-lg border-slate-950 mt-2"
                                     name="password_confirmation"
+                                    placeholder="********"
                                 />
                             </div>
                         </div>
-                        <button
-                            class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6] ms-96 mt-2"
-                            style="border: 3px solid #cbd5e1; color: #cbd5e1"
-                            type="submit"
-                        >
-                            <i class="fa-solid fa-circle-check"></i>Simpan
-                        </button>
+                        <div class="grid justify-items-end mr-44 mt-3">
+                            <button
+                                class="btn font-bold w-1/10 h-2 text-xl bg-[#0077B6]"
+                                style="
+                                    border: 3px solid #cbd5e1;
+                                    color: #cbd5e1;
+                                "
+                                type="submit"
+                            >
+                                <i class="fa-solid fa-circle-check"></i>Simpan
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

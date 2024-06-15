@@ -24,7 +24,6 @@ class ProfileController extends Controller
 
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        // $request->user()->fill($request->validated());
         $request->validated();
 
         if ($request->user()->isDirty('email')) {
@@ -32,34 +31,54 @@ class ProfileController extends Controller
         }
 
         $user = $request->user();
-        $foto = $request->user()->foto;
+        $foto = $user->foto;
 
         if ($foto) {
             if ($request->hasFile('foto')) {
 
-                //upload new image
+                //upload foto baru
                 $image = $request->file('foto');
                 $image->storeAs('public/assets/images/profile', $image->hashName());
-
                 //delete old image
                 Storage::delete('public/assets/images/profile/' . $foto);
 
-                //update profile with new image
-                $user->update([
-                    'profile_name' => $request->profile_name,
-                    'foto' => $image->hashName()
-                ]);
-            } else {
+                // Mengisi data
+                $request->user()->fill($request->validated());
+                $request->user()->foto = $image->hashName();
 
-                //update category without image
+                //update profile dengan foto baru
+                $request->user()->save();
+            } else {
+                //update profile tanpa foto
                 $user->update([
-                    'category_name' => $request->category_name
+                    'nama' => $request->nama_pengguna,
+                    'email' => $request->email,
+                    'nomor_hp' => $request->nomor_hp,
+                    'alamat' => $request->alamat,
+                ]);
+            }
+        } else {
+            if ($request->hasFile('foto')) {
+
+                //upload foto
+                $image = $request->file('foto');
+                $image->storeAs('public/assets/images/profile', $image->hashName());
+
+                $request->user()->fill($request->validated());
+                $request->user()->foto = $image->hashName();
+
+                //update profile dengan foto baru
+                $request->user()->save();
+            } else {
+                //update profile tanpa foto
+                $user->update([
+                    'nama' => $request->nama_pengguna,
+                    'email' => $request->email,
+                    'nomor_hp' => $request->nomor_hp,
+                    'alamat' => $request->alamat,
                 ]);
             }
         }
-
-
-        $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
