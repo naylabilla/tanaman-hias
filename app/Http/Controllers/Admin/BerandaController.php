@@ -10,10 +10,6 @@ class BerandaController extends Controller
 {
     public function index()
     {
-        $jumlahProduk = Produk::count();
-
-        $totalStok = Produk::sum('stok');
-
-        return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok'));
+        
     }
 }

@@ -20,24 +20,31 @@
                 <p>Admin</p>
             </a>
             <h1 class="mx-auto">Rekapan</h1>
-            <a href="" class="btn btn-ghost ms-auto">
-                <img src="./assets/icons/logout.png" alt="" class="w-10">
-            </a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="btn btn-ghost ms-auto">
+                    <img src="./assets/icons/logout.png" alt="" class="w-10">
+                </button>
+            </form>
         </div>
         <div class="fixed left-0 top-[5.5rem] h-screen bg-[#B0D9B1] w-[23%]">
             <div class="bg-transparent w-48 min-h-48 rounded-lg flex mx-auto my-5">
                 <img src="./assets/images/tamu/logo.png" alt="" class="resize pl-1">
             </div>
             <div class="flex justify-center grid grid-rows-3 gap-5">
-                <a href="/beranda_penjual" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <a href="/beranda_penjual"
+                    class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                     <img src="./assets/icons/beranda.png" alt="" class="w-9 h-9 mr-4">
                     <span>Beranda</span>
                 </a>
-                <a href="/produk" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <a href="/produk"
+                    class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                     <img src="./assets/icons/produk.png" alt="" class="w-9 h-9 mr-4">
                     <span class="self-center col-span-2 mr-3">Produk</span>
                 </a>
-                <a href="/pesanan_penjual" class="btn bg-[#327C54] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+                <a href="/pesanan_penjual"
+                    class="btn bg-[#327C54] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                     <img src="./assets/icons/rekapan.png" alt="" class="w-9 h-9 mr-4">
                     <span class="self-center col-span-2">Rekapan</span>
                 </a>
@@ -45,7 +52,8 @@
         </div>
         <main class="absolute top-[5.5rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73.5%] h-[82%] rounded-lg">
             <div class="relative overflow-x-auto m-6">
-                <table class="w-full text-sm text-left rtl:text-right mx-auto bg-green-700 text-white rounded-xl text-center">
+                <table
+                    class="w-full text-sm text-left rtl:text-right mx-auto bg-green-700 text-white rounded-xl text-center">
                     <thead class="text-xs uppercase border-b border-black">
                         <h1 class="text-center font-bold mb-4 text-green-800 text-2xl">Detail Pembelian Produk</h1>
                         <tr>
@@ -73,7 +81,8 @@
                                     <option value="">Sedang di Kirim</option>
                                     <option value="">Pesanan Selesai</option>
                                 </select>
-                                <button class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 ml-3">Perbarui</button>
+                                <button
+                                    class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 ml-3">Perbarui</button>
                             </td>
                             <td class="py-3">
                                 <button class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24">Cetak</button>

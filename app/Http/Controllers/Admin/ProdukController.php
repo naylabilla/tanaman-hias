@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+
 use App\Models\Produk;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller
@@ -30,6 +32,39 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
+        Session::flash('nama', $request->nama);
+        Session::flash('tinggi', $request->tinggi);
+        Session::flash('stok', $request->stok);
+        Session::flash('harga', $request->harga);
+        Session::flash('deskripsi', $request->deskripsi);
+        Session::flash('kategori', $request->kategori);
+        
+        $request->validate([
+            'nama' => 'required|string',
+            'tinggi' => 'required|integer',
+            'stok' => 'required|integer',
+            'harga' => 'required|integer',
+            'gambar' => 'required|max:3000',
+            'deskripsi' => 'required|string',
+            'kategori' => 'required|string',
+        ],[
+            'nama.required'=>'Nama Produk harus diisi ngab!',
+            'tinggi.required'=>'Tinggi Produk harus diisi ngab!',
+            'stok.required'=>'Stok Produk harus diisi ngab!',
+            'harga.required'=>'Harga Produk harus diisi ngab!',
+            'gambar.required'=>'Gambar Produk harus diisi ngab!',
+            'deskripsi.required'=>'Deskripsi Produk harus diisi ngab!',
+            'kategori.required'=>'Kategori harus diisi ngab!',
+            // 'gambar.mimes'=>'Type gambar produknya harus JPG/JPEG/PNG ngab!',
+            'gambar.max'=>'Ukuran file gambar nya maks 3 mb ngab!',
+            // 'gambar.image' => 'File harus berupa gambar.',
+            // 'gambar.mimes' => 'Ekstensi file harus berupa JPG, JPEG, atau PNG.',
+            // 'gambar.max' => 'Ukuran file tidak boleh melebihi 5 MB.',
+            'harga.integer'=>'Ketikan harganya jangan pake titik ngab, harus angka aja!',
+            'stok.integer'=>'Ketikan stok jangan pake titik ngab, harus angka aja!',
+            'tinggi.integer'=>'Ketikan tingginya jangan pake titik ngab, harus angka aja!',
+        ]);
+
         $data = [
             'nama'=>$request->nama,
             'stok'=>$request->stok,

@@ -123,7 +123,7 @@ Route::get('/keranjang', function () {
 
 Route::resource('produk', ProdukController::class);
 
-Route::get('/beranda_penjual', [BerandaController::class, 'index']);
+// Route::get('/beranda_penjual', [BerandaController::class, 'index']);
 
 
 

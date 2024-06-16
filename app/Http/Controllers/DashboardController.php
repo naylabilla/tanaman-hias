@@ -14,7 +14,11 @@ class DashboardController extends Controller
             $role = Auth()->user()->role;
 
             if ($role == 'admin') {
-                return view('admin.beranda_penjual');
+                $jumlahProduk = Produk::count();
+
+                $totalStok = Produk::sum('stok');
+
+                return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok'));
             } elseif ($role == 'pembeli') {
                 $produkOutdoor = Produk::where('kategori', 'Outdoor')->get();
 
