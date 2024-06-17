@@ -19,7 +19,7 @@
                 <img src="./assets/icons/icon mobil.png" alt="" class="rawr absolute right-1 h-full">
             </div>
 
-            <div class="flex border-t border-b border-black py-4 mt-4">
+            <div class="flex border-t border-b border-black py-4 mt-2">
                 <!-- Kotak tengah baru -->
                 <div class="bg-gray-300 rounded-full w-2/3 h-9 flex items-center justify-center mx-auto text-black text-xl">
                     No.Pesanan 240320GGVM1HUD
@@ -27,7 +27,7 @@
             </div>
 
             <!-- Teks Penerima dan Pengirim -->
-            <div class="flex justify-between text-lg mt-4 px-4 mr-24 ml-5">
+            <div class="flex justify-between text-lg mt-4 px-4 mr-60 ml-5">
                 <div>
                     Penerima <span class="ml-4">: Marsya Huriyah</span><br>
                     Username <span class="ml-2">: hryyyh</span><br><br>
@@ -40,16 +40,16 @@
                 </div>
             </div>
 
-            <div class="flex justify-between items-center mt-4 border-t border-b border-black py-2">
-                <div class="text-center w-1/3">CASHLESS</div>
-                <div class="w-0.5 h-14 bg-black"></div>
-                <div class="text-center w-1/3">2 pcs</div>
+            <div class="flex justify-center items-center mt-4 border-t border-b border-black py-4 relative">
+                <div class="text-center w-2/3">CASHLESS</div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-14 bg-black"></div>
+                <div class="text-center w-2/3">2 pcs</div>
             </div>
 
             <div class="py-4 mt-4">
                 <span class="block ml-4">Waktu Pengiriman : 28/03/2024</span>
-                <span class="block ml-4">Monstera Deliciosa<span class="ml-6">Rp.165.000</span></span>
-                <span class="block ml-4">Calla Lily<span class="ml-24">Rp.200.000</span></span>
+                <span class="block ml-4">Monstera Deliciosa<span class="ml-10">Rp.165.000</span></span>
+                <span class="block ml-4">Calla Lily<span class="ml-28">Rp.200.000</span></span>
             </div>
         </div>
     </div>
