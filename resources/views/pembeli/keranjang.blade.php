@@ -119,7 +119,7 @@
 
     <div class="mt-4 flex items-center justify-end">
         <p class="text-gray-300 text-2xl mr-32">Total Pembayaran</p>
-        <p class="text-white text-2xl mr-40">Rp. 730.000</p>
+        <p class="text-white text-2xl mr-36">Rp. 730.000</p>
     </div>
 
     <div class="flex items-center justify-end mt-6 mr-40">
