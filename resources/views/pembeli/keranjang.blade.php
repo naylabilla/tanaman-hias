@@ -21,29 +21,28 @@
 </head>
 
 <body class="bg-green-500">
-    <div class="navbar bg-white sticky top-0 flex justify-between items-center px-5 py-3 text-black font-bold z-50">
-        <a href="#" class="flex items-center space-x-2">
-            <img src="./assets/images/tamu/logo.png" alt="Logo" class="h-10 object-scale-down">
-            <p class="text-2xl text-[#78A07C]">Lushtilvy</p>
+    <div class="navbar bg-white sticky top-0 flex justify-between px-8 py-1 text-3xl font-medium">
+        <a href="#" class="flex items-center space-x-4" style="margin-left: 20px;">
+            <img src="./assets/images/tamu/logo.png" alt="" class="w-12 object-scale-down">
+            <p class="text-2xl" style="color: #78A07C;">Lushtilvy</p>
         </a>
         <div class="flex items-center space-x-6">
             <a href="/keranjang" class="flex items-center space-x-2 hover:text-[#78A07C]">
-                <img src="./assets/icons/navbar keranjang.png" alt="Keranjang" class="w-8 h-8">
-                <p class="text-xl">Keranjang</p>
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <p class="text-2xl" style="color: #78A07C;">Keranjang</p>
             </a>
-            <a href="/pesanan" class="flex items-center space-x-2 hover:text-[#78A07C]">
-                <img src="./assets/icons/navbar pesanan.png" alt="Pesanan" class="w-8 h-8">
-                <p class="text-xl">Pesanan</p>
+            <a href="/pesanan" class="flex items-center space-x-2">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+                <p class="text-2xl"  style="color: #78A07C;">Pesanan</p>
             </a>
-            <div class="border-l-2 border-black pl-4">
-                <a href="/logout" class="flex items-center hover:text-[#78A07C]">
-                    <img src="./assets/icons/user1.png" alt="User" class="w-8 h-8">
+            <div class="border-l-4 border-black">
+                <a href="/logout" class="btn btn-ghost hover:bg-white ">
+                    <img src="./assets/icons/user1.png" alt="" class="w-10 ml-4">
                 </a>
             </div>
         </div>
     </div>
 
-    
     <div class="container mx-auto">
         <div class="bg-green-600 p-5 mt-5 ml-24 flex w-full max-w-6xl rounded-lg">
             <p class="text-white text-xl ml-20">Produk</p>
