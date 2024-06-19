@@ -19,7 +19,7 @@
         </div>
 
         <div class="mt-4 ml-32 flex items-center">
-            <input type="checkbox" class="form-checkbox text-green-600 rounded" />
+            <input type="checkbox" class="form-checkbox text-green-600 rounded -mt-24" />
             <img src="assets/images/outdoor/gambar 5 monstera.png" alt="foto produk" class="ml-0 w-40 h-40" />
             <p class="text-white text-xl ml-24">Monstera Deliciosa <br> Outdoor</p>
             <button class="text-white rounded ml-48">
@@ -39,7 +39,7 @@
         <hr>
 
         <div class="mt-4 ml-32 flex items-center">
-            <input type="checkbox" class="form-checkbox text-green-600 rounded" />
+            <input type="checkbox" class="form-checkbox text-green-600 rounded -mt-24" />
             <img src="assets/images/indoor/gambar 4 calla.png" alt="foto produk" class="ml-0 w-40 h-40" />
             <p class="text-white text-xl ml-24">Calla Lily <br>Indoor</p>
             <button class="text-white rounded ml-72">
@@ -59,10 +59,10 @@
         <hr>
 
         <div class="mt-4 ml-32 flex items-center">
-            <input type="checkbox" class="form-checkbox text-green-600 rounded" />
+            <input type="checkbox" class="form-checkbox text-green-600 rounded -mt-24" />
             <img src="assets/images/indoor/gambar 3 anthurium.png" alt="foto produk" class="ml-0 w-40 h-40" />
             <p class="text-white text-xl ml-24">Anthurium Andraenum <br> Indoor </p>
-            <button class="text-white rounded ml-40">
+            <button class="text-white rounded ml-48">
                 <i class="fas fa-minus-circle"></i>
             </button>
             <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
@@ -76,6 +76,8 @@
         </div>
 
         <br>
+        <hr>
+
     </div>
 
 
