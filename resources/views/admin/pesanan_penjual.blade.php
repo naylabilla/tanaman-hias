@@ -15,7 +15,7 @@
 
     <body class="bg-[#618264] h-screen">
         <div class="navbar bg-[#B0D9B1] fixed top-0 rounded-b-3xl grid grid-cols-3 text-black text-3xl font-bold">
-            <a href="" class="btn btn-ghost text-xl me-auto">
+            <a href="{{ route('dashboard')}}" class="btn btn-ghost text-xl me-auto">
                 <img src="./assets/icons/user.png" alt="" class="w-10">
                 <p>Admin</p>
             </a>
@@ -33,12 +33,12 @@
                 <img src="./assets/images/tamu/logo.png" alt="" class="resize pl-1">
             </div>
             <div class="flex justify-center grid grid-rows-3 gap-5">
-                <a href="/beranda_penjual"
+                <a href="{{ route('dashboard')}}"
                     class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                     <img src="./assets/icons/beranda.png" alt="" class="w-9 h-9 mr-4">
                     <span>Beranda</span>
                 </a>
-                <a href="/produk"
+                <a href="{{ route('produk.index')}}"
                     class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                     <img src="./assets/icons/produk.png" alt="" class="w-9 h-9 mr-4">
                     <span class="self-center col-span-2 mr-3">Produk</span>

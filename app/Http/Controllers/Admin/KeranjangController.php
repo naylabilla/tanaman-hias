@@ -3,11 +3,58 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Keranjang;
+use App\Models\Produk;
+use App\Models\User; 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KeranjangController extends Controller
 {
+    // Menambahkan produk ke keranjang
+    public function addToCart(Request $request, $kode_produk)
+    {
+        $produk = Produk::findOrFail($kode_produk);
+
+        $keranjang = Keranjang::where('kode_produk', $kode_produk)
+            ->where('id_pengguna', Auth::id())
+            ->first();
+
+        if ($keranjang) {
+            // Update jumlah jika produk sudah ada di keranjang
+            $keranjang->jumlah += 1;
+        } else {
+            // Tambahkan produk baru ke keranjang
+            $keranjang = new Keranjang();
+            $keranjang->kode_produk = $kode_produk;
+            $keranjang->id_pengguna = Auth::id();
+            $keranjang->jumlah = 1;
+        }
+
+        $keranjang->save();
+
+        return redirect()->back()->with('success', 'Produk berhasil ditambahkan ke keranjang!');
+    }
+
+    // Menampilkan keranjang
+    public function showCart()
+    {
+        $keranjang = Keranjang::where('id_pengguna', Auth::id())->with('produk')->get();
+        return view('pembeli.keranjang', compact('keranjang'));
+    }
+
+    // Menghapus produk dari keranjang
+    public function removeFromCart($id_keranjang)
+    {
+        $keranjang = Keranjang::findOrFail($id_keranjang);
+        if ($keranjang->id_pengguna == Auth::id()) {
+            $keranjang->delete();
+            return redirect()->back()->with('success', 'Produk berhasil dihapus dari keranjang!');
+        } else {
+            return redirect()->back()->with('error', 'Anda tidak memiliki izin untuk menghapus produk ini.');
+        }
+    }
+
     /**
      * Display a listing of the resource.
      */

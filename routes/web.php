@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BerandaController;
 use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\KeranjangController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -129,3 +130,6 @@ Route::resource('produk', ProdukController::class);
 
 Route::get('/detail_produk/{id}', [DashboardController::class, 'detail'])->name('detail_produk');
 
+Route::post('/keranjang/tambah/{kode_produk}', [KeranjangController::class, 'addToCart'])->name('keranjang.tambah');
+Route::get('/keranjang', [KeranjangController::class, 'showCart'])->name('keranjang.tampil');
+Route::delete('/keranjang/hapus/{id_keranjang}', [KeranjangController::class, 'removeFromCart'])->name('keranjang.hapus');

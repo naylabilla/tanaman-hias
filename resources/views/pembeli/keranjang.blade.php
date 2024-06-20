@@ -17,12 +17,13 @@
             width: 2rem;
             text-align: center;
         }
+
     </style>
 </head>
 
 <body class="bg-green-500">
     <div class="navbar bg-white sticky top-0 flex justify-between px-8 py-1 text-3xl font-medium">
-        <a href="#" class="flex items-center space-x-4" style="margin-left: 20px;">
+        <a href="{{ route('dashboard')}}" class="flex items-center space-x-4" style="margin-left: 20px;">
             <img src="./assets/images/tamu/logo.png" alt="" class="w-12 object-scale-down">
             <p class="text-2xl" style="color: #78A07C;">Lushtilvy</p>
         </a>
@@ -33,7 +34,7 @@
             </a>
             <a href="/pesanan" class="flex items-center space-x-2">
                 <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
-                <p class="text-2xl"  style="color: #78A07C;">Pesanan</p>
+                <p class="text-2xl" style="color: #78A07C;">Pesanan</p>
             </a>
             <div class="border-l-4 border-black">
                 <a href="/logout" class="btn btn-ghost hover:bg-white ">
@@ -51,62 +52,28 @@
             <p class="text-white text-xl ml-64">Harga</p>
         </div>
 
+        @foreach($keranjang as $item)
         <div class="mt-4 ml-32 flex items-center">
             <input type="checkbox" class="form-checkbox text-green-600 rounded" />
-            <img src="assets/images/outdoor/gambar 5 monstera.png" alt="foto produk" class="ml-0 w-40 h-40" />
-            <p class="text-white text-xl ml-24">Monstera Deliciosa <br> Outdoor</p>
+            <img src="/assets/images/tambahproduk/{{$item->produk->gambar}}" alt="foto produk" class="ml-0 w-40 h-40" />
+            <p class="text-white text-xl ml-24">{{ $item->produk->nama }}<br> {{ $item->produk->kategori }}</p>
             <button class="text-white rounded ml-48">
                 <i class="fas fa-minus-circle"></i>
             </button>
-            <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
+            <span class="mx-5 text-white">{{ $item->jumlah }}</span> <!-- Ini untuk menampilkan jumlah -->
             <button class="text-white px-2 py-1 rounded">
                 <i class="fas fa-plus-circle"></i>
             </button>
-            <p class="text-white text-xl ml-52">Rp. 230.000 </p>
-            <button class="text-white">
-                <i class="fa-solid fa-trash ml-10"></i>
-            </button>
+            <p class="text-white text-xl ml-52">Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
+            <form action="{{ route('keranjang.hapus', $item->id_keranjang) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="text-black">
+                    <i class="fa-solid fa-trash ml-10"></i>
+                </button>
+            </form>
         </div>
-
-        <br>
-        <hr>
-
-        <div class="mt-4 ml-32 flex items-center">
-            <input type="checkbox" class="form-checkbox text-green-600 rounded" />
-            <img src="assets/images/indoor/gambar 4 calla.png" alt="foto produk" class="ml-0 w-40 h-40" />
-            <p class="text-white text-xl ml-24">Calla Lily <br>Indoor</p>
-            <button class="text-white rounded ml-72">
-                <i class="fas fa-minus-circle"></i>
-            </button>
-            <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
-            <button class="text-white px-2 py-1 rounded">
-                <i class="fas fa-plus-circle"></i>
-            </button>
-            <p class="text-white text-xl ml-52">Rp. 200.000</p>
-            <button class="text-white">
-                <i class="fa-solid fa-trash ml-10"></i>
-            </button>
-        </div>
-
-        <br>
-        <hr>
-
-        <div class="mt-4 ml-32 flex items-center">
-            <input type="checkbox" class="form-checkbox text-green-600 rounded" />
-            <img src="assets/images/indoor/gambar 3 anthurium.png" alt="foto produk" class="ml-0 w-40 h-40" />
-            <p class="text-white text-xl ml-24">Anthurium Andraenum <br> Indoor </p>
-            <button class="text-white rounded ml-40">
-                <i class="fas fa-minus-circle"></i>
-            </button>
-            <span class="mx-5 text-white">1</span> <!-- Ini untuk menampilkan jumlah -->
-            <button class="text-white px-2 py-1 rounded">
-                <i class="fas fa-plus-circle"></i>
-            </button>
-            <p class="text-white text-xl ml-52">Rp. 300.000</p>
-            <button class="text-white ml-10">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
+        @endforeach
 
         <br>
         <hr>
@@ -142,6 +109,7 @@
                 span.textContent = quantity - 1;
             }
         }
+
     </script>
 </body>
 
