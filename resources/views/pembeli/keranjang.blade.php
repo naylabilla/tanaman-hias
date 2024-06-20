@@ -13,7 +13,6 @@
         .product-row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
         .product-info {
             display: flex;
@@ -24,16 +23,18 @@
         .product-details {
             display: flex;
             flex-direction: column;
-            margin-left: 130px;
+            margin-left: 60px;
         }
         .product-quantity {
-            margin-right: 207px;
+            margin-right: 105px;
         }
         .product-price {
-            width: 120px;
-            margin-right: 100px;
+            margin-right: 60px;
         }
        
+        .product-total {
+            margin-right: 100px;
+        }
     </style>
 </head>
 
@@ -71,17 +72,19 @@
     <div class="container mx-auto">
         <div class="bg-green-600 p-5 mt-5 ml-16 flex w-full max-w-6xl rounded-lg">
             <p class="text-white text-xl w-1/4 text-center">Produk</p>
-            <p class="text-white text-xl w-1/4 text-center">Nama</p>
-            <p class="text-white text-xl w-1/4 text-center">Jumlah</p>
-            <p class="text-white text-xl w-1/4 text-center">Harga</p>
+            <p class="text-white text-xl w-1/3 text-center">Nama</p>
+            <p class="text-white text-xl w-1/3 text-center">Jumlah</p>
+            <p class="text-white text-xl w-1/6 text-center">Harga</p>
+            <p class="text-white text-xl w-1/4 text-center">Total</p>
+            <p class="text-white text-xl w-1/6 text-center">Aksi</p>
         </div>
 
         @foreach($keranjang as $item)
         <div class="product-row mt-4 ml-16">
             <div class="product-info">
-                <input type="checkbox" class="form-checkbox text-green-600 rounded rounded -mt-32 ml-10" />
+                <input type="checkbox" class="form-checkbox text-green-600 rounded rounded -mt-32 ml-4" />
                 <div class="product-pict">
-                <img src="/assets/images/tambahproduk/{{$item->produk->gambar}}" alt="foto produk" class="ml-4 w-40 h-40" />
+                <img src="/assets/images/tambahproduk/{{$item->produk->gambar}}" alt="foto produk" class="ml-2 w-40 h-40" />
                 </div>
 
                 <div class="product-details">
@@ -100,31 +103,18 @@
             </div>
 
             <p class="text-white text-xl product-price">Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
+            <p class="text-white text-xl product-total">Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
             <form action="{{ route('keranjang.hapus', $item->id_keranjang) }}" method="POST">
+
                 @csrf
                 @method('DELETE')
-                <button class="text-black ml-10">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-            </form>
+                <svg class="w-6 h-6 text-white dark:text-white mr-32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                </svg>
+    </form>
         </div>
         <hr class="mt-4 ml-16">
         @endforeach
-    </div>
-
-    <div class="mt-4 flex items-center justify-end mr-16">
-        <p class="text-gray-300 text-2xl mr-16">Total Pembayaran</p>
-        <p class="text-white text-2xl">Rp. 730.000</p>
-    </div>
-
-    <div class="flex items-center justify-end mt-6 mr-40">
-        <button class="bg-green-600 text-white font-bold py-2 px-4 rounded text-xl">Lanjutkan Pesanan</button>
-    </div>
-
-    <div class="grid grid-cols-2 items-center ml-8 mb-6">
-        <a href="/dashboardlama" class="text-2xl text-black font-bold">
-            <i class="fa-solid fa-chevron-left w-6 mr-2 mb-6"></i>Kembali
-        </a>
     </div>
 
     <script>
