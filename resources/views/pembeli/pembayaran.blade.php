@@ -9,26 +9,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#618264] h-full">
+<body class="bg-[#6D896B] h-full">
     <!-- Navbar -->
-    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000;">
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="
+                position: sticky;
+                z-index: 1000;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            ">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
-            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down">
+            <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
             <a href="/keranjang" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12">
+                <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12" />
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
-                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12">
+            <a href="/riwayat_pesanan" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/navbar pesanan.png" alt="" class="w-12" />
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
+            <a href="{{ route('profile.index') }}" class="btn btn-ghost hover:bg-white">
+                <img src="./assets/icons/user1.png" alt="" class="w-10" />
+                <p class="text-2xl text-[#78A07C]">Profil</p>
+            </a>
             <div class="border-l-4 border-black">
-                <a href="/logout" class="btn btn-ghost hover:bg-white">
-                    <img src="./assets/icons/user1.png" alt="" class="w-10">
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <button type="submit" class="btn btn-ghost">
+                        <img src="/assets/icons/logout.png" alt="" class="w-10" />
+                    </button>
+                </form>
             </div>
         </div>
     </div>
