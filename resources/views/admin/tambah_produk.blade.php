@@ -50,11 +50,11 @@
     {{-- PRODUK --}}
     <div class="rounded-lg absolute top-[5.5rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73.5%] h-[82%]">
         @if ($errors->any())
-        <div class="pt-3">
-            <div class="alert alert-danger">
+        <div class="pt-2">
+            <div class="alert alert-danger w-3/4 ml-4 bg-red-500 text-white">
                 <ul>
                     @foreach ($errors->all() as $item)
-                        <li>{{ $item }}</li>
+                        <li class="italic text-xs font-semibold">{{ $item }}</li>
                     @endforeach
                 </ul>
             </div>
@@ -81,7 +81,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-[30%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="stok" type="number" placeholder="" value="{{ Session::get('nama') }}" name="stok" >
+                        id="stok" type="number" placeholder="" value="{{ Session::get('stok') }}" name="stok" >
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="#">
@@ -113,7 +113,7 @@
                     </label>
                     <textarea
                         class="shadow appearance-none border rounded w-[95%] h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        rows="2" name="deskripsi" value="{{ Session::get('deskripsi') }}"></textarea>
+                        rows="2" name="deskripsi" value="">{{ Session::get('deskripsi') }}</textarea>
                 </div>
                 <div class="col-span-2 -mt-5">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="#">

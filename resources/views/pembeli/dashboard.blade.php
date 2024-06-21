@@ -247,7 +247,7 @@
                             <img src="/assets/images/tambahproduk/{{ $produkout->gambar }}" alt="Gambar 1"
                                 class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3 text-bold">{{ $produkout->nama }}</div>
-                            <button class="absolute bottom-3 left-3 bg-green-400 bg-hover hover:bg-gray-300">
+                            <button class="absolute bottom-5 left-3 bg-green-400 bg-hover hover:bg-gray-300">
                                 <a href="{{ route('detail_produk', $produkout->kode) }}">
                                     <img src="assets/icons/detail.png" alt="Icon"
                                         class="px-1 w-9 h-9 object-scale-down">
@@ -301,9 +301,14 @@
                                 </a>
                             </button>
                             <div class="mt-1">Rp{{ number_format($produkin->harga, 0, ',', '.') }}</div>
-                            <button class="absolute bottom-3 right-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <img src="assets/icons/icon keranjang.png" alt="Icon" class="w-9 h-9 object-scale-down">
-                            </button>
+                            <form action="{{ route('keranjang.tambah', $produkin->kode) }}" method="POST"
+                                class="absolute bottom-3 right-3">
+                                @csrf
+                                <button type="submit" class="bg-green-400 bg-hover hover:bg-gray-300">
+                                    <img src="assets/icons/icon keranjang.png" alt="Icon"
+                                        class="w-9 h-9 object-scale-down">
+                                </button>
+                            </form>
                         </div>
                     </div>
                     @endforeach

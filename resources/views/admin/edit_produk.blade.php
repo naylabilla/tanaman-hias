@@ -49,6 +49,17 @@
 
     {{-- PRODUK --}}
     <div class="rounded-lg absolute top-[5.5rem] ml-[25%] mr-6 bg-[#D0E7D2] w-[73.5%] h-[82%]">
+        @if ($errors->any())
+        <div class="pt-2">
+            <div class="alert alert-danger w-3/4 ml-4 bg-red-500 text-white ">
+                <ul>
+                    @foreach ($errors->all() as $item)
+                    <li class="italic text-xs font-semibold">{{ $item }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        @endif
 
         <form class="rounded-box pl-8 pt-6" action="{{ url('produk/'.$data->kode) }}" method="post" enctype="#">
             @csrf
@@ -62,7 +73,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-[95%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama" type="text" placeholder="" value="{{ $data->nama }}" name="nama" required>
+                        id="nama" type="text" placeholder="" value="{{ $data->nama }}" name="nama">
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -70,7 +81,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-[30%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama" type="number" placeholder="" value="{{ $data->stok }}" name="stok" required>
+                        id="" type="number" placeholder="" value="{{ $data->stok }}" name="stok">
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -78,15 +89,15 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-[30%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama" type="text" placeholder="" value="{{ $data->tinggi }}" name="tinggi" required>
+                        id="" type="number" placeholder="" value="{{ $data->tinggi }}" name="tinggi">
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
                         Kategori
-                    </label>
+                    </label>                    
                     <input
                         class="shadow appearance-none border rounded w-[40%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama" type="text" placeholder="" value="{{ $data->kategori }}" name="kategori" required>
+                        id="" type="text" placeholder="" value="{{ $data->kategori }}" name="kategori" >
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -94,7 +105,7 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-[50%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama" type="text" placeholder="" value="{{ $data->harga }}" name="harga" required>
+                        id="" type="number" placeholder="" value="{{ $data->harga }}" name="harga">
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -103,7 +114,7 @@
                     <textarea
                         class="shadow appearance-none border rounded w-[95%] h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         rows="2" name="deskripsi">{{ $data->deskripsi }}</textarea>
-                    <!-- <input class="shadow appearance-none border rounded w-[95%] h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" value="{{ $data->deskripsi }}" name="deskripsi" required> -->
+                    <!-- <input class="shadow appearance-none border rounded w-[95%] h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" type="text" placeholder="" value="{{ $data->deskripsi }}" name="deskripsi" > -->
                 </div>
                 <div class="col-span-2 -mt-5 ">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -112,7 +123,7 @@
                     <input
                         class="shadow appearance-none border rounded w-[40%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="nama" type="file" placeholder="" value="/assets/images/tambahproduk/{{ $data->gambar }}"
-                        name="gambar" required>
+                        name="gambar">
                 </div>
                 <div class="flex justify-center items-center mt-4 ">
 

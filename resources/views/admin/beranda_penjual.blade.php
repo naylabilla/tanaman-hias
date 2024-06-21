@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="bg-white rounded-lg border border-black w-[93%] h-32 ml-4 grid grid-cols-4 items-center">
-                            <img src="./assets/icons/icon pendapatan.png" alt="" class="h-16 justify-self-center">
+                            <img src="./assets/icons/rupiah-sign-solid.png" alt="" class="h-14 ml-3 justify-self-center">
                             <div class="col-span-3 mt-4">
                                 <p class="text-black font-bold text-6xl">1.000.000</p>
                                 <p class="text-[#618264] font-bold text-xl ml-3">Pendapatan</p>
