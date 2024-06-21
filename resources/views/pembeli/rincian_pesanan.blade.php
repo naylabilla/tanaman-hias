@@ -9,30 +9,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .text-left {
-            display: flex;
-        }
-
-        .text-left p {
-            display: flex;
-        }
-
-        .container2 {
-            display: flex;
-        }
-
-        .container2>div {
-            flex: 1;
-        }
-
         hr {
             width: calc(100% - 123px);
+        }
+        .product-pict {
+            margin-left: 5rem;
+        }
+        .product-name {
+            margin-left: -4rem;
+        }
+        .product-pieces {
+            margin-right: -3rem;
+        }
+        .product-price {
+            margin-right: -5.5rem;
+        }
+        .product-total {
+            margin-right: 3.5rem;
         }
     </style>
 </head>
@@ -59,86 +52,81 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center text-white text-3xl font-bold mt-15">Rincian Pesanan</h1>
-    <div class="flex items-center">
-        <img src="./assets/icons/panah kiri.png" alt="" class="w-8 h-8 mt-8 ml-10">
-        <p class="text-2xl text-[#B0D9B1] font-bold mt-7 mr-[72%] ml-3">Rincian</p>
-    </div>
-    </div>
-    <hr style="border-color: white; margin-top: 5px; margin-left: 80px; margin-right: 50px;">
+    <!-- Title -->
+    <h1 class="text-center text-white text-3xl font-bold mt-10">Rincian Pesanan</h1>
 
-
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Pesanan</div>
-        <div class="text-left text-white mt-2" style="margin-left: -330px;">: 24032GGVM1HUD</div>
-        <div class="text-right text-white mr-16 mt-3">Status Pesanan : Sedang Dikirim</div>
+    <!-- Back Button and Subtitle -->
+    <div class="flex items-center mt-8 ml-10">
+        <img src="./assets/icons/panah kiri.png" alt="Back" class="w-8 h-8">
+        <p class="text-2xl text-[#B0D9B1] font-bold ml-3">Rincian</p>
     </div>
 
+    <hr class="border-white mx-20 my-2">
 
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Nama</div>
-        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Marsya Huriyah</div>
-    </div>
-
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Nomor Hp</div>
-        <div class="text-left text-white mt-2" style="margin-left: -900px;">: 08341428919</div>
-    </div>
-
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Alamat</div>
-        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Orchard Park blok X no 505, Batam Centre, 29431</div>
-    </div>
-
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Tanggal Pesan</div>
-        <div class="text-left text-white mt-2" style="margin-left: -900px;">: 27/03/2024</div>
-    </div>
-
-    <div class="container2">
-        <div class="text-left text-white mt-2" style="margin-left: 96px;">Metode Pembayaran</div>
-        <div class="text-left text-white mt-2" style="margin-left: -900px;">: Transfer Bank</div>
-    </div>
-
-    <hr style="border-color: white; margin-top: 25px; margin-right: 50px; margin-left: 84px;">
-
-    <div class="container2">
-        <div class="text-left text-white ml-20 mt-2" style="margin-left: 96px;">Gambar</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: -25px;">Nama</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 38px;">Jumlah</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 85px;">Harga</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 118px;">Total</div>
-    </div>
-
-    <hr style="border-color: white; margin-top: 12px; margin-right: 50px; margin-left: 84px;">
-
-    <div class="container2">
-        <div class="text-left text-white ml-20 mt-2" style="margin-left: 96px;">
-            <img src="./assets/images/outdoor/gambar 5 monstera.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
+    <!-- Order Details -->
+     <div class="mx-10 mt-2 text-white">
+        <div class="flex justify-between">
+            <div class="grid grid-cols-3 gap-2">
+                <p class="ml-14 col-span-1">Nomor Pesanan</p>
+                <p class="col-span-1 ">: 24832GGVM1HUD</p>
+            </div>
+            <p class="mr-8">Status Pesanan: Sedang Dikirim</p>
+        </div><br>
+        <div class="grid grid-cols-3 gap-2">
+            <p class="ml-14 col-span-1">Nama</p>
+            <p class="col-span-1 -ml-48">: Marsya Huriyah</p>
         </div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: -35px;">Monstera Deliciosa</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 44px;">1</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 54px;">165.000</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 106px;">165.000</div>
-    </div>
-
-    <hr style="border-color: white; margin-top: 12px; margin-right: 50px; margin-left: 84px;">
-
-    <div class="container2">
-        <div class="text-left text-white ml-20 mt-2" style="margin-left: 96px;">
-            <img src="./assets/images/indoor/gambar 4 calla.png" alt="Gambar" class="inline-block h-6" style="width: 100px; height: 100px;">
+        <div class="grid grid-cols-3 gap-2">
+            <p class="ml-14 col-span-1">Nomor Hp</p>
+            <p class="col-span-2 -ml-48">: 08341428919</p>
         </div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: -35px;">Calla Lily</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 44px;">1</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 54px;">200.000</div>
-        <div class="text-left text-white mr-16 mt-2" style="margin-left: 106px;">200.000</div>
+        <div class="grid grid-cols-3 gap-2">
+            <p class="ml-14 col-span-1">Alamat</p>
+            <p class="col-span-2 -ml-48">: Orchard Park blok X no 505, Batam Centre, 29431</p>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+            <p class="ml-14 col-span-1">Tanggal Pesan</p>
+            <p class="col-span-2 -ml-48">: 27/03/2024</p>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+            <p class="ml-14 col-span-1">Metode Pembayaran</p>
+            <p class="col-span-2 -ml-48">: Transfer Bank</p>
+        </div>
     </div>
 
-    <hr style="border-color: white; margin-top: 12px; margin-right: 50px; margin-left: 84px;">
 
-    <div class="container2">
-        <div class="text-left text-white font-bold ml-20 mt-4 " style="margin-left: 795px;">Total</div>
-        <div class="text-left text-white font-bold mr-16 mt-4" style="margin-left: 160px;">365.000</div>
+    <br>
+    <hr class="border-white my-2 mx-20">
+
+    <!-- Order Items Header -->
+    <div class="flex justify-between text-white mx-10 mt-2 ml-24">
+        <p class="ml-10">Gambar</p>
+        <p class="mr-12">Nama</p> 
+        <p class="-mr-16">Jumlah</p>
+        <p class="-mr-14">Harga</p>
+        <p class="mr-16">Total</p>
     </div>
 
+    <hr class="border-white my-2 mx-20">
+
+    <!-- Order Items -->
+   
+        <!-- Item 1 -->
+        <div class="flex justify-between items-center mx-10 mt-2 space-y-4 text-white">
+            <img src="./assets/images/outdoor/gambar 5 monstera.png" alt="Monstera Deliciosa" class="w-24 h-24 product-pict">
+            <p class="product-name">Monstera Deliciosa</p>
+            <p class="product-pieces">1</p>
+            <p class="product-price">165.000</p>
+            <p class="product-total">165.000</p>
+        </div>
+        
+        <hr class="border-white my-2 mx-20">
+
+    <!-- Total -->
+    <div class="flex justify-end font-bold text-white mx-10 mt-4">
+        <p class="mr-44">Total</p>
+        <p class="mr-12">365.000</p>
+    </div>
 </body>
+
+</html>
