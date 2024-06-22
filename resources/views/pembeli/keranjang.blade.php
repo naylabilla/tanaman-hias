@@ -43,7 +43,6 @@
         .product-total {
             margin-right: 100px;
         }
-
     </style>
 </head>
 
@@ -94,7 +93,7 @@
         @foreach($keranjang as $item)
         <div class="product-row mt-4 ml-16">
             <div class="product-info">
-                <input type="checkbox" class="form-checkbox text-green-600 rounded rounded check_tunggal -mt-32 ml-4" />
+                <input type="checkbox" class="form-checkbox text-green-600 rounded check_tunggal -mt-32 ml-4" />
                 <div class="product-pict">
                     <img src="/assets/images/tambahproduk/{{$item->produk->gambar}}" alt="foto produk"
                         class="ml-2 w-40 h-40" />
@@ -142,36 +141,40 @@
         @endforeach
     </div>
 
-    <div class="fixed bottom-0 w-full bg-white border-t-2 border-white-900">
-        <div class="container mx-auto p-0 my-2">
-            <table class="w-full mb-0">
-                <thead class="align-middle relative">
-                    <tr>
-                        <th class="text-blue-900 text-xl absolute left-20 top-5 ">
-                            <input class="form-check-input -ml-1 " id="pilih_semua_checkbox" type="checkbox">
-                            Pilih Semua
-                        </th>
-                        <!-- <th class="text-2xl text-blue-900" style="width: 400px" colspan="2">
-                            Pilih Semua 
-                        </th> -->
-                        <th class="text-2xl text-blue-900 pl-96" colspan="2">
-                            Total (<span id="jumlah_produk">0</span> Produk)
-                        </th>
-                        <th class="text-right text-xl text-blue-900 absolute right-60 top-5" id="total_harga_akhir">
-                            Rp0
-                        </th>
-                        <th class="">
-                            <button class="btn btn-lg text-xl font-semibold bg-blue-700 text-white w-25 mr-5 "
-                                type="submit">
-                                Periksa
-                            </button>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+    <form id="submit-pesanan-form" method="POST" action="/submit-pesanan">
+        @csrf
+        <input type="hidden" name="keranjang" id="keranjang-input">
+        <input type="hidden" name="jumlah" id="jumlah-input">
+        <div class="fixed bottom-0 w-full bg-white border-t-2 border-white-900">
+            <div class="container mx-auto p-0 my-2">
+                <table class="w-full mb-0">
+                    <thead class="align-middle relative">
+                        <tr>
+                            <th class="text-blue-900 text-xl absolute left-20 top-5 ">
+                                <input class="form-check-input -ml-1 " id="pilih_semua_checkbox" type="checkbox">
+                                Pilih Semua
+                            </th>
+                            <!-- <th class="text-2xl text-blue-900" style="width: 400px" colspan="2">
+                                Pilih Semua
+                            </th> -->
+                            <th class="text-2xl text-blue-900 pl-96" colspan="2">
+                                Total (<span id="jumlah_produk">0</span> Produk)
+                            </th>
+                            <th class="text-right text-xl text-blue-900 absolute right-60 top-5" id="total_harga_akhir">
+                                Rp0
+                            </th>
+                            <th class="">
+                                <button class="btn btn-lg text-xl font-semibold bg-blue-700 text-white w-25 mr-5"
+                                    type="submit" onclick="submitPesanan()">
+                                    Periksa
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
-    </div>
-
+    </form>
 
     <script>
         function increaseQuantity(cartItemId) {
@@ -256,6 +259,24 @@
         const pilih_semua_checkbox = document.querySelector("#pilih_semua_checkbox");
         pilih_semua_checkbox.addEventListener("change", handle_pilih_semua_change);
 
+        function submitPesanan() {
+            const selectedItems = [];
+            const selectedQuantities = [];
+
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    const row = checkbox.closest(".product-row");
+                    const itemId = row.querySelector(".jumlah").id.split('-')[1];
+                    const quantity = parseInt(row.querySelector(".jumlah").textContent);
+                    selectedItems.push(itemId);
+                    selectedQuantities.push(quantity);
+                }
+            });
+
+            document.getElementById('keranjang-input').value = JSON.stringify(selectedItems);
+            document.getElementById('jumlah-input').value = JSON.stringify(selectedQuantities);
+            document.getElementById('submit-pesanan-form').submit();
+        }
     </script>
 
 </body>
