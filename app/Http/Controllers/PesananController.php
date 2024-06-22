@@ -7,6 +7,7 @@ use App\Models\Pesanan;
 use App\Models\Produk;
 use App\Models\Resi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class PesananController extends Controller
@@ -14,6 +15,7 @@ class PesananController extends Controller
     public function submit_pesanan(Request $request)
     {
         $resi = new Resi();
+        $resi->user_id = Auth::id();
         $resi->save();
 
         $keranjangIds = json_decode($request->input('keranjang'));

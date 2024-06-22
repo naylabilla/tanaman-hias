@@ -119,9 +119,9 @@ Route::get('/lupa_password', function () {
     return view('pembeli.lupa_password');
 });
 
-Route::get('/keranjang', function () {
-    return view('pembeli.keranjang');
-});
+// Route::get('/keranjang', function () {
+//     return view('pembeli.keranjang');
+// });
 
 Route::resource('produk', ProdukController::class);
 

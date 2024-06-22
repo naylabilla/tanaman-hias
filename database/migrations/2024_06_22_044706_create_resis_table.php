@@ -23,7 +23,10 @@ return new class extends Migration
             $table->string('kode_pos')->nullable();
             $table->enum('metode_pembayaran', ['Transfer Bank', 'Bayar di Tempat'])->nullable();
             $table->string('bukti_pembayaran')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id_pengguna')->on('pengguna');
         });
     }
 

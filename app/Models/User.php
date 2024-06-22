@@ -42,4 +42,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function resi()
+    {
+        return $this->hasMany(Resi::class, 'user_id', 'id_pengguna');
+    }
 }
