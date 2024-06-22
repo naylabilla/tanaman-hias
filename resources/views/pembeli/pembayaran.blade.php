@@ -11,14 +11,17 @@
 
 <body class="bg-[#6D896B] h-full">
     <!-- Navbar -->
-    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
+        style="
                 position: sticky;
                 z-index: 1000;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
             ">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+
             <img src="{{ asset('assets/images/tamu/logo.png') }}" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />
+
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
@@ -81,6 +84,7 @@
         @php
         $total += $item->harga_satuan * $item->jumlah;
         @endphp
+
         @endforeach
 
         <div class="grid grid-cols-5">
@@ -94,7 +98,9 @@
             <div class="grid grid-cols-5 my-5">
                 <div class="col-span-2">
                     <h1 class="text-gray-300 text-xl mb-1">METODE PEMBAYARAN</h1>
+
                     <select name="metode_pembayaran" id="" class="w-4/6 h-10 text-2xl bg-white text-black border border-4 border-green-400">
+
                         <option selected disabled hidden></option>
                         <option value="Transfer Bank">Transfer Bank</option>
                         <option value="Bayar di Tempat">Bayar di Tempat</option>
@@ -102,12 +108,16 @@
                 </div>
                 <div class="col-span-3">
                     <h1 class="text-gray-300 text-xl mb-1">PESAN UNTUK PENERIMA (OPSIONAL)</h1>
+
                     <textarea class="w-full bg-white text-black resize-none border border-4 border-green-400" name="pesan" id="" rows="3"></textarea>
+
                 </div>
             </div>
             <div class="grid grid-cols-2 items-center">
                 <a href="" class="text-2xl text-black font-bold">
+
                     <img src="{{ asset('assets/icons/kembali.png') }}" alt="" class="inline size-5 mb-1 ml-1">Kembali
+
                 </a>
                 <button type="submit" class="btn bg-green-600 text-xl my-3 text-white border-none w-2/5 ms-auto">BAYAR
                     SEKARANG</button>

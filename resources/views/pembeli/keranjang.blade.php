@@ -252,6 +252,7 @@
             const selectedQuantities = [];
 
             checkboxes.forEach(function(checkbox) {
+
                 if (checkbox.checked) {
                     const row = checkbox.closest(".product-row");
                     const itemId = row.querySelector(".jumlah").id.split('-')[1];

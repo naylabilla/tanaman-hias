@@ -12,7 +12,8 @@
 
 <body class="bg-[#6D896B] h-full">
     <!-- Navbar -->
-    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
+        style="
                 position: sticky;
                 z-index: 1000;
                 border-bottom-left-radius: 10px;

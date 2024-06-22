@@ -11,14 +11,17 @@
 
 <body class="bg-[#6D896B] h-screen">
     <!-- Navbar -->
-    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
+        style="
                 position: sticky;
                 z-index: 1000;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
             ">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+
             <img src="{{ asset('assets/images/tamu/logo.png') }}" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />
+
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
@@ -67,11 +70,13 @@
             <div class="mt-4">
                 <p class="text-xl text-white font-bold mt-4 mr-[86%]">Total Pembayaran</p>
                 @php
+
                 $total = 0;
 
                 foreach ($resi->pesanan as $value) {
                 $total += $value->harga_satuan * $value->jumlah;
                 }
+
                 @endphp
                 <p class="text-3xl text-[#066A34] font-bold mb-6 mr-[86%]">Rp. {{ number_format($total) }}</p>
                 <div class="bg-white border border-green-600 rounded w-1/6 h-8 border-green-600">
@@ -88,11 +93,13 @@
 
             <div class="mt-4">
                 <p class="text-white text-3xs font-bold">Bukti Pembayaran</p>
+
                 <input type="file" name="bukti_pembayar" id="tes" class="text-black font-bold rounded input input-bordered input-success w-[57%] h-18 border-green-300" />
             </div>
 
             <div class="mt-8 flex justify-center">
                 <button type="submit" class="btn bg-[#00A651] text-xl rounded text-white border-none w-[14%] h-[10%] mx-auto">OK</button>
+
             </div>
         </div>
     </form>
