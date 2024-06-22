@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\KeranjangController;
+use App\Http\Controllers\PesananController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -118,9 +119,9 @@ Route::get('/lupa_password', function () {
     return view('pembeli.lupa_password');
 });
 
-Route::get('/keranjang', function () {
-    return view('pembeli.keranjang');
-});
+// Route::get('/keranjang', function () {
+//     return view('pembeli.keranjang');
+// });
 
 Route::resource('produk', ProdukController::class);
 
@@ -133,3 +134,10 @@ Route::get('/detail_produk/{id}', [DashboardController::class, 'detail'])->name(
 Route::post('/keranjang/tambah/{kode_produk}', [KeranjangController::class, 'addToCart'])->name('keranjang.tambah');
 Route::get('/keranjang', [KeranjangController::class, 'showCart'])->name('keranjang.tampil');
 Route::delete('/keranjang/hapus/{id_keranjang}', [KeranjangController::class, 'removeFromCart'])->name('keranjang.hapus');
+
+Route::post('/submit-pesanan', [PesananController::class, 'submit_pesanan']);
+Route::get('/pembayaran/{id}', [PesananController::class, 'pembayaran']);
+Route::get('/alamat/{id}', [PesananController::class, 'alamat']);
+Route::post('/submit-alamat/{id}', [PesananController::class, 'update_alamat']);
+Route::post('/submit-pembayaran/{id}', [PesananController::class, 'submit_pembayaran']);
+Route::post('/submit-bukti-bayar/{id}', [PesananController::class, 'submit_bukti_bayar']);

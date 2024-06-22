@@ -13,4 +13,9 @@ class Produk extends Model
     protected $primaryKey = 'kode';
     protected $table = 'produk';
     public $timestamps = false;
+
+    public function pesanan()
+    {
+        return $this->hasMany(Pesanan::class, 'kode_produk', 'kode');
+    }
 }
