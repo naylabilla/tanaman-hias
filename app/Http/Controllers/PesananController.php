@@ -95,30 +95,43 @@ class PesananController extends Controller
 
     public function submit_bukti_bayar(Request $request, $id)
     {
-        $resi = Resi::find($id);
+     $resi = Resi::find($id);
 
-        if (!$resi) {
-            return redirect()->back()->with('error', 'Resi tidak ditemukan.');
-        }
-
-        // Validasi input
-        $request->validate([
-            'bukti_pembayar' => 'required|mimes:jpg,jpeg,png,pdf|max:2048', // Atur sesuai kebutuhan
-        ]);
-
-        // Generate UUID untuk nama file
-        $file = $request->file('bukti_pembayar');
-        $uuid = Str::uuid()->toString();
-        $extension = $file->getClientOriginalExtension();
-        $filename = $uuid . '.' . $extension;
-
-        // Simpan file ke storage
-        $file->storeAs('public/bukti_pembayaran', $filename);
-
-        // Simpan informasi file ke database
-        $resi->bukti_pembayaran = $filename;
-        $resi->save();
-
-        return redirect('/dashboard')->with('success', 'Pesanan Berhasil Dibuat');
+    if (!$resi) {
+        return redirect()->back()->with('error', 'Resi tidak ditemukan.');
     }
+
+    // Validasi input
+    $request->validate([
+        'bukti_pembayar' => 'required|mimes:jpg,jpeg,png,pdf|max:2048',
+    ]);
+
+    // Generate UUID untuk nama file
+    $file = $request->file('bukti_pembayar');
+    $uuid = Str::uuid()->toString();
+    $extension = $file->getClientOriginalExtension();
+    $filename = $uuid . '.' . $extension;
+
+    // Simpan file ke storage
+    $file->storeAs('public/bukti_pembayaran', $filename);
+
+    // Simpan informasi file ke database
+    $resi->bukti_pembayaran = $filename;
+    $resi->save();
+
+        return redirect()->route('rincian_pesanan', ['id' => $resi->id])->with('success', 'Pesanan Berhasil Dibuat');
+    }
+    
+    public function rincian_pesanan($id)
+    {
+        $resi = Resi::find($id);
+    
+        if (!$resi) {
+            return redirect('/dashboard')->with('error', 'Resi tidak ditemukan.');
+        }
+    
+        return view('pembeli.rincian_pesanan', ['resi' => $resi]);
+    }
+
+
 }

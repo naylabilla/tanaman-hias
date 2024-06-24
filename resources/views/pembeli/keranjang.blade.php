@@ -111,7 +111,7 @@
                 </svg>
             </div>
 
-            <p class="text-white text-xl product-price harga mr-64" data_harga="{{ $item->produk->harga }}">
+            <p class="text-white text-xl product-price harga mr-60" data_harga="{{ $item->produk->harga }}">
                 Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
             <p class="text-white text-xl product-total total_harga absolute right-44">
                 Rp{{ number_format($item->produk->harga * $item->jumlah, 0, ',', '.') }}</p>

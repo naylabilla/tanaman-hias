@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\KeranjangController;
+use App\Http\Controllers\Pembeli\TransaksiController;
 use App\Http\Controllers\PesananController;
 use Illuminate\Support\Facades\Route;
 
@@ -141,3 +142,7 @@ Route::get('/alamat/{id}', [PesananController::class, 'alamat']);
 Route::post('/submit-alamat/{id}', [PesananController::class, 'update_alamat']);
 Route::post('/submit-pembayaran/{id}', [PesananController::class, 'submit_pembayaran']);
 Route::post('/submit-bukti-bayar/{id}', [PesananController::class, 'submit_bukti_bayar']);
+Route::middleware('auth')->group(function () {
+    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
+});
+Route::get('/rincian-pesanan/{id}', [PesananController::class, 'rincian_pesanan'])->name('rincian_pesanan');
