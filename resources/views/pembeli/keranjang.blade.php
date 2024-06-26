@@ -8,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/9abb4e3af2.js" crossorigin="anonymous"></script>
 
@@ -47,8 +46,7 @@
 </head>
 
 <body class="bg-[#618264] h-full pb-5">
-    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" 
-    style="position: sticky; z-index: 1000; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+    <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
         <a href="{{ route('dashboard')}}" class="btn btn-ghost me-auto hover:bg-white mx-5">
             <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
@@ -115,7 +113,7 @@
 
             <p class="text-white text-xl product-price harga mr-64" data_harga="{{ $item->produk->harga }}">
                 Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
-            <p class="text-white text-xl product-total total_harga mr-66">
+            <p class="text-white text-xl product-total total_harga absolute right-44">
                 Rp{{ number_format($item->produk->harga * $item->jumlah, 0, ',', '.') }}</p>
             <form action="{{ route('keranjang.hapus', $item->id_keranjang) }}" method="POST" onsubmit="return confirm('Apakah anda yakin ingin menghapus produk ini dari keranjang ?')">
 
