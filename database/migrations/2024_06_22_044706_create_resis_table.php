@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('resis', function (Blueprint $table) {
+        Schema::create('resi', function (Blueprint $table) {
             $table->id();
             $table->string('nama_penerima')->nullable();
             $table->string('username')->nullable();
@@ -23,7 +23,10 @@ return new class extends Migration
             $table->string('kode_pos')->nullable();
             $table->enum('metode_pembayaran', ['Transfer Bank', 'Bayar di Tempat'])->nullable();
             $table->string('bukti_pembayaran')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id_pengguna')->on('pengguna');
         });
     }
 
@@ -32,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('resis');
+        Schema::dropIfExists('resi');
     }
 };

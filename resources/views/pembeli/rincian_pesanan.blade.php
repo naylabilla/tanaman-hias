@@ -18,20 +18,25 @@
             hr {
                 width: calc(100% - 123px);
             }
+
             .product-pict {
                 margin-left: 5rem;
             }
+
             .product-name {
                 margin-left: -4rem;
             }
+
             .product-pieces {
-                margin-right: -3rem;
+                margin-right: -2.5rem;
             }
+
             .product-price {
-                margin-right: -5.5rem;
+                margin-right: -4rem;
             }
+
             .product-total {
-                margin-right: 3.5rem;
+                margin-right: 3rem;
             }
         </style>
     </head>
@@ -43,7 +48,7 @@
         >
             <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
                 <img
-                    src="./assets/images/tamu/logo.png"
+                    src="{{ asset('assets/images/tamu/logo.png') }}"
                     alt=""
                     class="size-14 mb-5 -mt-1 object-scale-down"
                 />
@@ -52,7 +57,7 @@
             <div class="ms-auto">
                 <a href="/keranjang" class="btn btn-ghost hover:bg-white">
                     <img
-                        src="./assets/icons/navbar keranjang.png"
+                        src="{{ asset('assets/icons/navbar keranjang.png') }}"
                         alt=""
                         class="w-12"
                     />
@@ -60,24 +65,20 @@
                 </a>
                 <a href="/pesanan" class="btn btn-ghost hover:bg-white">
                     <img
-                        src="./assets/icons/navbar pesanan.png"
+                        src="{{ asset('assets/icons/navbar pesanan.png') }}"
                         alt=""
                         class="w-12"
                     />
                     <p class="text-2xl text-[#78A07C]">Pesanan</p>
                 </a>
                 <div class="border-l-4 border-black">
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <button type="submit" class="btn btn-ghost">
-                            <img
-                                src="/assets/icons/logout.png"
-                                alt=""
-                                class="w-10"
-                            />
-                        </button>
-                    </form>
+                    <a href="/logout" class="btn btn-ghost hover:bg-white">
+                        <img
+                            src="{{ asset('assets/icons/user1.png') }}"
+                            alt=""
+                            class="w-10"
+                        />
+                    </a>
                 </div>
             </div>
         </div>
@@ -89,7 +90,7 @@
         <!-- Back Button and Subtitle -->
         <div class="flex items-center mt-8 ml-10">
             <img
-                src="./assets/icons/panah kiri.png"
+                src="{{ asset('assets/icons/panah kiri.png') }}"
                 alt="Back"
                 class="w-8 h-8"
             />
@@ -103,32 +104,34 @@
             <div class="flex justify-between">
                 <div class="grid grid-cols-3 gap-2">
                     <p class="ml-14 col-span-1">Nomor Pesanan</p>
-                    <p class="col-span-1">: 24832GGVM1HUD</p>
+                    <p class="col-span-1">: {{ $resi->id }}</p>
                 </div>
-                <p class="mr-8">Status Pesanan: Sedang Dikirim</p>
+                <p class="mr-8">Status Pesanan: {{ $resi->status }}</p>
             </div>
             <br />
             <div class="grid grid-cols-3 gap-2">
                 <p class="ml-14 col-span-1">Nama</p>
-                <p class="col-span-1 -ml-48">: Marsya Huriyah</p>
+                <p class="col-span-1 -ml-48">: {{ $resi->nama_penerima }}</p>
             </div>
             <div class="grid grid-cols-3 gap-2">
                 <p class="ml-14 col-span-1">Nomor Hp</p>
-                <p class="col-span-2 -ml-48">: 08341428919</p>
+                <p class="col-span-2 -ml-48">: {{ $resi->no_hp }}</p>
             </div>
             <div class="grid grid-cols-3 gap-2">
                 <p class="ml-14 col-span-1">Alamat</p>
-                <p class="col-span-2 -ml-48">
-                    : Orchard Park blok X no 505, Batam Centre, 29431
-                </p>
+                <p class="col-span-2 -ml-48">: {{ $resi->alamat }}</p>
             </div>
             <div class="grid grid-cols-3 gap-2">
                 <p class="ml-14 col-span-1">Tanggal Pesan</p>
-                <p class="col-span-2 -ml-48">: 27/03/2024</p>
+                <p class="col-span-2 -ml-48">
+                    : {{ $resi->created_at->format('d/m/Y') }}
+                </p>
             </div>
             <div class="grid grid-cols-3 gap-2">
                 <p class="ml-14 col-span-1">Metode Pembayaran</p>
-                <p class="col-span-2 -ml-48">: Transfer Bank</p>
+                <p class="col-span-2 -ml-48">
+                    : {{ $resi->metode_pembayaran }}
+                </p>
             </div>
         </div>
 
@@ -147,28 +150,33 @@
         <hr class="border-white my-2 mx-20" />
 
         <!-- Order Items -->
-
-        <!-- Item 1 -->
+        @foreach($resi->pesanan as $item)
         <div
             class="flex justify-between items-center mx-10 mt-2 space-y-4 text-white"
         >
             <img
-                src="./assets/images/outdoor/gambar 5 monstera.png"
-                alt="Monstera Deliciosa"
+                src="{{ asset('assets/images/tambahproduk/'.$item->produk->gambar) }}"
+                alt="{{ $item->produk->nama }}"
                 class="w-24 h-24 product-pict"
             />
-            <p class="product-name">Monstera Deliciosa</p>
-            <p class="product-pieces">1</p>
-            <p class="product-price">165.000</p>
-            <p class="product-total">165.000</p>
+            <p class="product-name">{{ $item->produk->nama }}</p>
+            <p class="product-pieces">{{ $item->jumlah }}</p>
+            <p class="product-price">
+                {{ number_format($item->harga_satuan, 0, ',', '.') }}
+            </p>
+            <p class="product-total">
+                {{ number_format($item->jumlah * $item->harga_satuan, 0, ',', '.') }}
+            </p>
         </div>
-
         <hr class="border-white my-2 mx-20" />
+        @endforeach
 
         <!-- Total -->
         <div class="flex justify-end font-bold text-white mx-10 mt-4">
-            <p class="mr-44">Total</p>
-            <p class="mr-12">365.000</p>
+            <p class="mr-56">Total</p>
+            <p class="mr-10">
+                {{ number_format($resi->pesanan->sum(function($item) { return $item->jumlah * $item->harga_satuan; }), 0, ',', '.') }}
+            </p>
         </div>
     </body>
 </html>

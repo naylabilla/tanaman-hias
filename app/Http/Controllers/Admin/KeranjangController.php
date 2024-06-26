@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class KeranjangController extends Controller
 {
-    // Menambahkan produk ke keranjang
+    
     public function addToCart(Request $request, $kode_produk)
     {
         $produk = Produk::findOrFail($kode_produk);
@@ -21,10 +21,10 @@ class KeranjangController extends Controller
             ->first();
 
         if ($keranjang) {
-            // Update jumlah jika produk sudah ada di keranjang
+            
             $keranjang->jumlah += 1;
         } else {
-            // Tambahkan produk baru ke keranjang
+            
             $keranjang = new Keranjang();
             $keranjang->kode_produk = $kode_produk;
             $keranjang->id_pengguna = Auth::id();
@@ -36,14 +36,14 @@ class KeranjangController extends Controller
         return redirect()->back()->with('success', 'Produk berhasil ditambahkan ke keranjang!');
     }
 
-    // Menampilkan keranjang
+    
     public function showCart()
     {
         $keranjang = Keranjang::where('id_pengguna', Auth::id())->with('produk')->get();
         return view('pembeli.keranjang', compact('keranjang'));
     }
 
-    // Menghapus produk dari keranjang
+    
     public function removeFromCart($id_keranjang)
     {
         $keranjang = Keranjang::findOrFail($id_keranjang);

@@ -20,8 +20,7 @@
                 border-bottom-right-radius: 10px;
             ">
         <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
-            <img src="{{ asset('assets/images/tamu/logo.png') }}" alt=""
-                class="size-14 mb-5 -mt-1 object-scale-down" />
+            <img src="{{ asset('assets/images/tamu/logo.png') }}" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
@@ -54,15 +53,11 @@
             @csrf
             <h1 class="text-center text-white text-4xl font-bold mt-4 mb-4">Alamat Pengiriman</h1>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4"
-                placeholder="Nama Lengkap" name="nama_penerima"
-                value="{{ $resi->nama_penerima ? $resi->nama_penerima : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Nama Lengkap" name="nama_penerima" value="{{ $user->nama }}" readonly>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4"
-                placeholder="Username" name="username" value="{{ $resi->username ? $resi->username : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Username" name="username" value="{{ $user->email }}" readonly>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4"
-                placeholder="Contoh: +6285-0000-1111" name="no_hp" value="{{ $resi->no_hp ? $resi->no_hp : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Contoh: +6285-0000-1111" name="no_hp" value="{{ $user->nomor_hp }}" readonly>
 
             <select class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" name="tujuan">
                 <option value="" disabled selected>Pilih Tujuan Pengiriman</option>
@@ -71,34 +66,25 @@
                 </option>
             </select>
 
-            <input type="text"
-                class="bg-white border-[#51EC4E] border p-10 w-5/6 mx-auto block text-left pl-5 pt-3 mb-4"
-                placeholder="Alamat Lengkap" name="alamat" value="{{ $resi->alamat ? $resi->alamat : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-10 w-5/6 mx-auto block text-left pl-5 pt-3 mb-4" placeholder="Alamat Lengkap" name="alamat" value="{{ $resi->alamat ? $resi->alamat : '' }}">
 
             <div class="flex space-x-20 w-5/6 mx-auto mb-4">
                 <select class="bg-white border-[#51EC4E] border p-3 w-1/2 mx-auto block" name="kecamatan">
                     <option disabled selected>Pilih Kecamatan</option>
-                    <option value="Batam Kota"
-                        {{ $resi->kecamatan && $resi->kecamatan == 'Batam Kota' ? 'selected' : '' }}>Batam Kota
+                    <option value="Batam Kota" {{ $resi->kecamatan && $resi->kecamatan == 'Batam Kota' ? 'selected' : '' }}>Batam Kota
                     </option>
-                    <option value="Batu Aji"
-                        {{ $resi->kecamatan && $resi->kecamatan == 'Batu Aji' ? 'selected' : '' }}>Batu Aji</option>
-                    <option value="Batu Ampar"
-                        {{ $resi->kecamatan && $resi->kecamatan == 'Batu Ampar' ? 'selected' : '' }}>Batu Ampar
+                    <option value="Batu Aji" {{ $resi->kecamatan && $resi->kecamatan == 'Batu Aji' ? 'selected' : '' }}>Batu Aji</option>
+                    <option value="Batu Ampar" {{ $resi->kecamatan && $resi->kecamatan == 'Batu Ampar' ? 'selected' : '' }}>Batu Ampar
                     </option>
-                    <option value="Bengkong"
-                        {{ $resi->kecamatan && $resi->kecamatan == 'Bengkong' ? 'selected' : '' }}>Bengkong</option>
+                    <option value="Bengkong" {{ $resi->kecamatan && $resi->kecamatan == 'Bengkong' ? 'selected' : '' }}>Bengkong</option>
                     <option value="Nongsa" {{ $resi->kecamatan && $resi->kecamatan == 'Nongsa' ? 'selected' : '' }}>
                         Nongsa</option>
-                    <option value="Sekupang"
-                        {{ $resi->kecamatan && $resi->kecamatan == 'Sekupang' ? 'selected' : '' }}>Sekupang</option>
+                    <option value="Sekupang" {{ $resi->kecamatan && $resi->kecamatan == 'Sekupang' ? 'selected' : '' }}>Sekupang</option>
                 </select>
-                <input type="text" class="bg-white border-[#51EC4E] border p-3 w-1/2 mx-auto block"
-                    placeholder="Kode Pos" name="kode_pos" value="{{ $resi->kode_pos ? $resi->kode_pos : '' }}">
+                <input type="text" class="bg-white border-[#51EC4E] border p-3 w-1/2 mx-auto block" placeholder="Kode Pos" name="kode_pos" value="{{ $resi->kode_pos ? $resi->kode_pos : '' }}">
             </div>
 
-            <button type="submit"
-                class="bg-[#00A651] hover:bg-green-800 text-white font-bold p-3 w-5/6 mx-auto block text-xl">SIMPAN</button>
+            <button type="submit" class="bg-[#00A651] hover:bg-green-800 text-white font-bold p-3 w-5/6 mx-auto block text-xl">SIMPAN</button>
         </div>
     </form>
 </body>
