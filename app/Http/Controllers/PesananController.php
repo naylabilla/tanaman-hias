@@ -103,7 +103,7 @@ class PesananController extends Controller
 
         // Validasi input
         $request->validate([
-            'bukti_pembayar' => 'required|mimes:jpg,jpeg,png,pdf|max:2048', // Atur sesuai kebutuhan
+            'bukti_pembayar' => 'required|mimes:jpg,jpeg,png,pdf|max:2048',
         ]);
 
         // Generate UUID untuk nama file
@@ -119,6 +119,19 @@ class PesananController extends Controller
         $resi->bukti_pembayaran = $filename;
         $resi->save();
 
-        return redirect('/dashboard')->with('success', 'Pesanan Berhasil Dibuat');
+        return redirect()->route('rincian_pesanan', ['id' => $resi->id])->with('success', 'Pesanan Berhasil Dibuat');
     }
+        
+    public function rincian_pesanan($id)
+    {
+        $resi = Resi::find($id);
+    
+        if (!$resi) {
+            return redirect('/dashboard')->with('error', 'Resi tidak ditemukan.');
+        }
+    
+        return view('pembeli.rincian_pesanan', ['resi' => $resi]);
+    }
+
+
 }
