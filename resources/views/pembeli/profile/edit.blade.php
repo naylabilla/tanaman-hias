@@ -164,7 +164,8 @@
                                 >
                                 <div class="relative flex items-center">
                                     <button
-                                        class="h-12 w-40 bg-blue-900 text-white rounded-l-lg mt-2"
+                                        class="h-10 bg-blue-900 text-white rounded-l-lg mt-2"
+                                        style="width: 136px"
                                     >
                                         Pilih File
                                     </button>
