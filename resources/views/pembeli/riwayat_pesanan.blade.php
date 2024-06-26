@@ -14,6 +14,7 @@
             background-size: contain;
             background-position: center;
         }
+
     </style>
 </head>
 
@@ -51,15 +52,15 @@
     <br>
     @php
     $riwayatPesanan = $riwayatPesanan->sortByDesc(function ($pesananGroup) {
-        return $pesananGroup->first()->resi->updated_at;
+    return $pesananGroup->first()->resi->updated_at;
     });
     @endphp
-    
+
     @foreach ($riwayatPesanan as $resiId => $pesananGroup)
     @php
-        $totalHarga = 0;
+    $totalHarga = 0;
     @endphp
-    
+
     <div class="grid grid-cols-1 grid-flow-row gap-0 border border-white w-5/6 mx-auto mb-10">
         <div class="h-20 flex justify-center border text-left text-white pl-2 flex-col relative">
             <div class="text-left pl-2">
@@ -67,13 +68,18 @@
                 <p>Tanggal Pesanan: {{ $pesananGroup->first()->resi->updated_at }}</p>
                 <p>Status Pengiriman: {{ $pesananGroup->first()->status }}</p>
             </div>
+            <button class="absolute top-6 right-44 rounded bg-green-400 bg-hover hover:bg-gray-300">
+                <a href="{{ route('riwayat-pesanan.show', $pesananGroup->first()->resi_id) }}">
+                    <img src="assets/icons/detail.png" alt="Icon" class="px-1 w-9 h-8 object-scale-down">
+                </a>
+            </button>
             <button class="bg-[#00A651] text-white px-8 py-1 rounded absolute top-6 right-3">Cetak Resi</button>
         </div>
 
         <div class="relative">
             @foreach ($pesananGroup as $pesanan)
             @php
-                $totalHarga += $pesanan->jumlah * $pesanan->harga_satuan;
+            $totalHarga += $pesanan->jumlah * $pesanan->harga_satuan;
             @endphp
             <div class="h-40 flex items-center border-b border-gray-300">
                 <div class="flex items-center text-white text-lg pl-10">
@@ -93,7 +99,8 @@
 
         <div class="h-14 flex justify-between border-t text-white pl-2 flex-col relative">
             <p class="text-lg absolute top-3 pl-2">Total Pesanan</p>
-            <p class="text-3xl text-[#136E3B] font-bold absolute top-1 right-3">Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
+            <p class="text-3xl text-[#136E3B] font-bold absolute top-1 right-3">
+                Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
         </div>
     </div>
     @endforeach

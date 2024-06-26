@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resi;
+use App\Models\Pesanan;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +20,9 @@ class DashboardController extends Controller
 
                 $totalStok = Produk::sum('stok');
 
-                return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok'));
+                $totalPesanan = Resi::count();
+
+                return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok', 'totalPesanan'));
             } elseif ($role == 'pembeli') {
                 $produkOutdoor = Produk::where('kategori', 'Outdoor')->get();
 

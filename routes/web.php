@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\KeranjangController;
 use App\Http\Controllers\Pembeli\TransaksiController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\RiwayatPesananController;
+use App\Http\Controllers\Admin\RekapanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,9 +35,9 @@ Route::get('/loginlama', function () {
     return view('pembeli.login');
 });
 
-Route::get('/pesanan_penjual', function () {
-    return view('admin.pesanan_penjual');
-});
+// Route::get('/pesanan_penjual', function () {
+//     return view('admin.pesanan_penjual');
+// });
 
 Route::get('/detail_produk', function () {
     return view('pembeli.detail_produk');
@@ -58,9 +59,9 @@ Route::get('/alamat', function () {
     return view('pembeli.alamat_pengiriman');
 });
 
-Route::get('/rincian_pesanan', function () {
-    return view('pembeli.rincian_pesanan');
-});
+// Route::get('/rincian_pesanan', function () {
+//     return view('pembeli.rincian_pesanan');
+// });
 
 Route::get('/cetak_resi_penjual', function () {
     return view('admin.cetak_resi_penjual');
@@ -146,7 +147,7 @@ Route::post('/submit-bukti-bayar/{id}', [PesananController::class, 'submit_bukti
 // Route::middleware('auth')->group(function () {
 //     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
 // });
-Route::get('/rincian-pesanan/{id}', [PesananController::class, 'rincian_pesanan'])->name('rincian_pesanan');
+// Route::get('/rincian-pesanan/{id}', [PesananController::class, 'rincian_pesanan'])->name('rincian_pesanan');
 
 // Route::get('/riwayat-pesanan/{id}', [PesananController::class, 'riwayatPesanan'])->name('riwayat_pesanan');
 // Route::get('/riwayat-pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');
@@ -157,3 +158,7 @@ Route::get('/riwayat_pesanan', [RiwayatPesananController::class, 'index'])->name
 Route::get('/tes', function () {
     return view('tes');
 });
+
+Route::get('/riwayat-pesanan/{resi_id}', [RiwayatPesananController::class, 'show'])->name('riwayat-pesanan.show');
+
+Route::resource('rekapan', RekapanController::class);

@@ -39,7 +39,7 @@
                 <img src="/assets/icons/produk.png" alt="" class="w-9 h-9 mr-4">
                 <span class="self-center col-span-2 mr-3">Produk</span>
             </a>
-            <a href="/pesanan_penjual"
+            <a href="{{ route('rekapan.index')}}"
                 class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                 <img src="/assets/icons/rekapan.png" alt="" class="w-9 h-9 mr-4">
                 <span class="self-center col-span-2">Rekapan</span>

@@ -37,7 +37,7 @@
                 <img src="./assets/icons/produk.png" alt="" class="w-9 h-9 mr-4">
                 <span class="self-center col-span-2 mr-3">Produk</span>
             </a>
-            <a href="/pesanan_penjual" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
+            <a href="{{ route('rekapan.index')}}" class="btn bg-[#B0D9B1] font-bold text-black text-2xl border-none w-72 rounded-full hover:bg-[#27603F] flex items-center gap-4">
                 <img src="./assets/icons/rekapan.png" alt="" class="w-9 h-9 mr-4">
                 <span class="self-center col-span-2">Rekapan</span>
             </a>
@@ -81,7 +81,7 @@
                         <div class="bg-white rounded-lg border border-black w-[90%] h-32 ml-4 grid grid-cols-4 items-center">
                             <img src="./assets/icons/icon keranjang.png" alt="" class="h-14 justify-self-end">
                             <div class="col-span-3 mt-4">
-                                <p class="text-black font-bold text-6xl">5</p>
+                                <p class="text-black font-bold text-6xl">{{ $totalPesanan }}</p>
                                 <p class="text-[#618264] font-bold text-xl">Pesanan</p>
                             </div>
                         </div>

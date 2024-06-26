@@ -68,12 +68,32 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @php
+                        
+                        $pesananPenjual = $pesananPenjual->sortByDesc(function ($pesananGroup) {
+                        return $pesananGroup->first()->resi->updated_at;
+                        });
+
+                        $i = 1;
+                        @endphp
+
+                        @foreach ($pesananPenjual as $resiId => $pesananGroup)
+                        @php
+                        $totalHarga = 0;
+
+                        
+                        foreach ($pesananGroup as $pesanan) {
+                        $totalHarga += $pesanan->jumlah * $pesanan->harga_satuan;
+                        }
+                        @endphp
+
                         <tr>
-                            <td>1</td>
-                            <td>oa0dwjd8wj890j</td>
-                            <td>2005-06-19</td>
-                            <td>Uni Nay</td>
-                            <td>Rp185.000</td>
+                            <td>{{ $i }}</td>
+                            <td>{{ $resiId }}</td>
+                            <td>{{ $pesananGroup->first()->resi->updated_at }}</td>
+                            <td>{{ $pesananGroup->first()->resi->nama_penerima }}</td>
+                            <td>{{ number_format($totalHarga, 0, ',', '.') }}</td>
                             <td>
                                 <select name="" id="" class="text-black rounded-3xl p-2 bg-gray-200">
                                     <option value="">Menunggu Konfirmasi</option>
@@ -88,7 +108,8 @@
                                 <button class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24">Cetak</button>
                             </td>
                             <td>
-                                <a href="#detail" class="inline-block">
+                                <a href="{{ route('rekapan.show', $pesananGroup->first()->resi_id) }}"
+                                    class="inline-block">
                                     <img src="./assets/icons/detail.png" alt="" class="size-10">
                                 </a>
                                 <a href="#delete" class="inline-block">
@@ -96,6 +117,8 @@
                                 </a>
                             </td>
                         </tr>
+                        @php $i++ @endphp
+                        @endforeach
                     </tbody>
                 </table>
             </div>
