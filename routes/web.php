@@ -70,9 +70,9 @@ Route::get('/cetak_resi', function () {
     return view('pembeli.cetak_resi');
 });
 
-Route::get('/riwayat_pesanan', function () {
-    return view('pembeli.riwayat_pesanan');
-});
+// Route::get('/riwayat_pesanan', function () {
+//     return view('pembeli.riwayat_pesanan');
+// });
 
 Route::get('/daftar_akun', function () {
     return view('pembeli.daftar_akun');
@@ -152,4 +152,8 @@ Route::get('/rincian-pesanan/{id}', [PesananController::class, 'rincian_pesanan'
 // Route::get('/riwayat-pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');
 // Route::get('/riwayat-pesanan', [PesananController::class, 'riwayat_pesanan'])->name('riwayat.pesanan');
 
-// Route::get('/riwayat-pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');
+Route::get('/riwayat_pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');
+
+Route::get('/tes', function () {
+    return view('tes');
+});
