@@ -34,7 +34,7 @@
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
-            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
+            <a href="{{ route('keranjang.tampil')}}" class="btn btn-ghost hover:bg-white">
                 <img src="./assets/icons/navbar keranjang.png" alt="" class="w-12" />
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
@@ -275,7 +275,7 @@
                             <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
                             <img src="/assets/images/tambahproduk/{{ $produkin->gambar }}" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3 text-bold">{{ $produkin->nama}}</div>
-                            <button class="absolute bottom-3 left-3 bg-green-400 bg-hover hover:bg-gray-300">
+                            <button class="absolute bottom-5 left-3 bg-green-400 bg-hover hover:bg-gray-300">
                                 <a href="{{ route('detail_produk', $produkin->kode) }}">
                                     <img src="assets/icons/detail.png" alt="Icon" class="px-1 w-9 h-9 object-scale-down">
                                 </a>

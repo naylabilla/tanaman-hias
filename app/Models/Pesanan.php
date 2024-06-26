@@ -13,7 +13,7 @@ class Pesanan extends Model
 
     public function resi()
     {
-        return $this->belongsTo(Resi::class, 'resis_id', 'id');
+        return $this->belongsTo(Resi::class, 'resi_id', 'id');
     }
 
     public function produk()

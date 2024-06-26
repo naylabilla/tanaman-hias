@@ -53,11 +53,11 @@
             @csrf
             <h1 class="text-center text-white text-4xl font-bold mt-4 mb-4">Alamat Pengiriman</h1>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Nama Lengkap" name="nama_penerima" value="{{ $resi->nama_penerima ? $resi->nama_penerima : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Nama Lengkap" name="nama_penerima" value="{{ $user->nama }}" readonly>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Username" name="username" value="{{ $resi->username ? $resi->username : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Username" name="username" value="{{ $user->email }}" readonly>
 
-            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Contoh: +6285-0000-1111" name="no_hp" value="{{ $resi->no_hp ? $resi->no_hp : '' }}">
+            <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Contoh: +6285-0000-1111" name="no_hp" value="{{ $user->nomor_hp }}" readonly>
 
             <select class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" name="tujuan">
                 <option value="" disabled selected>Pilih Tujuan Pengiriman</option>

@@ -9,11 +9,11 @@ class Resi extends Model
 {
     use HasFactory;
 
-    protected $table = 'resis';
+    protected $table = 'resi';
 
     public function pesanan()
     {
-        return $this->hasMany(Pesanan::class, 'resis_id', 'id');
+        return $this->hasMany(Pesanan::class, 'resi_id', 'id');
     }
 
     public function user()
