@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\KeranjangController;
 use App\Http\Controllers\Pembeli\TransaksiController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\RiwayatPesananController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -142,7 +143,13 @@ Route::get('/alamat/{id}', [PesananController::class, 'alamat']);
 Route::post('/submit-alamat/{id}', [PesananController::class, 'update_alamat']);
 Route::post('/submit-pembayaran/{id}', [PesananController::class, 'submit_pembayaran']);
 Route::post('/submit-bukti-bayar/{id}', [PesananController::class, 'submit_bukti_bayar']);
-Route::middleware('auth')->group(function () {
-    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
-});
+// Route::middleware('auth')->group(function () {
+//     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
+// });
 Route::get('/rincian-pesanan/{id}', [PesananController::class, 'rincian_pesanan'])->name('rincian_pesanan');
+
+// Route::get('/riwayat-pesanan/{id}', [PesananController::class, 'riwayatPesanan'])->name('riwayat_pesanan');
+// Route::get('/riwayat-pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');
+// Route::get('/riwayat-pesanan', [PesananController::class, 'riwayat_pesanan'])->name('riwayat.pesanan');
+
+// Route::get('/riwayat-pesanan', [RiwayatPesananController::class, 'index'])->name('riwayat-pesanan.index');

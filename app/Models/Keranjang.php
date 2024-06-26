@@ -12,7 +12,7 @@ class Keranjang extends Model
     protected $table = 'keranjang';
     protected $primaryKey = 'id_keranjang';
     
-    public $timestamps = false; // Tambahkan ini untuk menonaktifkan timestamps
+    public $timestamps = false; 
 
     public function produk()
     {
