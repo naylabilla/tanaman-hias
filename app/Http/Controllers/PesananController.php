@@ -204,19 +204,19 @@ class PesananController extends Controller
         $resi->bukti_pembayaran = $filename;
         $resi->save();
 
-        return redirect()->route('rincian_pesanan', ['id' => $resi->id])->with('success', 'Pesanan Berhasil Dibuat');
+        return redirect('dashboard')->with('success', 'Pesanan Berhasil Dibuat');
     }
         
-    public function rincian_pesanan($id)
-    {
-        $resi = Resi::find($id);
+    // public function rincian_pesanan($id)
+    // {
+    //     $resi = Resi::find($id);
     
-        if (!$resi) {
-            return redirect('/dashboard')->with('error', 'Resi tidak ditemukan.');
-        }
+    //     if (!$resi) {
+    //         return redirect('/dashboard')->with('error', 'Resi tidak ditemukan.');
+    //     }
     
-        return view('pembeli.rincian_pesanan', ['resi' => $resi]);
-    }
+    //     return view('pembeli.rincian_pesanan', ['resi' => $resi]);
+    // }
 
     // public function riwayat_pesanan()
     // {
