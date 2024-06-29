@@ -82,26 +82,26 @@
 <div class="mt-14"> 
     <div class="grid grid-cols-1 grid-flow-row gap-0 border border-black w-5/6 mx-auto">
     <div class="h-10 mx-5 mt-4 relative"> <!-- Tambahkan class "relative" untuk posisi relatif -->
-    <img src="./assets/icons/toko.png" alt="" class="absolute left-0 h-full">
+    <img src="/assets/icons/toko.png" alt="" class="absolute left-0 h-full">
     <h1 class="font1 ml-12">Lustilvy</h1> <!-- Sesuaikan margin kiri untuk membuat ruang di sebelah gambar -->
-    <img src="./assets/icons/mobil.png" alt="" class="rawr absolute right-5 h-full"> 
+    <img src="/assets/icons/mobil.png" alt="" class="rawr absolute right-5 h-full"> 
     </div>
 
             <div class="flex border-t border-b border-black py-4 mt-2">
                 <!-- Kotak tengah baru -->
                 <div class="bg-gray-300 rounded-full w-2/3 h-9 flex items-center justify-center mx-auto text-black text-xl">
-                    No.Pesanan 240320GGVM1HUD
+                    No.Pesanan : {{ $resi_id }}
                 </div>
             </div>
 
             <!-- Teks Penerima dan Pengirim -->
             <div class="flex justify-between text-lg mt-4 px-4 mr-60 ml-5">
                 <div>
-                    Penerima <span class="ml-4">: Marsya Huriyah</span><br>
-                    Username <span class="ml-2">: hryyyh</span><br><br>
-                    Orchard Park blok X no 505<br>
-                    Batam Centre, 29431<br>
-                    +628341428919
+                    Penerima <span class="ml-4">: {{ $pesananGroup->first()->resi->nama_penerima }}</span><br>
+                    Username <span class="ml-2">: {{ $pesananGroup->first()->resi->username }}</span><br><br>
+                    {{ $pesananGroup->first()->resi->alamat }}<br>
+                    {{ $pesananGroup->first()->resi->kecamatan }}, {{ $pesananGroup->first()->resi->kode_pos }}<br>
+                    {{ $pesananGroup->first()->resi->no_hp }}
                 </div>
                 <div>
                     Pengirim : Lustilvy
@@ -109,19 +109,26 @@
             </div>
 
             <div class="flex justify-center items-center mt-4 border-t border-b border-black py-4 relative">
-                <div class="text-center w-2/3">CASHLESS</div>
+                <div class="text-center w-2/3">{{ $pesananGroup->first()->resi->metode_pembayaran }}</div>
                 <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-14 bg-black"></div>
                 <div class="text-center w-2/3">2 pcs</div>
             </div>
 
             <div class="py-4 mt-4">
-                <span class="block ml-4">Waktu Pengiriman : 28/03/2024</span>
-                <span class="block ml-4">Monstera Deliciosa<span class="ml-10">Rp.165.000</span></span>
-                <span class="block ml-4">Calla Lily<span class="ml-28">Rp.200.000</span></span>
+                <span class="block ml-4">Waktu Pemesanan : {{ $pesananGroup->first()->resi->updated_at }}</span>
+                @foreach ($pesananGroup as $pesanan)
+                <span class="block ml-4">{{ $pesanan->produk->nama }} x{{ $pesanan->jumlah }}<span class="ml-10">Rp{{ number_format($pesanan->jumlah * $pesanan->harga_satuan, 0, ',', '.') }}</span></span>
+                <!-- <span class="block ml-4">Calla Lily<span class="ml-28">Rp.200.000</span></span> -->
+                @endforeach
+
             </div>
         </div>
     </div>
 </body>
 
 </html>
+
+<script type="text/javascript">
+    window.print();
+</script>
 

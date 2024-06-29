@@ -174,7 +174,7 @@ class PesananController extends Controller
         if ($request->metode_pembayaran == 'Transfer Bank') {
             return view('pembeli.transaksi', ['resi' => $resi]);
         } else {
-            return redirect('dashboard')->with('success', 'Pesanan Berhasil Dibuat');
+            return redirect('riwayat_pesanan')->with('success', 'Pesanan Berhasil Dibuat');
         }
     }
 
@@ -204,7 +204,22 @@ class PesananController extends Controller
         $resi->bukti_pembayaran = $filename;
         $resi->save();
 
-        return redirect('dashboard')->with('success', 'Pesanan Berhasil Dibuat');
+        return redirect('riwayat_pesanan')->with('success', 'Pesanan Berhasil Dibuat');
+    }
+
+    public function resi_pembeli($resi_id)
+    {
+        $pesananGroup = Pesanan::where('resi_id', $resi_id)->get();
+
+        if ($pesananGroup->isEmpty()) {
+            abort(404, 'Pesanan tidak ditemukan.');
+        }
+
+        $totalHarga = $pesananGroup->sum(function ($pesanan) {
+            return $pesanan->jumlah * $pesanan->harga_satuan;
+        });
+
+        return view('pembeli.cetak_resi', compact('resi_id', 'pesananGroup', 'totalHarga'));
     }
         
     // public function rincian_pesanan($id)

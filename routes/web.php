@@ -63,9 +63,9 @@ Route::get('/alamat', function () {
 //     return view('pembeli.rincian_pesanan');
 // });
 
-Route::get('/cetak_resi_penjual', function () {
-    return view('admin.cetak_resi_penjual');
-});
+// Route::get('/cetak_resi_penjual', function () {
+//     return view('admin.cetak_resi_penjual');
+// });
 
 Route::get('/cetak_resi', function () {
     return view('pembeli.cetak_resi');
@@ -83,9 +83,9 @@ Route::get('/daftar_akun', function () {
 //     return view('pembeli.produk');
 // });
 
-Route::get('/dashboardlama', function () {
-    return view('pembeli.dashboard');
-});
+// Route::get('/dashboardlama', function () {
+//     return view('pembeli.dashboard');
+// });
 
 Route::get('/tambah_produk', function () {
     return view('admin.tambah_produk');
@@ -144,6 +144,7 @@ Route::get('/alamat/{id}', [PesananController::class, 'alamat']);
 Route::post('/submit-alamat/{id}', [PesananController::class, 'update_alamat']);
 Route::post('/submit-pembayaran/{id}', [PesananController::class, 'submit_pembayaran']);
 Route::post('/submit-bukti-bayar/{id}', [PesananController::class, 'submit_bukti_bayar']);
+Route::get('rekapan/resipembeli/{resi_id}', [PesananController::class, 'resi_pembeli'])->name('rekapan.resi_pembeli');
 // Route::middleware('auth')->group(function () {
 //     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
 // });
@@ -161,4 +162,10 @@ Route::get('/tes', function () {
 
 Route::get('/riwayat-pesanan/{resi_id}', [RiwayatPesananController::class, 'show'])->name('riwayat-pesanan.show');
 
+// Route::get('/cetak-resi/{resi_id}', [RiwayatPesananController::class, 'resi'])->name('riwayat-pesanan.resi');
+
 Route::resource('rekapan', RekapanController::class);
+
+Route::get('rekapan/resi/{resi_id}', [RekapanController::class, 'resi'])->name('rekapan.resi');
+
+Route::put('/admin/pesanan/update/{resiId}', [RekapanController::class, 'update'])->name('pesanan.update');

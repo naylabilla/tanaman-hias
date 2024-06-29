@@ -49,24 +49,48 @@ class RekapanController extends Controller
             return $pesanan->jumlah * $pesanan->harga_satuan;
         });
 
-        return view('pembeli.rincian_pesanan', compact('resi_id', 'pesananGroup', 'totalHarga'));
+        return view('admin.detail_pesanan_penjual', compact('resi_id', 'pesananGroup', 'totalHarga'));
         
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function resi($resi_id)
     {
-        //
+        $pesananGroup = Pesanan::where('resi_id', $resi_id)->get();
+
+        if ($pesananGroup->isEmpty()) {
+            abort(404, 'Pesanan tidak ditemukan.');
+        }
+
+        $totalHarga = $pesananGroup->sum(function ($pesanan) {
+            return $pesanan->jumlah * $pesanan->harga_satuan;
+        });
+
+        return view('admin.cetak_resi_penjual', compact('resi_id', 'pesananGroup', 'totalHarga'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $resiId)
     {
-        //
+        // Validasi input jika diperlukan
+        $request->validate([
+            'status' => 'required|string',
+        ]);
+
+        // Temukan pesanan berdasarkan resiId dan update statusnya
+        $pesanan = Pesanan::where('resi_id', $resiId)->first();
+        if ($pesanan) {
+            $pesanan->status = $request->input('status');
+            $pesanan->save();
+
+            return redirect()->back()->with('success', 'Status pesanan berhasil diperbarui.');
+        }
+
+        return redirect()->back()->with('error', 'Pesanan tidak ditemukan.');
     }
 
     /**

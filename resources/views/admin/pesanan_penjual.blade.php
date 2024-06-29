@@ -70,7 +70,7 @@
                     <tbody>
 
                         @php
-                        
+
                         $pesananPenjual = $pesananPenjual->sortByDesc(function ($pesananGroup) {
                         return $pesananGroup->first()->resi->updated_at;
                         });
@@ -82,10 +82,12 @@
                         @php
                         $totalHarga = 0;
 
-                        
+
                         foreach ($pesananGroup as $pesanan) {
                         $totalHarga += $pesanan->jumlah * $pesanan->harga_satuan;
                         }
+
+                        $currentStatus = $pesananGroup->first()->status;
                         @endphp
 
                         <tr>
@@ -95,26 +97,38 @@
                             <td>{{ $pesananGroup->first()->resi->nama_penerima }}</td>
                             <td>{{ number_format($totalHarga, 0, ',', '.') }}</td>
                             <td>
-                                <select name="" id="" class="text-black rounded-3xl p-2 bg-gray-200">
-                                    <option value="">Menunggu Konfirmasi</option>
-                                    <option value="">Sedang di Proses</option>
-                                    <option value="">Sedang di Kirim</option>
-                                    <option value="">Pesanan Selesai</option>
-                                </select>
-                                <button
-                                    class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 ml-3">Perbarui</button>
+                                <form action="{{ route('pesanan.update', $resiId) }}" method="POST">
+                                    @csrf
+                                    @method('PUT')
+                                    <select name="status" class="text-black rounded-3xl p-2 bg-gray-200">
+                                        <option value="Menunggu Konfirmasi"
+                                            {{ $currentStatus == 'Menunggu Konfirmasi' ? 'selected' : '' }}>Menunggu
+                                            Konfirmasi</option>
+                                        <option value="Sedang di Proses"
+                                            {{ $currentStatus == 'Sedang di Proses' ? 'selected' : '' }}>Sedang di
+                                            Proses</option>
+                                        <option value="Sedang di Kirim"
+                                            {{ $currentStatus == 'Sedang di Kirim' ? 'selected' : '' }}>Sedang di Kirim
+                                        </option>
+                                        <option value="Pesanan Selesai"
+                                            {{ $currentStatus == 'Pesanan Selesai' ? 'selected' : '' }}>Pesanan Selesai
+                                        </option>
+                                    </select>
+                                    <button type="submit"
+                                        class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 ml-3">Perbarui</button>
+                                </form>
                             </td>
                             <td class="py-3">
-                                <button class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24">Cetak</button>
+                                <a href="{{ route('rekapan.resi', $pesananGroup->first()->resi_id) }}" target="_blank" class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 no-print">Cetak</a>
                             </td>
                             <td>
                                 <a href="{{ route('rekapan.show', $pesananGroup->first()->resi_id) }}"
                                     class="inline-block">
                                     <img src="./assets/icons/detail.png" alt="" class="size-10">
                                 </a>
-                                <a href="#delete" class="inline-block">
+                                <!-- <a href="#delete" class="inline-block">
                                     <img src="./assets/icons/delete.png" alt="" class="size-10">
-                                </a>
+                                </a> -->
                             </td>
                         </tr>
                         @php $i++ @endphp

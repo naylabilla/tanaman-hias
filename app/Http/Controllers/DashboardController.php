@@ -22,7 +22,13 @@ class DashboardController extends Controller
 
                 $totalPesanan = Resi::count();
 
-                return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok', 'totalPesanan'));
+                $pendapatan = $pendapatan = Pesanan::where('status', 'Pesanan Selesai')
+                ->get()
+                ->sum(function ($pesanan) {
+                    return $pesanan->harga_satuan * $pesanan->jumlah;
+                });
+
+                return view('admin.beranda_penjual', compact('jumlahProduk', 'totalStok', 'totalPesanan', 'pendapatan'));
             } elseif ($role == 'pembeli') {
                 $produkOutdoor = Produk::where('kategori', 'Outdoor')->get();
 

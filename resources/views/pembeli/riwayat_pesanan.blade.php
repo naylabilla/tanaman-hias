@@ -73,7 +73,8 @@
                     <img src="assets/icons/detail.png" alt="Icon" class="px-1 w-9 h-8 object-scale-down">
                 </a>
             </button>
-            <button class="bg-[#00A651] text-white px-8 py-1 rounded absolute top-6 right-3">Cetak Resi</button>
+            <a href="{{ route('rekapan.resi_pembeli', $pesananGroup->first()->resi_id) }}" class="bg-[#00A651] text-white px-8 py-1 rounded absolute top-6 right-3 no-print">Cetak Resi</a>
+            <!-- <button class="bg-[#00A651] text-white px-8 py-1 rounded absolute top-6 right-3">Cetak Resi</button> -->
         </div>
 
         <div class="relative">
@@ -107,3 +108,4 @@
 </body>
 
 </html>
+
