@@ -49,13 +49,14 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center text-black text-3xl font-bold">Riwayat Pesanan</h1>
+    <h1 class="text-center text-black text-3xl font-bold mt-10">Riwayat Pesanan</h1>
     <div class="flex items-center text-black text-2xl">
-        <img src="./assets/icons/panah kiri.png" alt="" class="w-8 h-8 mt-8 ml-16 ">
-        <div class="text-2xl font-bold pb-2 border-b-2 border-black w-5/6 mx-auto ml-4 mt-10">
-            Pesanan
-        </div>
-    </div>
+    <a href="{{ route('dashboard') }}" class="flex items-center">
+        <img src="{{ asset('assets/icons/panah kiri.png') }}" alt="" class="w-8 h-8 mt-8 ml-16">
+        <div class=" text-2xl font-bold pb-2 ml-4 mt-8">Pesanan</div>
+    </a>
+</div>
+<hr class="border-black mx-24 my-2" style="width: calc(100% - 123px);" />
 
     <br>
     @php
