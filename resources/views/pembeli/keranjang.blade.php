@@ -55,7 +55,7 @@
     </style>
 </head>
 
-<body class="bg-[#618264] h-full pb-5">
+<body class="bg-[#618264] h-screen pb-5">
     <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="position: sticky; z-index: 1000; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
         <a href="{{ route('dashboard')}}" class="btn btn-ghost me-auto hover:bg-white mx-5">
             <img src="./assets/images/tamu/logo.png" alt="" class="size-14 mb-5 -mt-1 object-scale-down" />

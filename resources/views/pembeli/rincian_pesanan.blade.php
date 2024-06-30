@@ -11,7 +11,7 @@
     </head>
 
     <!-- Navbar -->
-    <body class="h-full pb-5" style="background-image: url('{{ asset('assets/images/tamu/bg.png') }}'); background-size: contain; background-position: center;">
+    <body class="h-screen pb-5" style="background-image: url('{{ asset('assets/images/tamu/bg.png') }}'); background-size: contain; background-position: center;">
     <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold" style="
                     position: sticky;
                     z-index: 1000;
@@ -103,9 +103,9 @@
         <!-- Order Items Header -->
         <div class="flex justify-between text-black mx-10 mt-2 ml-24">
             <p class="ml-10">Gambar</p>
-            <p class="-ml-10">Nama</p>
-            <p style="margin-right: -6.5rem;">Jumlah</p>
-            <p style="margin-right: -5.8rem;">Harga</p>
+            <p class="-ml-12">Nama</p>
+            <p style="margin-right: -4.5rem;">Jumlah</p>
+            <p style="margin-right: -3.7rem;">Harga</p>
             <p class="mr-16">Total</p>
         </div>
 
@@ -126,8 +126,8 @@
 
         <!-- Total -->
         <div class="flex justify-end font-bold mx-10 mt-4">
-            <p class="mr-44" style="text-black">Total</p>
-            <p class="mr-10" style="text-[#15803d]">Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
+            <p class="mr-48" style="text-black font-size: 1.5rem;">Total</p>
+            <p class="mr-10" style="color: #15803d; ">Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
         </div>
     </body>
 
