@@ -126,8 +126,8 @@
 
         <!-- Total -->
         <div class="flex justify-end font-bold mx-10 mt-4">
-            <p class="mr-48" style="text-black font-size: 1.5rem;">Total</p>
-            <p class="mr-10" style="color: #15803d; ">Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
+            <p class="mr-44" style="text-black">Total</p>
+            <p class="mr-14" style="color: #15803d; ">Rp. {{ number_format($totalHarga, 0, ',', '.') }}</p>
         </div>
     </body>
 
