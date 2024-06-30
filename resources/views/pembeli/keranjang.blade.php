@@ -13,6 +13,12 @@
     <script src="https://kit.fontawesome.com/9abb4e3af2.js" crossorigin="anonymous"></script>
 
     <style>
+          body {
+            background-image: url('assets/images/tamu/bg.png');
+            background-size: contain;
+            background-position: center;
+        }
+
         .product-row {
             display: flex;
             align-items: center;
