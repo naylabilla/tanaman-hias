@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#6D896B] h-full">
+<body class="h-full pb-5" style="background-image: url('{{ asset('assets/images/tamu/bg.png') }}'); background-size: contain; background-position: center;">
     <!-- Navbar -->
     <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
         style="
@@ -75,7 +75,7 @@
                 <img src="{{ asset('assets/images/tambahproduk/'.$item->produk->gambar) }}" alt="">
             </div>
             <div class="col-span-4">
-                <h1 class="text-2xl text-[#C1D1C0]">{{ $item->produk->nama }}</h1>
+                <h1 class="text-2xl text-black">{{ $item->produk->nama }}</h1>
                 <h1 class="text-2xl text-black">Rp. {{ number_format($item->harga_satuan * $item->jumlah) }}</h1>
                 <h1 class="text-2xl text-black text-end mt-14">{{ $item->jumlah }}x</h1>
             </div>
@@ -90,14 +90,14 @@
         <div class="grid grid-cols-5">
             <h1 class="text-white text-xl font-bold">Total Pembayaran</h1>
             <div class="col-span-3">
-                <h1 class="text-2xl text-[#51EC4E]">Rp. {{ number_format($total) }}</h1>
+                <h1 class="text-2xl text-[#136E3B] font-bold">Rp. {{ number_format($total) }}</h1>
             </div>
         </div>
         <form action="/submit-pembayaran/{{ $resi->id }}" method="post">
             @csrf
             <div class="grid grid-cols-5 my-5">
                 <div class="col-span-2">
-                    <h1 class="text-gray-300 text-xl mb-1">METODE PEMBAYARAN</h1>
+                    <h1 class="text-gray-700 text-xl mb-1">METODE PEMBAYARAN</h1>
 
                     <select name="metode_pembayaran" id="" class="w-4/6 h-10 text-2xl bg-white text-black border border-4 border-green-400">
 
@@ -107,7 +107,7 @@
                     </select>
                 </div>
                 <div class="col-span-3">
-                    <h1 class="text-gray-300 text-xl mb-1">PESAN UNTUK PENERIMA (OPSIONAL)</h1>
+                    <h1 class="text-gray-700 text-xl mb-1">PESAN UNTUK PENERIMA (OPSIONAL)</h1>
 
                     <textarea class="w-full bg-white text-black resize-none border border-4 border-green-400" name="pesan" id="" rows="3"></textarea>
 
