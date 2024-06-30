@@ -34,7 +34,9 @@ class DashboardController extends Controller
 
                 $produkIndoor = Produk::where('kategori', 'Indoor')->get();
 
-                return view('pembeli.dashboard', compact('produkOutdoor', 'produkIndoor'));
+                $produkPopuler = Produk::where('stok', '<', 5)->get();
+
+                return view('pembeli.dashboard', compact('produkOutdoor', 'produkIndoor', 'produkPopuler'));
             } else {
                 return redirect()->back();
             }

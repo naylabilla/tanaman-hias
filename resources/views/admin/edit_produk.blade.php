@@ -92,12 +92,15 @@
                         id="" type="number" placeholder="" value="{{ $data->tinggi }}" name="tinggi">
                 </div>
                 <div class="">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="kategori">
                         Kategori
-                    </label>                    
-                    <input
+                    </label>
+                    <select
                         class="shadow appearance-none border rounded w-[40%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="" type="text" placeholder="" value="{{ $data->kategori }}" name="kategori" >
+                        id="kategori" name="kategori">
+                        <option value="Indoor" {{ $data->kategori == 'Indoor' ? 'selected' : '' }}>Indoor</option>
+                        <option value="Outdoor" {{ $data->kategori == 'Outdoor' ? 'selected' : '' }}>Outdoor</option>
+                    </select>
                 </div>
                 <div class="">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="">
@@ -132,13 +135,11 @@
 
 
                 </div>
-                <div class="flex justify-center items-center mt-4 ">
-
-
-                    <button class="btn text-white font-bold w-44 text-lg"> Kembali
-                        <a href="{{ route('produk.index')}}"></a>
-                    </button>
-
+                <div class="flex justify-center items-center mt-4 mr-24">
+                    <a href="{{ route('produk.index')}}" class="btn text-white font-bold w-44 text-lg"
+                        style="background-color: grey">Kembali</a>
+                    <!-- <input type="#" value="Kembali" class="btn text-white font-bold w-44 text-lg"
+                        style="background-color: grey" /> -->
                 </div>
 
 

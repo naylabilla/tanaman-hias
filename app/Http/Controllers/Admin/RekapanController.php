@@ -76,17 +76,14 @@ class RekapanController extends Controller
      */
     public function update(Request $request, $resiId)
     {
-        // Validasi input jika diperlukan
+        
         $request->validate([
             'status' => 'required|string',
         ]);
 
-        // Temukan pesanan berdasarkan resiId dan update statusnya
-        $pesanan = Pesanan::where('resi_id', $resiId)->first();
-        if ($pesanan) {
-            $pesanan->status = $request->input('status');
-            $pesanan->save();
+        $affectedRows = Pesanan::where('resi_id', $resiId)->update(['status' => $request->input('status')]);
 
+        if ($affectedRows) {
             return redirect()->back()->with('success', 'Status pesanan berhasil diperbarui.');
         }
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('stok');
             $table->string('tinggi');
-            $table->string('kategori');
+            $table->enum('kategori', ['Indoor', 'Outdoor']);
             $table->integer('harga');
             $table->text('deskripsi');
             $table->string('gambar');
