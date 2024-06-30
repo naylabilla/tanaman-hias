@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#6D896B] h-screen">
+<body style="background-image: url('/assets/images/tamu/bg.png'); background-size: cover;" class="h-screen">
     <!-- Navbar -->
     <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
         style="
@@ -56,19 +56,19 @@
                     <img src="{{ asset('assets/icons/panah kiri.png') }}" alt="" class="w-10 h-10 mt-4 ml-4">
                 </a>
                 <div class="flex items-center">
-                    <p class="text-3xl text-white font-bold mt-6 ml-[84%] text-center flex-1">PEMBAYARAN</p>
+                    <p class="text-3xl text-black font-bold mt-6 ml-[84%] text-center flex-1">TRANSAKSI</p>
                 </div>
             </div>
             <div class="grid grid-cols-2">
                 <div class="flex items-center">
                     <img src="{{ asset('assets/icons/user.png') }}" alt="" class="w-8 h-8 mt-8 ml-4">
-                    <p class="text-2xs font-bold text-white mt-8 mr-[82%] text-center flex-1">{{ $resi->username }}</p>
+                    <p class="text-2xs font-bold text-black mt-8 mr-[82%] text-center flex-1">{{ $resi->username }}</p>
                 </div>
             </div>
             <hr class="w-full border-b-2 border-white mt-3">
 
             <div class="mt-4">
-                <p class="text-xl text-white font-bold mt-4 mr-[86%]">Total Pembayaran</p>
+                <p class="text-xl text-black font-bold mt-4 mr-[86%]">Total Pembayaran</p>
                 @php
 
                 $total = 0;
@@ -84,15 +84,15 @@
                 </div>
             </div>
             <div class="mb-3">
-                <p class="text-3xs text-white font-bold mt-3 mr-[86%]">No. Rekening</p>
+                <p class="text-3xs text-black font-bold mt-3 mr-[86%]">No. Rekening</p>
                 <div class="bg-white border border-green-600 rounded w-64 h-14 border-green-600">
-                    <p class="text-3xs text-[#327C54] font-bold ml-3 mt-2 ">1083915345</p>
+                    <p class="text-3xs text-[#066A34] font-bold ml-3 mt-2 ">1083915345</p>
                 </div>
             </div>
             <hr class="w-full border-b-2 border-white mt-3">
 
             <div class="mt-4">
-                <p class="text-white text-3xs font-bold">Bukti Pembayaran</p>
+                <p class="text-black text-3xs font-bold">Bukti Pembayaran</p>
 
                 <input type="file" name="bukti_pembayar" id="tes" class="text-black font-bold rounded input input-bordered input-success w-[57%] h-18 border-green-300" />
             </div>
