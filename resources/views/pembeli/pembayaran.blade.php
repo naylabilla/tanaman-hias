@@ -114,10 +114,8 @@
                 </div>
             </div>
             <div class="grid grid-cols-2 items-center">
-                <a href="" class="text-2xl text-black font-bold">
-
+                <a href="{{ route('keranjang.tampil')}}"class="text-2xl text-black font-bold">
                     <img src="{{ asset('assets/icons/kembali.png') }}" alt="" class="inline size-5 mb-1 ml-1">Kembali
-
                 </a>
                 <button type="submit" class="btn bg-green-600 text-xl my-3 text-white border-none w-2/5 ms-auto">BAYAR
                     SEKARANG</button>
