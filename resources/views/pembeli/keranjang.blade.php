@@ -87,7 +87,7 @@
     </div>
 
     <div class="container mx-auto">
-        <div class="bg-green-600 p-5 mt-5 ml-16 flex w-full max-w-6xl rounded-lg relative">
+        <div class="bg-[#78A07C] p-5 mt-5 ml-16 flex w-full max-w-6xl rounded-lg relative">
             <p class="text-white text-xl w-1/4 text-center">Produk</p>
             <div class="w-1/3 relative">
                 <p class="text-white text-xl text-center absolute left-14">Nama</p>
@@ -149,21 +149,21 @@
                 <table class="w-full mb-0">
                     <thead class="align-middle relative">
                         <tr>
-                            <th class="text-blue-900 text-xl absolute left-20 top-5 ">
+                            <th class="text-[#78A07C] text-xl absolute left-20 top-5 ">
                                 <input class="form-check-input -ml-1 " id="pilih_semua_checkbox" type="checkbox">
                                 Pilih Semua
                             </th>
                             <!-- <th class="text-2xl text-blue-900" style="width: 400px" colspan="2">
                                 Pilih Semua
                             </th> -->
-                            <th class="text-2xl text-blue-900 pl-96" colspan="2">
+                            <th class="text-2xl text-[#78A07C] pl-96" colspan="2">
                                 Total (<span id="jumlah_produk">0</span> Produk)
                             </th>
-                            <th class="text-right text-xl text-blue-900 absolute right-60 top-5" id="total_harga_akhir">
+                            <th class="text-right text-xl text-[#78A07C] absolute right-60 top-5" id="total_harga_akhir">
                                 Rp0
                             </th>
                             <th class="">
-                                <button class="btn btn-lg text-xl font-semibold bg-blue-700 text-white w-25 mr-5" type="submit" onclick="submitPesanan()">
+                                <button class="btn btn-lg text-xl font-semibold bg-[#78A07C] text-white w-25 mr-5" type="submit" onclick="submitPesanan()">
                                     Periksa
                                 </button>
                             </th>
