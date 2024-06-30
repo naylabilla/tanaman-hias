@@ -18,19 +18,19 @@
         }
 
         .product-name {
-            margin-left: -4rem;
+            margin-left: -5rem;
         }
 
         .product-pieces {
-            margin-right: -2.5rem;
-        }
-
-        .product-price {
             margin-right: -4rem;
         }
 
+        .product-price {
+            margin-right: -5.5rem;
+        }
+
         .product-total {
-            margin-right: 3rem;
+            margin-right: 3.5rem;
         }
 
     </style>
@@ -137,7 +137,7 @@
 
     <!-- Total -->
     <div class="flex justify-end font-bold text-white mx-10 mt-4">
-        <p class="mr-56">Total</p>
+        <p class="mr-44">Total</p>
         <p class="mr-10">Rp{{ number_format($totalHarga, 0, ',', '.') }}</p>
     </div>
 

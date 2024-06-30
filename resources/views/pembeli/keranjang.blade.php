@@ -32,15 +32,19 @@
         }
 
         .product-quantity {
-            margin-right: 105px;
+            margin-right: 125px;
         }
 
         .product-price {
-            margin-right: 60px;
+            margin-right: 250px;
         }
 
         .product-total {
-            margin-right: 100px;
+            margin-right: 125px;
+        }
+
+        .button-delete {
+            margin-right: 120px;
         }
     </style>
 </head>
@@ -111,7 +115,7 @@
                 </svg>
             </div>
 
-            <p class="text-white text-xl product-price harga mr-64" data_harga="{{ $item->produk->harga }}">
+            <p class="text-white text-xl product-price harga" data_harga="{{ $item->produk->harga }}">
                 Rp{{ number_format($item->produk->harga, 0, ',', '.') }}</p>
             <p class="text-white text-xl product-total total_harga absolute right-44">
                 Rp{{ number_format($item->produk->harga * $item->jumlah, 0, ',', '.') }}</p>
@@ -120,7 +124,7 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-ghost">
-                    <svg class="w-6 h-6 text-white dark:text-white mr-32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-white dark:text-white button-delete" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
                     </svg>
                 </button>
