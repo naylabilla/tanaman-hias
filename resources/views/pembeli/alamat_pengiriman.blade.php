@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#6D896B] h-full">
+<body style="background-image: url('/assets/images/tamu/bg.png'); background-size: cover;" class="h-screen">
     <!-- Navbar -->
     <div class="navbar bg-white sticky top-0 grid grid-cols-2 text-black text-3xl font-bold"
         style="
@@ -51,7 +51,7 @@
     <form action="/submit-alamat/{{ $resi->id }}" method="post">
         <div class="w-full flex flex-col items-center pb-5 ">
             @csrf
-            <h1 class="text-center text-white text-4xl font-bold mt-4 mb-4">Alamat Pengiriman</h1>
+            <h1 class="text-center text-black text-4xl font-bold mt-4 mb-4">Alamat Pengiriman</h1>
 
             <input type="text" class="bg-white border-[#51EC4E] border p-3 w-5/6 mx-auto block mb-4" placeholder="Nama Penerima" name="nama_penerima" value="{{ $resi->nama_penerima ? $resi->nama_penerima : '' }}">
 
