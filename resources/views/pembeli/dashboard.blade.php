@@ -193,6 +193,7 @@
                 <div class="mt-3 text-[#423F45]">Indoor</div>
             </a>
         </div>
+    <div id="populer"></div>
     </div>
 
     <br><br><br>
@@ -201,7 +202,7 @@
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
-            <div class="px-4 text-[#78A07C] text-2xl" id="populer">P O P U L E R</div>
+            <div class="px-4 text-[#78A07C] text-2xl">P O P U L E R</div>
             <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
         <div class="px-2 mt-1 text-[#423F45]">Saat ini kamu tertarik untuk menambah koleksi tanaman hias daun di
@@ -212,27 +213,19 @@
                     @foreach ($produkPopuler as $produkpop)
                     <div class="text-center">
                         <!-- Untuk gambar 1 -->
+                        <a href="{{ route('detail_produk', $produkpop->kode) }}">
                         <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                             <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
                             <img src="/assets/images/tambahproduk/{{ $produkpop->gambar }}" alt="Gambar 1"
                                 class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3 text-bold">{{ $produkpop->nama }}</div>
-                            <button class="absolute bottom-5 left-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <a href="{{ route('detail_produk', $produkpop->kode) }}">
-                                    <img src="assets/icons/detail.png" alt="Icon"
-                                        class="px-1 w-9 h-9 object-scale-down">
-                                </a>
-                            </button>
                             <div class="mt-1">Rp{{ number_format($produkpop->harga, 0, ',', '.') }}</div>
                             <form action="{{ route('keranjang.tambah', $produkpop->kode) }}" method="POST"
                                 class="absolute bottom-3 right-3">
                                 @csrf
-                                <button type="submit" class="bg-green-400 bg-hover hover:bg-gray-300">
-                                    <img src="assets/icons/icon keranjang.png" alt="Icon"
-                                        class="w-9 h-9 object-scale-down">
-                                </button>
                             </form>
                         </div>
+                    </a>
                         <!-- <div class="bg-gray-100 shadow-lg rounded-lg p-4">
                             <img src="assets/images/populer/gambar 1 monstera.png" alt="Gambar 1" class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3">Monstera Deliciosa</div>
@@ -243,6 +236,7 @@
                 </div>
             </div>
         </div>
+    <div id="outdoor"></div>
     </div>
 
     <br><br><br>
@@ -253,7 +247,7 @@
     <div class="font-semibold pb-2 w-5/6 mx-auto text-center -mt-3">
         <div class="flex items-center justify-center">
             <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
-            <div class="px-4 text-[#78A07C] text-2xl" id="outdoor">O U T D O O R</div>
+            <div class="px-4 text-[#78A07C] text-2xl">O U T D O O R</div>
             <div class="flex-1 h-0.5 bg-[#78A07C]"></div>
         </div>
         <div class="px-2 mt-1 text-[#423F45]">Tanaman Hias Outdoor merupakan pilihan tepat untuk mempercantik
@@ -264,33 +258,25 @@
                     @foreach ($produkOutdoor as $produkout)
                     <div class="text-center">
                         <!-- Untuk gambar 1 -->
+                        <a href="{{ route('detail_produk', $produkout->kode) }}">
                         <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                             <img src="assets/icons/outdoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
                             <img src="/assets/images/tambahproduk/{{ $produkout->gambar }}" alt="Gambar 1"
                                 class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3 text-bold">{{ $produkout->nama }}</div>
-                            <button class="absolute bottom-5 left-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <a href="{{ route('detail_produk', $produkout->kode) }}">
-                                    <img src="assets/icons/detail.png" alt="Icon"
-                                        class="px-1 w-9 h-9 object-scale-down">
-                                </a>
-                            </button>
                             <div class="mt-1">Rp{{ number_format($produkout->harga, 0, ',', '.') }}</div>
                             <form action="{{ route('keranjang.tambah', $produkout->kode) }}" method="POST"
                                 class="absolute bottom-3 right-3">
                                 @csrf
-                                <button type="submit" class="bg-green-400 bg-hover hover:bg-gray-300">
-                                    <img src="assets/icons/icon keranjang.png" alt="Icon"
-                                        class="w-9 h-9 object-scale-down">
-                                </button>
                             </form>
                         </div>
+                    </a>
                     </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
+        <div id="indoor"></div> 
     </div>
 
     <br><br><br>
@@ -311,27 +297,19 @@
                     @foreach ($produkIndoor as $produkin)
                     <div class="text-center">
                         <!-- Untuk gambar 1 -->
+                        <a href="{{ route('detail_produk', $produkin->kode) }}">
                         <div class="bg-gray-100 shadow-lg rounded-lg p-4 relative">
                             <img src="assets/icons/indoor.png" alt="Icon" class="absolute w-20 h-20 -ml-4 -mt-3">
                             <img src="/assets/images/tambahproduk/{{ $produkin->gambar }}" alt="Gambar 1"
                                 class="w-48 h-48 mx-auto -mt-1 object-scale-down">
                             <div class="mt-3 text-bold">{{ $produkin->nama}}</div>
-                            <button class="absolute bottom-5 left-3 bg-green-400 bg-hover hover:bg-gray-300">
-                                <a href="{{ route('detail_produk', $produkin->kode) }}">
-                                    <img src="assets/icons/detail.png" alt="Icon"
-                                        class="px-1 w-9 h-9 object-scale-down">
-                                </a>
-                            </button>
                             <div class="mt-1">Rp{{ number_format($produkin->harga, 0, ',', '.') }}</div>
                             <form action="{{ route('keranjang.tambah', $produkin->kode) }}" method="POST"
                                 class="absolute bottom-3 right-3">
                                 @csrf
-                                <button type="submit" class="bg-green-400 bg-hover hover:bg-gray-300">
-                                    <img src="assets/icons/icon keranjang.png" alt="Icon"
-                                        class="w-9 h-9 object-scale-down">
-                                </button>
                             </form>
                         </div>
+                    </a>
                     </div>
                     @endforeach
                 </div>

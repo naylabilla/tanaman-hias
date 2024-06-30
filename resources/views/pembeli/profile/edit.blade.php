@@ -19,11 +19,11 @@
             <p class="text-2xl text-[#78A07C] mb-6 text-bold">Lushtilvy</p>
         </a>
         <div class="ms-auto">
-            <a href="/keranjang" class="btn btn-ghost hover:bg-white">
+            <a href="{{ route('keranjang.tampil')}}" class="btn btn-ghost hover:bg-white">
                 <img src="/assets/icons/navbar keranjang.png" alt="" class="w-12" />
                 <p class="text-2xl text-[#78A07C]">Keranjang</p>
             </a>
-            <a href="/pesanan" class="btn btn-ghost hover:bg-white">
+            <a href="{{ route('riwayat-pesanan.index') }}" class="btn btn-ghost hover:bg-white">
                 <img src="/assets/icons/navbar pesanan.png" alt="" class="w-12" />
                 <p class="text-2xl text-[#78A07C]">Pesanan</p>
             </a>
