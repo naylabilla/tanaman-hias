@@ -34,7 +34,7 @@
                 border-bottom-right-radius: 10px;
             "
         >
-            <a href="" class="btn btn-ghost me-auto hover:bg-white mx-5">
+            <a href="{{ route('dashboard')}}" class="btn btn-ghost me-auto hover:bg-white mx-5">
                 <img
                     src="{{ asset('assets/images/tamu/logo.png') }}"
                     alt=""
