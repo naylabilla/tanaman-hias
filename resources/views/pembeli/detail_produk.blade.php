@@ -33,7 +33,6 @@
     </div>
 
     <br>
-
     <a href="{{ route('dashboard')}}" class="absolute top-20 left-5">
         <img src="/assets/icons/panah kiri.png" alt="" class="w-10 h-10 mt-1">
     </a>
@@ -53,8 +52,7 @@
             <h1 class="text-xl block">{{ $data->tinggi }} cm</h1>
         </div>
         <div class="flex justify-center mt-4">
-            <form action="{{ route('keranjang.tambah', $data->kode) }}" method="POST"
-                class="">
+            <form action="{{ route('keranjang.tambah', $data->kode) }}" method="POST" class="">
                 @csrf
                 <button type="submit" class="btn bg-green-600 w-64 mt-3 text-white text-xl rounded-full">
                     Tambah ke Keranjang
