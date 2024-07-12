@@ -68,7 +68,9 @@ class RekapanController extends Controller
             return $pesanan->jumlah * $pesanan->harga_satuan;
         });
 
-        return view('admin.cetak_resi_penjual', compact('resi_id', 'pesananGroup', 'totalHarga'));
+        $totalJumlah = $pesananGroup->sum('jumlah');
+
+        return view('admin.cetak_resi_penjual', compact('resi_id', 'pesananGroup', 'totalHarga', 'totalJumlah'));
     }
 
     /**

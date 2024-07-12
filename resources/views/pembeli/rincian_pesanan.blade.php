@@ -126,16 +126,16 @@
 
         <!-- Total -->
         <div class="flex font-bold mx-10 mt-4">
-            <div class="card">
+            <!-- <div class="card">
                 <img src="{{ asset('assets/images/bukti/bukti.jpg') }}" alt="Uploaded Image"
                     class="object-cover" width="200" height="200">
-            </div>
-            <div class="col-span-1 ml-28 mt-8">
+            </div> -->
+            <!-- <div class="col-span-1 ml-28 mt-8">
                     <h1 class="text-gray-700 text-xl mb-1">PESAN UNTUK PENERIMA (OPSIONAL)</h1>
 
                     <textarea class="w-full bg-white text-black resize-none border border-4 border-green-400" name="pesan" id="" rows="1.5"></textarea>
 
-                </div>
+                </div> -->
             <div class="total-section flex font-bold ms-auto">
                 <p class="total-text mr-44">Total</p>
                 <p class="total-price mr-14">Rp. {{ number_format($totalHarga, 0, ',', '.') }}</p>

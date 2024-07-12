@@ -55,7 +55,7 @@
                 <table
                     class="w-full text-sm text-left rtl:text-right mx-auto bg-green-700 text-white rounded-xl text-center">
                     <thead class="text-xs uppercase border-b border-black">
-                        <h1 class="text-center font-bold mb-4 text-green-800 text-2xl">Detail Pembelian Produk</h1>
+                        <h1 class="text-center font-bold mb-4 text-green-800 text-2xl">Daftar Rekapan Produk</h1>
                         <tr>
                             <th scope="col" class="px-4 py-3">No</th>
                             <th scope="col" class="px-4 py-3">No Pesanan</th>
@@ -95,12 +95,12 @@
                             <td>{{ $resiId }}</td>
                             <td>{{ $pesananGroup->first()->resi->updated_at }}</td>
                             <td>{{ $pesananGroup->first()->resi->nama_penerima }}</td>
-                            <td>{{ number_format($totalHarga, 0, ',', '.') }}</td>
+                            <td>Rp{{ number_format($totalHarga, 0, ',', '.') }}</td>
                             <td>
                                 <form action="{{ route('pesanan.update', $resiId) }}" method="POST">
                                     @csrf
                                     @method('PUT')
-                                    <select name="status" class="text-black rounded-3xl p-2 bg-gray-200">
+                                    <select name="status" class="text-black rounded-3xl w-40 p-2 bg-gray-200">
                                         <option value="Menunggu Konfirmasi"
                                             {{ $currentStatus == 'Menunggu Konfirmasi' ? 'selected' : '' }}>Menunggu
                                             Konfirmasi</option>
@@ -115,11 +115,11 @@
                                         </option>
                                     </select>
                                     <button type="submit"
-                                        class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 ml-3">Perbarui</button>
+                                        class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-20 ml-3">Perbarui</button>
                                 </form>
                             </td>
                             <td class="py-3">
-                                <a href="{{ route('rekapan.resi', $pesananGroup->first()->resi_id) }}" target="_blank" class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-24 no-print">Cetak</a>
+                                <a href="{{ route('rekapan.resi', $pesananGroup->first()->resi_id) }}" target="_blank" class="btn bg-[#B0D9B1] border-none text-black rounded-lg w-20 no-print">Cetak</a>
                             </td>
                             <td>
                                 <a href="{{ route('rekapan.show', $pesananGroup->first()->resi_id) }}"

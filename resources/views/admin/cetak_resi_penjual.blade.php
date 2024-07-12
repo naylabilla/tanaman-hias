@@ -103,23 +103,25 @@
                     {{ $pesananGroup->first()->resi->kecamatan }}, {{ $pesananGroup->first()->resi->kode_pos }}<br>
                     {{ $pesananGroup->first()->resi->no_hp }}
                 </div>
-                <div>
+                <div class="mt-7">
                     Pengirim : Lustilvy
                 </div>
             </div>
 
             <div class="flex justify-center items-center mt-4 border-t border-b border-black py-4 relative">
                 <div class="text-center w-2/3">{{ $pesananGroup->first()->resi->metode_pembayaran }}</div>
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-14 bg-black"></div>
-                <div class="text-center w-2/3">2 pcs</div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-14 bg-black mt-1"></div>
+                <div class="text-center w-2/3">Jumlah Pesanan : {{ $totalJumlah }} Pcs</div>
             </div>
 
             <div class="py-4 mt-4">
-                <span class="block ml-4">Waktu Pemesanan : {{ $pesananGroup->first()->resi->updated_at }}</span>
+                <span class="block ml-10">Waktu Pemesanan : {{ $pesananGroup->first()->resi->updated_at }}</span>
                 @foreach ($pesananGroup as $pesanan)
-                <span class="block ml-4">{{ $pesanan->produk->nama }} x{{ $pesanan->jumlah }}<span class="ml-10">Rp{{ number_format($pesanan->jumlah * $pesanan->harga_satuan, 0, ',', '.') }}</span></span>
+                <span class="block ml-10">{{ $pesanan->produk->nama }} x{{ $pesanan->jumlah }} : Rp{{ number_format($pesanan->jumlah * $pesanan->harga_satuan, 0, ',', '.') }}</span>
+                
                 <!-- <span class="block ml-4">Calla Lily<span class="ml-28">Rp.200.000</span></span> -->
                 @endforeach
+                <span class="block ml-10">Total : Rp{{ number_format($totalHarga, 0, ',', '.') }}</span>
 
             </div>
         </div>

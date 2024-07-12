@@ -81,7 +81,7 @@
                                 </a>
                             </td>
                             <td>{{ $item->nama }}</td>
-                            <td>{{ $item->harga }}</td>
+                            <td>Rp{{ number_format($item->harga, 0, ',', '.') }}</td>
                             <td>{{ $item->kategori }}</td>
                             <td>{{ $item->stok }}</td>
                             <td>
